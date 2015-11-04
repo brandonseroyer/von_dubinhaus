@@ -25,7 +25,7 @@
     <li><%= link_to 'Sign in', new_user_session_path, id:'text-color', class: "navbar-brand"  %></li>
     <li><%= link_to 'Sign up', new_user_registration_path, id:'text-color', class: "navbar-brand"  %></li>
     <% else %>
-    <li><%= link_to 'Add Dog', new_dog_path, id:'text-color', class: "navbar-brand" %></li>
+    <li><%= link_to 'Add Dog', new_dog_path, id:'new-dog-link', remote: true %></li>
     <li><%= link_to current_user.email, edit_user_registration_path, id:'text-color', class: "navbar-brand"  %></li>
     <li><%= link_to 'Log out',  destroy_user_session_path, method: 'delete', id:'text-color', class: "navbar-brand"  %></li>
     <% end %>

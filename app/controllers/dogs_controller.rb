@@ -1,18 +1,15 @@
 class DogsController < ApplicationController
-  before_action :find_dog, except: [:new, :create, :index]
-  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @dogs = Dog.all.order(created_at: :desc)
   end
 
-  def show
-    @dog = Dog.find(params[:id])
-    render :show
-  end
-
   def new
     @dog = Dog.new
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def create
@@ -22,6 +19,11 @@ class DogsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @dog = Dog.find(params[:id])
+    render :show
   end
 
   def edit
