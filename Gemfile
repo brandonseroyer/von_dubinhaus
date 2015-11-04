@@ -13,6 +13,8 @@ gem "font-awesome-rails"
 gem 'rest-client'
 gem "paperclip", '~> 4.1'
 gem 'sqlite3'
+gem 'carrierwave'
+
 
 group :development do
   gem 'letter_opener'

@@ -1,16 +1,16 @@
-<h1><%= @dog.name %></h1>
-
+<i><b><h1><%= @dog.name %></h1></b></i>
+<br>
 <%= image_tag @dog.image.url(:profile) %>
 <br>
 <br>
-Age: <%= @dog.age %> years old
-Sex: <%= @dog.sex %>
-<b>
-Info: <%= @dog.info %>
-
+<h5>Breed: <i><%= @dog.breed %></i></h5>
+<h5>Age: <i><%= @dog.age %> years old</i></h5>
+<h5>Sex: <i><%= @dog.sex %></i></h5><br>
+<h5><%= @dog.name %>'s Story:</h5>
+<p><%= @dog.info %></p>
+<br>
 <p><%= link_to "Edit", edit_dog_path(@dog) %></p>
 <p><%= link_to "Delete", dog_path(@dog),
 :data => {:confirm => "You sure?",
   :method => "delete"} %></p>
-
-      <p><%= link_to "Return to questions", dogs_path %></p>
+      <p><%= link_to "Return to Home", dogs_path %></p>

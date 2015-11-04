@@ -1,6 +1,12 @@
+<center><header>Available for Adoption</header></center>
+<br>
+<br>
+<div id="profile">
 <% @dogs.each do |dog| %>
-  <%= image_tag dog.image.url(:standard) %>
-  <br><br>
-  <div>
-    <%= link_to dog.name, dog_path(dog)  %>
+  <%= image_tag dog.image.url(:profile) =%>
+  <br>
+    <i><h4>Learn more about <%= link_to dog.name, dog_path(dog) %>!</h4></i>
+      <hr>
+      <br>
     <% end %>
+  </div>

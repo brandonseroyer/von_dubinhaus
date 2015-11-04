@@ -1,17 +1,18 @@
 <%= form_for @dog, html: { multipart: true } do |f| %>
-
-  <%= f.file_field :image %>
-
   <div class='form-group'>
     <%= f.label :name %>
-    <%= f.text_field :title, class: "form-control", required: 'required' %>
+    <%= f.text_field :name, class: "form-control", required: 'required' %><br>
+    <%= f.label :breed %>
+    <%= f.text_field :breed, class: "form-control", required: 'required' %><br>
     <%= f.label :age %>
-    <%= f.text_field :age, class: "form-control", required: 'required' %>
+    <%= f.text_field :age, class: "form-control", required: 'required' %><br>
     <%= f.label :sex %>
-    <%= f.text_field :sex, class: "form-control", required: 'required' %>
+    <%= f.text_field :sex, class: "form-control", required: 'required' %><br>
     <%= f.label :info %>
-    <%= f.text_area :info, class: "form-control", required: 'required' %>
+    <%= f.text_area :info, class: "form-control", required: 'required' %><br>
     <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
   </div>
 
   <div class='form-group'>

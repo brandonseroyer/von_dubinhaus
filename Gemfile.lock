@@ -55,6 +55,11 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
@@ -246,6 +251,7 @@ DEPENDENCIES
   bootstrap-sass
   byebug
   capybara
+  carrierwave
   coffee-rails
   devise
   dotenv-rails

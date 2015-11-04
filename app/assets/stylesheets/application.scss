@@ -15,3 +15,49 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ /* navbar */
+  .navbar-default {
+   background-color: black;
+   border-color: black;
+
+ }
+
+body {
+   background-color: #FFFFCC;
+
+ }
+
+#text-color {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding-right: 20px;
+
+}
+
+#nav-text {
+   color: white;
+   font-weight: bold;
+   font-size: 20px;
+   padding-left: 135px;
+ }
+
+hr {
+    border: 1px dotted #000000;
+    border-style: none none dotted;
+    color: #000000;
+
+}
+
+header {
+  font-size: 55px;
+  font-weight: bold;
+
+
+}
+
+#profile {
+  width: 475px;
+  margin: 0 auto;
+}
