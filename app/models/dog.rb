@@ -1,6 +1,7 @@
 class Dog < ActiveRecord::Base
   belongs_to :user
-
+  has_many :comments, dependent: :destroy
+  
   validates :name, presence: true
   validates :sex, presence: true
   validates :age, presence: true
