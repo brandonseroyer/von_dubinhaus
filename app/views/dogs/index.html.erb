@@ -1,0 +1,6 @@
+<% @dogs.each do |dog| %>
+  <%= image_tag dog.image.url(:standard) %>
+  <br><br>
+  <div>
+    <%= link_to dog.name, dog_path(dog)  %>
+    <% end %>

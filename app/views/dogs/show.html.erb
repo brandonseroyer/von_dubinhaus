@@ -1,0 +1,16 @@
+<h1><%= @dog.name %></h1>
+
+<%= image_tag @dog.image.url(:profile) %>
+<br>
+<br>
+Age: <%= @dog.age %> years old
+Sex: <%= @dog.sex %>
+
+Info: <%= @dog.info %>
+
+<p><%= link_to "Edit", edit_dog_path(@dog) %></p>
+<p><%= link_to "Delete", dog_path(@dog),
+:data => {:confirm => "You sure?",
+  :method => "delete"} %></p>
+
+      <p><%= link_to "Return to questions", dogs_path %></p>
