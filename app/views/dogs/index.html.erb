@@ -5,7 +5,7 @@
 <br>
 <div id="profile">
 <% @dogs.each do |dog| %>
-  <%= image_tag dog.image.url(:profile) =%>
+  <%= image_tag dog.image.url(:profile), id:'pic' =%>
   <br>
     <i><h4>Learn more about <%= link_to dog.name, dog_path(dog) %>!</h4></i>
       <hr>
