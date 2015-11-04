@@ -6,10 +6,7 @@ class DogsController < ApplicationController
 
   def new
     @dog = Dog.new
-    respond_to do |format|
-      format.html
-      format.js
-    end
+    render :new
   end
 
   def create
@@ -29,7 +26,10 @@ class DogsController < ApplicationController
 
   def edit
     @dog = Dog.find(params[:id])
-    render :edit
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def update

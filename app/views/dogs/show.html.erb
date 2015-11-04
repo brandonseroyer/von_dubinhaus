@@ -26,8 +26,11 @@
   <p>There are no comments yet!</p>
   <% end %>
 
+  <div id='edit-dog-form'>
+  </div>
+
 <p><%= link_to "Add an comment", new_dog_comment_path(@dog) %></p>
-<p><%= link_to "Edit", edit_dog_path(@dog) %></p>
+<p><%= link_to "Edit", edit_dog_path(@dog), id:'edit-dog-link', remote: true %></p>
 <p><%= link_to "Delete", dog_path(@dog),
 :data => {:confirm => "You sure?",
   :method => "delete"} %></p>
