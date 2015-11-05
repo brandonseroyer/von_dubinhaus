@@ -20,13 +20,20 @@
         <b><%= link_to "Von Dubinhaus Shepherds", dogs_path, id:'nav-text', class: "navbar-brand" %></b>
       </div>
 
+
+  </ul>
   <ul class="nav navbar-nav navbar-right">
     <% unless current_user %>
     <li><%= link_to 'Sign in', new_user_session_path, id:'text-color', class: "navbar-brand"  %></li>
     <li><%= link_to 'Sign up', new_user_registration_path, id:'text-color', class: "navbar-brand"  %></li>
     <% else %>
-    <li><%= link_to 'Applications', applicants_path, id:'text-color', class: "navbar-brand" %></li>
-    <li><%= link_to 'Add Dog', new_dog_path, id:'text-color', class: "navbar-brand" %></li>
+    <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+    <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Tools<span class="caret"></span></a>
+    <ul class="dropdown-menu">
+    <li><%= link_to 'Add Dog', new_dog_path %></li>
+    <li><%= link_to 'Adoption Applications', applicants_path %></li>
+  </ul>
     <li><%= link_to current_user.email, edit_user_registration_path, id:'text-color', class: "navbar-brand"  %></li>
     <li><%= link_to 'Log out',  destroy_user_session_path, method: 'delete', id:'text-color', class: "navbar-brand"  %></li>
     <% end %>
