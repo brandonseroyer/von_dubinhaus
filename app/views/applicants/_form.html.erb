@@ -11,23 +11,13 @@
     <%= f.label :address %>
     <%= f.text_field :address, class: "form-control", required: 'required' %><br>
     <%= f.label :do_you_currently_own_a_cat? %><br>
-    <select class="selectpicker">
-    <option>Yes</option>
-    <option>No</option>
-  </select><br><br>
+    <%= f.select :cats, [['Yes', true], ['No', false]] %><br><br>
     <%= f.label :do_you_currently_own_a_dog? %><br>
-    <select class="selectpicker">
-    <option>Yes</option>
-    <option>No</option>
-  </select><br><br>
+    <%= f.select :dogs, [['Yes', true], ['No', false]] %><br><br>
     <%= f.label :do_you_have_children_under_age_7? %><br>
-    <select class="selectpicker">
-    <option>Yes</option>
-    <option>No</option>
-  </select><br><br>
+    <%= f.select :kids, [['Yes', true], ['No', false]] %><br><br>
     <%= f.label :about %>
     <%= f.text_area :about, class: "form-control", required: 'required' %><br>
-    <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
 
   <div class='form-group'>

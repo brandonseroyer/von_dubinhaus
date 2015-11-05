@@ -11,18 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151104233514) do
+ActiveRecord::Schema.define(version: 20151105012240) do
 
   create_table "applicants", force: :cascade do |t|
-    t.string  "name"
-    t.string  "phone"
-    t.string  "email"
-    t.string  "address"
-    t.boolean "cats"
-    t.boolean "dogs"
-    t.boolean "kids"
-    t.text    "about"
-    t.string  "dog"
+    t.string   "name"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "address"
+    t.boolean  "cats"
+    t.boolean  "dogs"
+    t.boolean  "kids"
+    t.text     "about"
+    t.string   "dog"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "comments", force: :cascade do |t|

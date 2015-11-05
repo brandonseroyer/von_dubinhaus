@@ -12,7 +12,8 @@ class ApplicantsController < ApplicationController
   def create
     @applicant = Applicant.new(applicant_params)
     if @applicant.save
-      redirect_to  applicants_path
+      redirect_to  dogs_path
+      flash[:notice] = 'Your Application Has Been Submitted!'
     else
       render :new
     end
@@ -25,7 +26,7 @@ class ApplicantsController < ApplicationController
 
   private
   def applicant_params
-    params.require(:applicant).permit(:name, :dog, :phone, :email, :address, :dogs, :about, :kids, :dogs, :cats, :user_id)
+    params.require(:applicant).permit(:name, :dog, :phone, :email, :address, :dogs, :about, :kids, :dogs, :cats)
   end
 
 end
