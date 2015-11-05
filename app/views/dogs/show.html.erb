@@ -29,14 +29,14 @@
   <div id='edit-dog-form'>
   </div>
 
-<p><%= link_to "Add an comment", new_dog_comment_path(@dog) %></p>
-<p><%= link_to "Edit", edit_dog_path(@dog), id:'edit-dog-link', remote: true %></p>
-<p><%= link_to "Delete", dog_path(@dog),
+<p><%= link_to "Add an comment", new_dog_comment_path(@dog) %><br>
+<%= link_to "Edit", edit_dog_path(@dog), id:'edit-dog-link', remote: true %><br>
+<%= link_to "Delete", dog_path(@dog),
 :data => {:confirm => "You sure?",
-  :method => "delete"} %></p>
+  :method => "delete"} %><br>
+  <%= link_to "Return to Home", dogs_path %></p>
 
 
-      <p><%= link_to "Return to Home", dogs_path %></p>
 
         <div class="fb-share-button" data-href="http://localhost:3000/dogs" data-layout="button_count"></div><br>
         <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
