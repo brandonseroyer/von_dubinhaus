@@ -1,5 +1,4 @@
 class ApplicantsController < ApplicationController
-
   def index
     @applicants = Applicant.all.order(created_at: :desc)
   end
@@ -19,9 +18,10 @@ class ApplicantsController < ApplicationController
     end
   end
 
-  def show
+  def destroy
     @applicant = Applicant.find(params[:id])
-    render :show
+    @applicant.destroy
+    redirect_to applicants_path
   end
 
   private

@@ -16,10 +16,9 @@
     <%= f.select :dogs, [['Yes', true], ['No', false]] %><br><br>
     <%= f.label :do_you_have_children_under_age_7? %><br>
     <%= f.select :kids, [['Yes', true], ['No', false]] %><br><br>
-    <%= f.label :about %>
+    <%= f.label :tell_us_about_you! %>
     <%= f.text_area :about, class: "form-control", required: 'required' %><br>
   </div>
-
   <div class='form-group'>
     <%= f.submit class: 'btn btn-success' %>
   </div>
