@@ -1,0 +1,36 @@
+<%= form_for @applicant, html: { multipart: true } do |f| %>
+  <div class='form-group'>
+    <%= f.label :dog_name%>
+    <%= f.text_field :dog, class: "form-control", required: 'required' %><br>
+    <%= f.label :Your_name %>
+    <%= f.text_field :name, class: "form-control", required: 'required' %><br>
+    <%= f.label :phone %>
+    <%= f.text_field :phone, class: "form-control", required: 'required' %><br>
+    <%= f.label :email %>
+    <%= f.text_field :email, class: "form-control", required: 'required' %><br>
+    <%= f.label :address %>
+    <%= f.text_field :address, class: "form-control", required: 'required' %><br>
+    <%= f.label :do_you_currently_own_a_cat? %><br>
+    <select class="selectpicker">
+    <option>Yes</option>
+    <option>No</option>
+  </select><br><br>
+    <%= f.label :do_you_currently_own_a_dog? %><br>
+    <select class="selectpicker">
+    <option>Yes</option>
+    <option>No</option>
+  </select><br><br>
+    <%= f.label :do_you_have_children_under_age_7? %><br>
+    <select class="selectpicker">
+    <option>Yes</option>
+    <option>No</option>
+  </select><br><br>
+    <%= f.label :about %>
+    <%= f.text_area :about, class: "form-control", required: 'required' %><br>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+  </div>
+
+  <div class='form-group'>
+    <%= f.submit class: 'btn btn-success' %>
+  </div>
+<% end %>

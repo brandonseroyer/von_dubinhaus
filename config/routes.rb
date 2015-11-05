@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :dogs do
     resources :comments
   end
+
+resources :applicants
+
 end

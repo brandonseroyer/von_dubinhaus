@@ -1,11 +1,12 @@
-<i><b><h1><%= @dog.name %></h1></b></i>
+<div id="profile-head"><%= @dog.name %></div>
 <br>
 <%= image_tag @dog.image.url(:profile), id: 'pic' %>
 <br>
-<br>
-<h5>Breed: <i><%= @dog.breed %></i></h5>
-<h5>Age: <i><%= @dog.age %> years old</i></h5>
-<h5>Sex: <i><%= @dog.sex %></i></h5><br>
+
+<h3><%= link_to "Apply for Adoption!", new_applicant_path %></h3>
+<h4>Breed: <i><%= @dog.breed %></i></h4>
+<h4>Age: <i><%= @dog.age %> years old</i></h4>
+<h4>Sex: <i><%= @dog.sex %></i></h4><br>
 <h3><%= @dog.name %>'s Story:</h3>
 <p><%= @dog.info %></p>
 <br>
