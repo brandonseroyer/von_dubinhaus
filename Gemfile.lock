@@ -282,6 +282,3 @@ DEPENDENCIES
   vcr
   web-console
   webmock
-
-BUNDLED WITH
-   1.10.6

@@ -1,50 +1,61 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/models/dog_spec.rb": [
-        1,
-        null,
-        1,
-        null,
-        2,
-        2,
-        2,
-        2,
-        2,
-        null,
-        null
-      ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/rails_helper.rb": [
-        1,
+      "/Users/Guest/von_dubinhaus/spec/features/add_dog_pages_spec.rb": [
         1,
         null,
         1,
         1,
         1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
         null,
         1,
-        null,
         1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/environment.rb": [
+      "/Users/Guest/von_dubinhaus/spec/rails_helper.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/von_dubinhaus/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/application.rb": [
+      "/Users/Guest/von_dubinhaus/config/application.rb": [
         1,
         null,
         1,
@@ -72,12 +83,12 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/boot.rb": [
+      "/Users/Guest/von_dubinhaus/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/environments/test.rb": [
+      "/Users/Guest/von_dubinhaus/config/environments/test.rb": [
         1,
         null,
         null,
@@ -121,7 +132,7 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/assets.rb": [
+      "/Users/Guest/von_dubinhaus/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -134,7 +145,7 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/backtrace_silencers.rb": [
+      "/Users/Guest/von_dubinhaus/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -143,12 +154,12 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/cookies_serializer.rb": [
+      "/Users/Guest/von_dubinhaus/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/devise.rb": [
+      "/Users/Guest/von_dubinhaus/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -412,13 +423,13 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/filter_parameter_logging.rb": [
+      "/Users/Guest/von_dubinhaus/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/inflections.rb": [
+      "/Users/Guest/von_dubinhaus/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -436,18 +447,18 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/mime_types.rb": [
+      "/Users/Guest/von_dubinhaus/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/session_store.rb": [
+      "/Users/Guest/von_dubinhaus/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/wrap_parameters.rb": [
+      "/Users/Guest/von_dubinhaus/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -463,15 +474,20 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/routes.rb": [
+      "/Users/Guest/von_dubinhaus/config/routes.rb": [
         1,
         1,
         1,
         null,
         1,
+        1,
+        null,
+        null,
+        1,
+        null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/models/user.rb": [
+      "/Users/Guest/von_dubinhaus/app/models/user.rb": [
         1,
         null,
         null,
@@ -479,37 +495,122 @@
         null,
         null,
         1,
-        null
-      ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/models/dog.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
         1,
         1,
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/models/user_spec.rb": [
+      "/Users/Guest/von_dubinhaus/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Guest/von_dubinhaus/spec/models/dog_spec.rb": [
         1,
         null,
         1,
         null,
         2,
         2,
+        2,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/Guest/von_dubinhaus/app/models/dog.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/von_dubinhaus/spec/models/user_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        2,
+        2,
+        null
+      ],
+      "/Users/Guest/von_dubinhaus/app/controllers/dogs_controller.rb": [
+        1,
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/Guest/von_dubinhaus/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
         null
       ]
     },
-    "timestamp": 1446614335
+    "timestamp": 1447098747
   }
 }
