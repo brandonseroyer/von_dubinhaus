@@ -46,6 +46,7 @@
     <ul class="dropdown-menu">
     <li><%= link_to 'Add Dog', new_dog_path %></li>
     <li><%= link_to 'Adoption Applications', applicants_path %></li>
+    <li><%= link_to 'Admin View', users_path %>
   </ul>
     <li><%= link_to current_user.email, edit_user_registration_path, id:'text-color', class: "navbar-brand"  %></li>
     <li><%= link_to 'Log out',  destroy_user_session_path, method: 'delete', id:'text-color', class: "navbar-brand"  %></li>

@@ -2,10 +2,12 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'dogs#index'
 
+  get '/users', to: 'users#index'
+
   resources :dogs do
     resources :comments
   end
 
-resources :applicants
+  resources :applicants
 
 end
