@@ -5,7 +5,13 @@
   <% @users.each do |user| %>
   <li>
     <%= user.email %>
-    <%= link_to "Edit", edit_user_registration_path(user) %>
+    <% if user.admin %>
+      <FONT COLOR="red">Admin</FONT>
+    <% end %>
+    <%= link_to "Edit", edit_user_path(user) %> |
+    <%= link_to "Delete", user_path(user),
+    :data => {:confirm => "Are you sure?",
+      :method => "delete"} %>
   </li>
   <% end %>
 </ul>
