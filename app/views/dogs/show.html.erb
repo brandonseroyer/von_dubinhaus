@@ -1,47 +1,59 @@
+<div id="profile-box">
 <div id="profile-head"><%= @dog.name %></div>
+
+<div id="social">
+  <h3>Help <%= @dog.name %> get adopted!</h3>
+  <div class="fb-share-button" data-href="http://localhost:3000/dogs" data-layout="button_count"></div><br>
+  <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+  <script>
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+  if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}
+  (document, 'script', 'twitter-wjs');
+  </script>
+</div>
+
 <br>
+<div id="profile-pic-stats">
 <%= image_tag @dog.image.url(:profile), id: 'pic' %>
 <br>
-
 <h3><%= link_to "Apply for Adoption!", new_applicant_path %></h3>
 <h4>Breed: <i><%= @dog.breed %></i></h4>
 <h4>Age: <i><%= @dog.age %> years old</i></h4>
 <h4>Sex: <i><%= @dog.sex %></i></h4>
-<h3><%= @dog.name %>'s Story:</h3>
-<p><%= @dog.info %></p>
-<h3><%= @dog.name %>'s Comments</h3>
-<% if @dog.comments.any? %>
-  <% @comments.each do |comment| %>
-  <ul>
-    <b><%= comment.author %>:</b> <i><%= comment.content %></i>
-    <% if current_user.id == @dog.user_id %>
-    <%= link_to "Edit", edit_dog_comment_path(@dog, comment) %> |
-    <%= link_to "Delete", dog_comment_path(@dog, comment),
-    :data => {:confirm => "Are you sure?",
-      :method => "delete"} %>
+</div>
+
+<div id="dog-story-comments">
+  <h3><%= @dog.name %>'s Story:</h3>
+  <p><%= @dog.info %></p>
+
+  <h4>Comments</h4>
+  <% if @dog.comments.any? %>
+    <% @comments.each do |comment| %>
+    <ul>
+      <b><%= comment.author %>:</b> <i><%= comment.content %></i>
+      <% if current_user.id == @dog.user_id %>
+      <%= link_to "Edit", edit_dog_comment_path(@dog, comment) %> |
+      <%= link_to "Delete", dog_comment_path(@dog, comment),
+      :data => {:confirm => "Are you sure?",
+        :method => "delete"} %>
+        <% end %>
+      </ul>
       <% end %>
-    </ul>
+    <% else %>
+    <p>There are no comments yet!</p>
     <% end %>
-  <% else %>
-  <p>There are no comments yet!</p>
-  <% end %>
+    <%= link_to "Add an comment", new_dog_comment_path(@dog) %>
+</div>
 
-  <div id='edit-dog-form'>
-  </div>
-
-<p><%= link_to "Add an comment", new_dog_comment_path(@dog) %><br>
+<div id='edit-dog-form'>
+</div>
+<hr>
+<div id='dog-links'>
+<p>
 <%= link_to "Edit", edit_dog_path(@dog), id:'edit-dog-link', remote: true %><br>
 <%= link_to "Delete", dog_path(@dog),
 :data => {:confirm => "You sure?",
   :method => "delete"} %><br>
   <%= link_to "Return to Home", dogs_path %></p>
-
-
-
-        <div class="fb-share-button" data-href="http://localhost:3000/dogs" data-layout="button_count"></div><br>
-        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-        <script>
-          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-          if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}
-            (document, 'script', 'twitter-wjs');
-        </script>
+</div>
+</div>
