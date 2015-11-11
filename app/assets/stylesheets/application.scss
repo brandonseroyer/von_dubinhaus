@@ -27,11 +27,21 @@
   color: white;
   font-size: 16px;
   font-weight: bold;
+}
+
+
+#dropdown {
+
+
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
 
 }
 
 body {
    background-color: #FFFFCC;
+
 
  }
 
@@ -107,6 +117,8 @@ header {
   border-style-top: outset;
   border-style-left: outset;
   border-style-bottom: outset;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, .85);
 }
 
 #profile-box {

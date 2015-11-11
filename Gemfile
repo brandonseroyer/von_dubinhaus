@@ -15,6 +15,8 @@ gem 'rest-client'
 gem "paperclip", '~> 4.1'
 gem 'sqlite3'
 gem 'carrierwave'
+gem 'paypal-sdk-rest'
+gem 'braintree'
 
 
 group :development do
