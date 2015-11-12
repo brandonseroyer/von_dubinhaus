@@ -16,6 +16,12 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+* {
+  font-family: 'Homenaje', arial, sans-serif;
+  font-size: 20px;
+}
+
+
  /* navbar */
   .navbar-default {
    background-color: black;
@@ -44,7 +50,7 @@ hr {
 
 #text-color {
   color: white;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold;
   padding-right: 35px;
 }
@@ -79,13 +85,13 @@ header {
 }
 
 #profile-head {
-  font-family: cursive;
+  font-family: 'Satisfy', cursive;
   font-size: 65px;
 }
 
 #social {
 
-  width: 150px;
+  width: 180px;
   height: 100px;
   float: right;
   padding-left: 10px;
@@ -115,11 +121,21 @@ header {
   border-radius: 25px;
   padding-bottom: 10px;
   padding-top: 10px;
-  width: 65em;
+  width: 60em;
   background-color: #FAFAFA;
 }
 
-#dog-story-comments {
+#dog-story {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+#dog-comments {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+#edit-dog-form {
   padding-right: 25px;
   padding-left: 25px;
 }
@@ -130,6 +146,7 @@ header {
 
 #profile-pic-stats {
   padding-left: 25px;
+  font-size: 24px;
 }
 
 #dog-links {
@@ -149,5 +166,16 @@ header {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 250px;
+}
 
+#index-profile-font {
+  font-size: 24px;
+}
+
+#apply-font {
+  font-size: 36px;
+}
+
+#dog-stats {
+  font-size: 20px;
 }

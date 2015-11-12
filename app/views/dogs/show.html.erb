@@ -18,19 +18,21 @@
 
 <br>
 <div id="profile-pic-stats">
-<%= image_tag @dog.image.url(:profile), id: 'pic' %>
-<br>
-<h3><%= link_to "Apply for Adoption!", new_applicant_path %></h3>
-<h4>Breed: <i><%= @dog.breed %></i></h4>
-<h4>Age: <i><%= @dog.age %> years old</i></h4>
-<h4>Sex: <i><%= @dog.sex %></i></h4>
+  <%= image_tag @dog.image.url(:profile), id: 'pic' %>
+  <br>
+  <%= link_to "Apply for Adoption!", new_applicant_path, id:'apply-font' %><br>
+  Breed: <i><%= @dog.breed %></i><br>
+  Age: <i><%= @dog.age %> years old</i><br>
+  Sex: <i><%= @dog.sex %></i>
 </div>
-
-<div id="dog-story-comments">
+<hr>
+<div id="dog-story">
   <h3><%= @dog.name %>'s Story:</h3>
   <p><%= @dog.info %></p>
-
-  <h4>Comments</h4>
+</div>
+<hr>
+<div id="dog-comments">
+<h3>Comments:</h3>
   <% if @dog.comments.any? %>
     <% @comments.each do |comment| %>
     <ul>
@@ -47,7 +49,7 @@
     <p>There are no comments yet!</p>
     <% end %>
     <%= link_to "Add an comment", new_dog_comment_path(@dog) %>
-</div>
+  </div>
 
 <div id='edit-dog-form'>
 </div>
