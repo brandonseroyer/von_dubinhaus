@@ -20,44 +20,33 @@
   .navbar-default {
    background-color: black;
    border-color: black;
-
  }
-
-#navbar {
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-}
 
 
 #dropdown {
-
-
   font-size: 16px;
   font-weight: bold;
-  background-color: transparent;
-
 }
 
 body {
    background-color: #FFFFCC;
-
-
  }
 
 hr {
      border: 1px solid #000000;
      border-style: solid;
      color: #000000;
+ }
 
+ header {
+   background-size: 100%;
  }
 
 #text-color {
   color: white;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
-  padding-right: 20px;
-
+  padding-right: 35px;
 }
 
 #nav-text {
@@ -74,19 +63,14 @@ hr {
   padding-right: 20px;
 }
 
-
-
 header {
   font-size: 55px;
   font-weight: bold;
-
-
 }
 
 #profile {
   width: 475px;
   margin: 0 auto;
-
 }
 
 #pic {
@@ -114,11 +98,16 @@ header {
   color: white;
   font-size: 110%;
   font-weight: bold;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
   border-style-top: outset;
   border-style-left: outset;
   border-style-bottom: outset;
   background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, .85);
+  background: rgba(0, 0, 0, .75);
 }
 
 #profile-box {
@@ -126,19 +115,17 @@ header {
   border-radius: 25px;
   padding-bottom: 10px;
   padding-top: 10px;
-  width: 70em;
-
+  width: 65em;
+  background-color: #FAFAFA;
 }
 
 #dog-story-comments {
   padding-right: 25px;
   padding-left: 25px;
-
 }
 
 #profile-head {
   padding-left: 25px;
-
 }
 
 #profile-pic-stats {
@@ -151,5 +138,16 @@ header {
 
 #profile-page {
   padding-left: 25px;
+}
+
+#nav-right {
+  padding-top: 12px;
+}
+
+#header {
+  background: url(header.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 250px;
 
 }
