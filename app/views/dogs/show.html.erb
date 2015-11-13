@@ -2,8 +2,12 @@
 <div id="profile-box">
 <div id="profile-head"><%= @dog.name %></div>
 
+<div id="donate">
+  <%= link_to 'Donate', new_charge_path, id:'text-color2' %>
+</div><br><br>
+
 <div id="social">
-  <p>Help <%= @dog.name %> get adopted!
+  Help <%= @dog.name %> get adopted!
     <div class="fb-share-button" data-href="http://localhost:3000/dogs" data-layout="button_count">
     </div>
     <br>
@@ -13,10 +17,10 @@
     if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}
     (document, 'script', 'twitter-wjs');
     </script>
-  </p>
 </div>
 
 <br>
+
 <div id="profile-pic-stats">
   <%= image_tag @dog.image.url(:profile), id: 'pic' %>
   <br>
@@ -25,6 +29,7 @@
   Age: <i><%= @dog.age %> years old</i><br>
   Sex: <i><%= @dog.sex %></i>
 </div>
+
 <hr>
 <div id="dog-story">
   <h3><%= @dog.name %>'s Story:</h3>

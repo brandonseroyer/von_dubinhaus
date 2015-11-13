@@ -55,6 +55,12 @@ hr {
   padding-right: 35px;
 }
 
+#text-color2 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 #nav-text {
    color: white;
    font-weight: bold;
@@ -92,7 +98,7 @@ header {
 #social {
 
   width: 180px;
-  height: 100px;
+  height: 90px;
   float: right;
   padding-left: 10px;
   padding-bottom: 10px;
@@ -102,7 +108,33 @@ header {
   border-bottom: 2px solid;
   background-color: black;
   color: white;
-  font-size: 110%;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  border-style-top: outset;
+  border-style-left: outset;
+  border-style-bottom: outset;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, .75);
+}
+
+#donate {
+
+  width: 180px;
+  height: 50px;
+  float: right;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-top:    2px solid;
+  border-left:  3px solid;
+  border-bottom: 2px solid;
+  background-color: black;
+  color: white;
+  font-size: 100%;
   font-weight: bold;
   text-shadow:
   -1px -1px 0 #000,
@@ -121,7 +153,7 @@ header {
   border-radius: 25px;
   padding-bottom: 10px;
   padding-top: 10px;
-  width: 60em;
+  width: 55em;
   background-color: #FAFAFA;
 }
 
@@ -166,6 +198,10 @@ header {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 250px;
+  border-right: solid;
+  border-left: solid;
+  border-top: solid;
+  border-width: 1px;
 }
 
 #index-profile-font {

@@ -7,5 +7,5 @@ class User < ActiveRecord::Base
   has_many :dogs, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :applicants, dependent: :destroy
-  
+
 end

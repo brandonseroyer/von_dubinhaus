@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   resources :applicants
 
+  resources :charges
+
 end
