@@ -1,7 +1,9 @@
-<p>Von Dubinhaus Shepherds Rescue is funded completely out of pocket.
-  A donation of any amount to our organization is greatly appreciation as it allows us to continue to do what we love so much -- help German Sheperd Dogs in need!
-  Below we have some set amounts to choose from for those who wish to donate.  Thank you for your support and visiting our site!</p>
+<p>Von Dubinhaus Shepherds Rescue is funded completely out of pocket. Donations of any amount gifted to our organization is greatly appreciation as it allows us to continue to do what we love so much -- help German Sheperd Dogs in need!</p>
+  <p>Below we have some set amounts to choose from for those who wish to donate.  Thank you for your support and visiting our site!</p>
+<p>Sincerely,<br>
+Paul Dubinski and Brandon Seroyer</p>
 
+<hr>
 <%= form_tag charges_path do %>
   <article>
     <% if flash[:error].present? %>
@@ -27,7 +29,7 @@
     <br><script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
             data-description="$10 donation"
-            data-amount="1000"
+            data-amount="<%= @amount * 2 %>"
             data-locale="auto"></script><br><br>
         </article>
 

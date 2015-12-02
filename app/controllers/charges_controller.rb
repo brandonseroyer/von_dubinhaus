@@ -1,8 +1,10 @@
 class ChargesController < ApplicationController
-    def new
+  def new
   end
 
   def create
+    # Amount in cents
+    @amount = 500
 
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],

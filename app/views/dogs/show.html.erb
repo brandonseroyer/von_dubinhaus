@@ -42,12 +42,10 @@
     <% @comments.each do |comment| %>
     <ul>
       <b><%= comment.author %>:</b> <i><%= comment.content %></i>
-      <% if current_user.id == @dog.user_id %>
       <%= link_to "Edit", edit_dog_comment_path(@dog, comment) %> |
       <%= link_to "Delete", dog_comment_path(@dog, comment),
       :data => {:confirm => "Are you sure?",
         :method => "delete"} %>
-        <% end %>
       </ul>
       <% end %>
     <% else %>
