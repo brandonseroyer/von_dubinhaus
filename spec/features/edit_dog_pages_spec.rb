@@ -1,13 +1,15 @@
 require 'rails_helper'
 
-describe "the delete a post process" do
-  it "deletes a post on the app" do
+describe "the edit a post process" do
+  it "edits a post on the app" do
     login_user
     post = FactoryGirl.create(:dog)
     visit dogs_path
     click_on "Sky"
-    click_on "Delete"
-    expect(page).to have_no_content "Sky"
+    click_on "Edit"
+    fill_in "Name",  with: "Angel"
+    click_on "Update Dog"
+    expect(page).to have_content "Angel"
   end
   def login_user
     visit dogs_path
