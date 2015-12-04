@@ -14,4 +14,6 @@ Rails.application.routes.draw do
 
   resources :charges
 
+  resources :testimonials
+
 end

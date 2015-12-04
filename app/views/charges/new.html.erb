@@ -4,66 +4,95 @@
 Paul Dubinski and Brandon Seroyer</p>
 
 <hr>
-<%= form_tag charges_path do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
+    <%= form_tag charges_path do %>
+      <article>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
 
-    <label class="amount">
-      <span>Amount: $5.00</span>
-    </label>
-
-  <br><script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="$5 donation"
-          data-amount="500"
-          data-locale="auto"></script><br><br>
-
-    <label class="amount">
-      <span>Amount: $10.00</span>
-    </label>
-
-    <br><script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-            data-description="$10 donation"
-            data-amount="1000"
-            data-locale="auto"></script><br><br>
-        </article>
 
         <label class="amount">
-          <span>Amount: $20.00</span>
+          <span>Amount: $5.00</span>
         </label>
+      </article>
 
-        <br><script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                data-description="$20 donation"
-                data-amount="2000"
-                data-locale="auto"></script><br><br>
-            </article>
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="$5 donation"
+              data-amount="500"
+              data-locale="auto"></script>
+    <% end %>
+<br>
+    <%= form_tag charges_path do %>
+      <article>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
 
-            <label class="amount">
-              <span>Amount: $50.00</span>
-            </label>
+        <label class="amount">
+          <span>Amout: $10.00</span>
+        </label>
+      </article>
 
-            <br><script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                    data-description="$50 donation"
-                    data-amount="5000"
-                    data-locale="auto"></script><br><br>
-                </article>
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="$10 donation"
+              data-amount="1000"
+              data-locale="auto"></script>
+    <% end %>
 
-                <label class="amount">
-                  <span>Amount: $100.00</span>
-                </label>
 
-                <br><script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                        data-description="$100 donation"
-                        data-amount="10000"
-                        data-locale="auto"></script><br><br>
-                    </article>
 
-<% end %>
+
+<!--
+
+<br>
+<table>
+<div id="pay-block-2">
+  <div id="pay1">
+    <%= form_tag charges_path do %>
+      <article>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+        <label class="amount">
+          <span>Amount: $5.00</span>
+        </label>
+      </article>
+
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="$5 donation"
+              data-amount="500"
+              data-locale="auto"></script>
+    <% end %>
+</div>
+<br>
+  <div id="pay2">
+    <%= form_tag charges_path do %>
+      <article>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+        <label class="amount">
+          <span>Amount: $10.00</span>
+        </label>
+      </article>
+
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="$10 donation"
+              data-amount="1000"
+              data-locale="auto"></script>
+    <% end %>
+  </div>
+</div>
+</table> -->

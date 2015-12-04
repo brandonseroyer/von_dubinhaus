@@ -1,0 +1,17 @@
+<center><header>Testimonials</header></center>
+<br>
+<div id="profile">
+<% @testimonials.each do |testimonial| %>
+  <%= image_tag testimonial.image.url(:profile), id:'pic' =%>
+  <br>
+    <h3>Name: <%=  testimonial.name %></h3>
+    <h3>Adopted: <%= testimonial.date %></h3>
+    <h4><%= testimonial.story %></h4>
+      <hr>
+      <br>
+      <%= link_to "Delete", testimonial_path(@testimonial),
+      :data => {:confirm => "You sure?",
+        :method => "delete"} %><br>
+    <% end %>
+
+</div>

@@ -49,8 +49,15 @@
       <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Tools<span class="caret"></span></a>
       <ul class="dropdown-menu" id="dropdown">
       <li><%= link_to 'Add Dog', new_dog_path %></li>
+      <li><%= link_to 'Add Testimonial', new_testimonial_path %></li>
       <li><%= link_to 'Adoption Applications', applicants_path %></li>
       <li><%= link_to 'Admin View', users_path %></li>
+      </ul>
+      <li class="dropdown">
+      <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dogs<span class="caret"></span></a>
+      <ul class="dropdown-menu" id="dropdown">
+      <li><%= link_to 'Available', dogs_path %></li>
+      <li><%= link_to 'Testamonials', testimonials_path %></li>
       </ul>
       <li><%= link_to 'Donate', new_charge_path, id:'text-color' %></li>
       <li><%= link_to current_user.email, edit_user_registration_path, id:'text-color', class: "navbar-brand"  %></li>
