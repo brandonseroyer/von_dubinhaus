@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, :path_prefix => 'd' # routes for devise modules on User
   resources :users # custom admin-type CRUD for users
 
-  root to: 'dogs#index'
+  root to: 'home#index'
 
   get '/users', to: 'users#index'
 
@@ -15,5 +15,7 @@ Rails.application.routes.draw do
   resources :charges
 
   resources :testimonials
+
+  resources :home, :only => [:index]
 
 end
