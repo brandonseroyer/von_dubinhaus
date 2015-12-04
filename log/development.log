@@ -9027,3 +9027,782 @@ Processing by HomeController#index as HTML
   Rendered home/index.html.erb within layouts/application (7.6ms)
   [1m[36mUser Load (19.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
 Completed 200 OK in 112ms (Views: 91.1ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 22:39:42 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (114.6ms)
+  [1m[35mUser Load (5.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 492ms (Views: 486.8ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 22:40:05 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (20.8ms)
+  [1m[36mUser Load (19.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 437ms (Views: 416.3ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 22:40:29 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (8.5ms)
+  [1m[35mUser Load (2.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 100ms (Views: 97.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 22:40:38 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 90ms (Views: 88.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 22:41:07 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (12.3ms)
+  [1m[35mUser Load (12.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 111ms (Views: 97.8ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 22:41:41 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (26.9ms)
+  [1m[36mUser Load (13.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 124ms (Views: 110.1ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 22:41:50 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (8.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 87ms (Views: 85.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 22:45:33 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (88.4ms)
+  [1m[36mUser Load (14.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 4454ms (Views: 4438.1ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 22:47:28 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (71.9ms)
+  [1m[35mUser Load (14.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 427ms (Views: 411.9ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 22:47:56 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (33.5ms)
+  [1m[36mUser Load (9.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 143ms (Views: 133.2ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 22:55:26 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (88.2ms)
+  [1m[35mUser Load (15.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 481ms (Views: 464.1ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 22:57:20 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (69.5ms)
+  [1m[36mUser Load (6.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 435ms (Views: 402.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 22:59:05 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (50.6ms)
+  [1m[35mUser Load (9.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 344ms (Views: 333.4ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 22:59:18 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (4.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 112ms (Views: 106.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:02:29 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (99.5ms)
+  [1m[35mUser Load (25.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 4336ms (Views: 4310.0ms | ActiveRecord: 25.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:03:13 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (36.2ms)
+  [1m[36mUser Load (12.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2677ms (Views: 2664.5ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:04:38 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (59.0ms)
+  [1m[35mUser Load (15.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 2443ms (Views: 2426.9ms | ActiveRecord: 15.8ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:05:00 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2018ms (Views: 2017.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:05:25 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (9.8ms)
+  [1m[35mUser Load (12.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 2722ms (Views: 2708.2ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:06:50 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (45.1ms)
+  [1m[36mUser Load (10.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 187ms (Views: 176.7ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:07:16 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (54.4ms)
+  [1m[35mUser Load (14.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 156ms (Views: 140.1ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:08:35 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (82.6ms)
+  [1m[36mUser Load (15.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 471ms (Views: 455.1ms | ActiveRecord: 15.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:13:59 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (115.0ms)
+  [1m[35mUser Load (16.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 559ms (Views: 541.5ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:14:19 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.9ms)
+  [1m[36mUser Load (15.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 113ms (Views: 96.8ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:14:43 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 109ms (Views: 107.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:15:11 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (12.3ms)
+  [1m[36mUser Load (8.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 102ms (Views: 92.7ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:15:27 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 116ms (Views: 115.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:15:34 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (17.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 121ms (Views: 102.5ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:15:47 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 108ms (Views: 107.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:18:23 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (88.1ms)
+  [1m[36mUser Load (14.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 3970ms (Views: 3953.7ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:19:27 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (111.3ms)
+  [1m[35mUser Load (14.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 3315ms (Views: 3299.9ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:19:55 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (43.1ms)
+  [1m[36mUser Load (15.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2844ms (Views: 2827.5ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:20:42 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (46.5ms)
+  [1m[35mUser Load (6.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 274ms (Views: 267.0ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:21:02 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.9ms)
+  [1m[36mUser Load (9.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 101ms (Views: 91.5ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:21:10 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 92ms (Views: 91.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:21:31 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 99ms (Views: 95.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:21:47 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.6ms)
+  [1m[35mUser Load (9.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 279ms (Views: 268.3ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:22:22 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (49.6ms)
+  [1m[36mUser Load (4.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 453ms (Views: 448.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:22:45 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (30.2ms)
+  [1m[35mUser Load (18.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 157ms (Views: 138.4ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:23:47 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (90.0ms)
+  [1m[36mUser Load (9.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 460ms (Views: 449.6ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:24:09 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (16.3ms)
+  [1m[35mUser Load (19.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 155ms (Views: 134.3ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:24:37 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.2ms)
+  [1m[36mUser Load (12.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 134ms (Views: 120.8ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:24:54 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 100ms (Views: 98.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:25:59 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (56.4ms)
+  [1m[36mUser Load (10.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 352ms (Views: 340.8ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:26:11 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (31.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 142ms (Views: 141.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:27:08 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (45.4ms)
+  [1m[36mUser Load (12.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 209ms (Views: 196.3ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:27:39 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (22.7ms)
+  [1m[35mUser Load (25.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 345ms (Views: 318.9ms | ActiveRecord: 25.8ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:27:53 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (15.4ms)
+  [1m[36mUser Load (3.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 109ms (Views: 105.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:28:10 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (8.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 97ms (Views: 96.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:28:35 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (67.7ms)
+  [1m[36mUser Load (15.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2621ms (Views: 2604.6ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:28:49 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (6.9ms)
+  [1m[35mUser Load (13.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 2024ms (Views: 2009.8ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:29:14 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (73.1ms)
+  [1m[36mUser Load (15.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 256ms (Views: 240.5ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-03 23:29:34 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (8.3ms)
+  [1m[35mUser Load (4.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 78ms (Views: 73.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/dogs" for ::1 at 2015-12-03 23:30:28 -0800
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (12.7ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (42.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 440ms (Views: 426.6ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/testimonials" for ::1 at 2015-12-03 23:30:41 -0800
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (13.1ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (27.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 267ms (Views: 227.4ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:30:50 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (88.4ms)
+  [1m[36mUser Load (10.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 276ms (Views: 265.0ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:32:06 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (82.8ms)
+  [1m[35mUser Load (9.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 450ms (Views: 439.8ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:34:17 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (90.0ms)
+  [1m[36mUser Load (8.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 470ms (Views: 461.0ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:34:31 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.5ms)
+  [1m[35mUser Load (11.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 123ms (Views: 109.7ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:34:51 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (16.9ms)
+  [1m[36mUser Load (17.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 137ms (Views: 118.2ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:35:53 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (36.2ms)
+  [1m[35mUser Load (13.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 277ms (Views: 263.3ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:36:34 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (54.6ms)
+  [1m[36mUser Load (8.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 366ms (Views: 357.1ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:36:45 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (15.0ms)
+  [1m[35mUser Load (7.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 146ms (Views: 137.7ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:37:55 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (54.3ms)
+  [1m[36mUser Load (11.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 403ms (Views: 391.6ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:38:21 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (68.5ms)
+  [1m[35mUser Load (5.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 264ms (Views: 257.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:38:32 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (20.9ms)
+  [1m[36mUser Load (28.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 153ms (Views: 122.9ms | ActiveRecord: 28.7ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:38:52 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (39.0ms)
+  [1m[35mUser Load (11.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 244ms (Views: 231.8ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:39:12 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (10.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 123ms (Views: 112.3ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:39:31 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.8ms)
+  [1m[35mUser Load (8.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 134ms (Views: 125.0ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:41:47 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (303.0ms)
+Completed 500 Internal Server Error in 307ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `page' for #<#<Class:0x007fef12ef3ba8>:0x007fef0afa9320>):
+    55: <div id="home-page-text">
+    56:   <br>
+    57:   <b><h1>Looking To Make a Difference and Enrich Your Life?<br>Don't shopt - Adopt!</h1></b>
+    58:   <h3>Visit our <%= link_to Rescue page, dogs_path %> to learn more about our available Rescue Shephreds currently looking for homes!</h3>
+    59:   <hr>
+    60:   <b><h1>We Don't Just Train Dogs - We Train You!</h1></b>
+    61:   <h3>Destructive Behaviour?</h3>
+  app/views/home/index.html.erb:58:in `_app_views_home_index_html_erb___4142480409744902959_70332329050240'
+
+
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.9ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (62.2ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (211.4ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:42:05 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (51.3ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Page):
+    55: <div id="home-page-text">
+    56:   <br>
+    57:   <b><h1>Looking To Make a Difference and Enrich Your Life?<br>Don't shopt - Adopt!</h1></b>
+    58:   <h3>Visit our <%= link_to Rescue Page, dogs_path %> to learn more about our available Rescue Shephreds currently looking for homes!</h3>
+    59:   <hr>
+    60:   <b><h1>We Don't Just Train Dogs - We Train You!</h1></b>
+    61:   <h3>Destructive Behaviour?</h3>
+  app/views/home/index.html.erb:58:in `_app_views_home_index_html_erb___4142480409744902959_70332428925680'
+
+
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (72.6ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (85.9ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (211.4ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:42:30 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (29.2ms)
+  [1m[36mUser Load (10.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 300ms (Views: 288.9ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/dogs" for ::1 at 2015-12-03 23:42:34 -0800
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.4ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (10.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 120ms (Views: 117.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:42:37 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (16.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 102ms (Views: 101.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:43:42 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (46.0ms)
+  [1m[36mUser Load (22.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 298ms (Views: 275.5ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/home" for ::1 at 2015-12-03 23:44:11 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (37.1ms)
+  [1m[35mUser Load (19.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 157ms (Views: 136.8ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-03 23:44:34 -0800
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (5.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 221ms (Views: 213.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-03 23:49:40 -0800
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (161.6ms)
+Completed 500 Internal Server Error in 262ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `donate' for #<#<Class:0x007fef18523320>:0x007fef175c4578>):
+    1: <%= image_tag (donate.jpg) %>
+    2: <p>Von Dubinhaus Shepherds Rescue is funded completely out of pocket. Donations of any amount gifted to our organization is greatly appreciation as it allows us to continue to do what we love so much -- help German Sheperd Dogs in need!</p>
+    3:   <p>Below we have some set amounts to choose from for those who wish to donate.  Thank you for your support and visiting our site!</p>
+    4: <p>Sincerely,<br>
+  app/views/charges/new.html.erb:1:in `_app_views_charges_new_html_erb___3086702268493557188_70332432725980'
+
+
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.7ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.4ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (171.9ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-03 23:50:08 -0800
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (154.4ms)
+  [1m[35mUser Load (49.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 597ms (Views: 546.6ms | ActiveRecord: 49.5ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-03 23:52:48 -0800
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (249.9ms)
+  [1m[36mUser Load (36.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 1369ms (Views: 1331.8ms | ActiveRecord: 36.8ms)
+
+
+Started GET "/images/donate.jpg" for ::1 at 2015-12-03 23:52:52 -0800
+
+ActionController::RoutingError (No route matches [GET] "/images/donate.jpg"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/bseroyer/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/bseroyer/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/bseroyer/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (9.4ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.2ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3@global/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (490.3ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (208.0ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/bseroyer/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (545.4ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-03 23:53:33 -0800
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (23.7ms)
+  [1m[35mUser Load (11.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 286ms (Views: 274.1ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-03 23:55:12 -0800
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (116.7ms)
+  [1m[36mUser Load (14.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 693ms (Views: 678.2ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-03 23:56:34 -0800
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (40.1ms)
+  [1m[35mUser Load (11.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 448ms (Views: 435.9ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-03 23:58:23 -0800
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (35.1ms)
+  [1m[36mUser Load (14.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 3396ms (Views: 3380.4ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-03 23:59:09 -0800
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (25.7ms)
+  [1m[35mUser Load (15.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 1955ms (Views: 1939.7ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-04 00:01:04 -0800
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (82.0ms)
+  [1m[36mUser Load (16.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2542ms (Views: 2525.2ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-04 00:02:10 -0800
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (22.9ms)
+  [1m[35mUser Load (15.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 2332ms (Views: 2315.9ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/home" for ::1 at 2015-12-04 00:02:23 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (32.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 2104ms (Views: 2103.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dogs" for ::1 at 2015-12-04 00:03:03 -0800
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (10.1ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (39.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 225ms (Views: 213.4ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/dogs/4" for ::1 at 2015-12-04 00:03:06 -0800
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mDog Load (0.2ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mComment Exists (37.8ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 4]]
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dog_id" = ?  ORDER BY created_at ASC[0m  [["dog_id", 4]]
+  Rendered dogs/show.html.erb within layouts/application (59.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 249ms (Views: 112.5ms | ActiveRecord: 38.7ms)
+
+
+Started GET "/testimonials" for ::1 at 2015-12-04 00:03:14 -0800
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (10.8ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (15.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 130ms (Views: 118.0ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-04 00:05:14 -0800
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (20.7ms)
+  [1m[36mUser Load (14.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 259ms (Views: 244.3ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/charges/new" for ::1 at 2015-12-04 00:05:50 -0800
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (5.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 94ms (Views: 91.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2015-12-04 00:06:10 -0800
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (67.1ms)
+  [1m[36mUser Load (13.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 246ms (Views: 231.0ms | ActiveRecord: 13.7ms)

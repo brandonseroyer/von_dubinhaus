@@ -88,6 +88,7 @@ header {
 #pic {
   border-style: solid;
   border-width: 2px;
+
 }
 
 #profile-head {
@@ -217,6 +218,18 @@ header {
 }
 
 #pay-block-2 {
+}
 
+#carousel-text {
+  font-size: 35px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, .75);
+}
 
+#home-page-text {
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, .15)
 }
