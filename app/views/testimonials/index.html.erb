@@ -7,11 +7,16 @@
     <h3>Name: <%=  testimonial.name %></h3>
     <h3>Adopted: <%= testimonial.date %></h3>
     <h4><%= testimonial.story %></h4>
-      <hr>
-      <br>
-      <%= link_to "Delete", testimonial_path(@testimonial),
-      :data => {:confirm => "You sure?",
-        :method => "delete"} %><br>
-    <% end %>
-
+ <div id='edit-testimonial-form'>
+ </div>
+ <div id='testimonial-links'>
+    <p>
+    <%= link_to "Edit", edit_testimonial_path(testimonial), id:'edit-testimonial-link', remote: true %><br>
+    <%= link_to "Delete", testimonial_path(testimonial),
+    :data => {:confirm => "You sure?",
+      :method => "delete"} %>
+<hr>
+<% end %>
+<%= link_to "Return to Home", dogs_path %></p>
+ </div>
 </div>

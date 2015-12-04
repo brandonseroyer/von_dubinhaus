@@ -1,5 +1,5 @@
 class TestimonialsController < ApplicationController
-  before_action :find_testimonial, except: [:index, :new, :create]
+
   def index
     @testimonials = Testimonial.all.order(created_at: :desc)
   end
@@ -19,8 +19,6 @@ class TestimonialsController < ApplicationController
   end
 
   def show
-    @testimonial = Testimonial.find(params[:id])
-    render :show
   end
 
   def edit
@@ -35,7 +33,7 @@ class TestimonialsController < ApplicationController
     @testimonial = Testimonial.find(params[:id])
 
     if @testimonial.update(testimonial_params)
-      redirect_to testimonial_path(@testimonial)
+      redirect_to testimonials_path
     else
       render :edit
     end
@@ -49,7 +47,7 @@ class TestimonialsController < ApplicationController
 
   private
   def testimonial_params
-    params.require(:testimonial).permit(:name, :date, :age, :story, :image, :user_id)
+    params.require(:testimonial).permit(:name, :date, :story, :image, :user_id)
   end
 
   def find_testimonial
