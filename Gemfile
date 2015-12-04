@@ -13,8 +13,6 @@ gem 'bootstrap-sass'
 gem "font-awesome-rails"
 gem 'rest-client'
 gem "paperclip", '~> 4.1'
-gem 'sqlite3'
-gem 'carrierwave'
 gem 'stripe'
 
 group :development do
