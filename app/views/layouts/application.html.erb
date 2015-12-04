@@ -49,6 +49,14 @@
     <div id="nav-right">
     <ul class="nav navbar-nav navbar-right">
       <% unless current_user %>
+      <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+      <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dogs<span class="caret"></span></a>
+      <ul class="dropdown-menu" id="dropdown">
+      <li><%= link_to 'Available', dogs_path %></li>
+      <li><%= link_to 'Testimonials', testimonials_path %></li>
+      </ul>
+      <li><%= link_to 'Donate', new_charge_path, id:'text-color' %></li>
       <li><%= link_to 'Sign in', new_user_session_path, id:'text-color', class: "navbar-brand"  %></li>
       <li><%= link_to 'Sign up', new_user_registration_path, id:'text-color', class: "navbar-brand"  %></li>
       <% else %>
