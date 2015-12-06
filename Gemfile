@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks'
 gem 'devise'
+gem 'sqlite3'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
 gem 'rest-client'
@@ -27,6 +28,7 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'launchy'
   gem 'pry'
+  gem 'vcr'
   gem 'dotenv-rails'
   gem 'hirb'
 end
@@ -36,7 +38,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'simplecov', require: false
   gem 'capybara'
-  gem 'vcr'
   gem 'webmock'
 end
 

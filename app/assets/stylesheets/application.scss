@@ -35,13 +35,13 @@
 }
 
 body {
-   background-color: #FFFFCC;
+  background-color: #FFFFCC;
  }
 
 hr {
-     border: 1px solid #000000;
-     border-style: solid;
-     color: #000000;
+   border: 1px solid #000000;
+   border-style: solid;
+   color: #000000;
  }
 
  header {
@@ -233,4 +233,14 @@ header {
   text-align: center;
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, .15)
+}
+
+#background-wrap {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#my-carousel {
+  border-style: solid;
+  border-width: 1px;
 }

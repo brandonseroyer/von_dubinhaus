@@ -496,6 +496,10 @@
         null,
         1,
         null,
+        1,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/models/user.rb": [
@@ -628,6 +632,54 @@
       "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/helpers/charges_helper_spec.rb": [
 
       ],
+      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/models/applicant_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/models/applicant.rb": [
+        1,
+        null,
+        7,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/models/comment_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        2,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/models/comment.rb": [
+        1,
+        12,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/models/dog_spec.rb": [
         1,
         null,
@@ -657,11 +709,37 @@
         null,
         null
       ],
+      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/models/testimonial_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        2,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/models/testimonial.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/models/user_spec.rb": [
         1,
         null,
         1,
         null,
+        2,
+        2,
         2,
         2,
         null
@@ -670,7 +748,7 @@
         1,
         1,
         1,
-        11,
+        8,
         null,
         null,
         1,
@@ -727,15 +805,15 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/models/comment.rb": [
+      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/controllers/home_controller.rb": [
         1,
-        9,
+        null,
         1,
-        1,
-        1,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1449116219
+    "timestamp": 1449433372
   }
 }
