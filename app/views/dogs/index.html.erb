@@ -1,11 +1,11 @@
 <center><header>Available for Adoption</header></center>
 <br>
 <div id="profile">
-<% @dogs.each do |dog| %>
+  <% @dogs.each do |dog| %>
   <%= image_tag dog.image.url(:profile), id:'pic' =%>
-  <br>
+    <br>
     <i><h3>Learn more about <%= link_to dog.name, dog_path(dog), id:'index-profile-font' %>!</h3></i>
-      <hr>
-      <br>
-    <% end %>
-  </div>
+    <hr>
+    <br>
+  <% end %>
+</div>

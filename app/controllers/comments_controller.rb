@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-
   def new
     @dog = Dog.find(params[:dog_id])
     @comment = @dog.comments.new
@@ -38,6 +37,7 @@ class CommentsController < ApplicationController
   end
 
   private
+  
   def comment_params
     params.require(:comment).permit(:content, :author, :dog_id, :user_id)
   end

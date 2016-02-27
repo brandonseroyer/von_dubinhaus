@@ -13,6 +13,7 @@ describe "the add a dog process" do
     click_on 'Create Dog'
     expect(page).to have_content 'Sky'
   end
+  
   def login_user
     visit dogs_path
     click_link "Sign up"

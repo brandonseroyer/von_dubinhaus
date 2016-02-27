@@ -17,5 +17,4 @@ Rails.application.routes.draw do
   resources :testimonials
 
   resources :home, :only => [:index]
-
 end

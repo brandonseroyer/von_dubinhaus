@@ -25,8 +25,8 @@ class ApplicantsController < ApplicationController
   end
 
   private
+  
   def applicant_params
     params.require(:applicant).permit(:name, :dog, :phone, :email, :address, :dogs, :about, :kids, :dogs, :cats)
   end
-
 end

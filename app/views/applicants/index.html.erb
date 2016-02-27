@@ -3,17 +3,17 @@
 <% @applicants.each do |applicant| %>
   <br>
   <hr>
-    Date: <%= applicant.created_at %><br><br>
-    Rescue: <%= applicant.dog %><br>
-    Name: <%= applicant.name %><br>
-    Phone: <%= applicant.phone %><br>
-    Email: <%= applicant.email %><br>
-    Address: <%= applicant.address %><br>
-    Dogs: <%= applicant.dogs %><br>
-    Cats: <%= applicant.cats %><br>
-    Kids: <%= applicant.kids %><br>
-    About: <%= applicant.about %>
-    <p><%= link_to "Delete", applicant_path(applicant),
-    :data => {:confirm => "You sure?",
-      :method => "delete"} %></p>
-  <% end %>
+  Date: <%= applicant.created_at %><br><br>
+  Rescue: <%= applicant.dog %><br>
+  Name: <%= applicant.name %><br>
+  Phone: <%= applicant.phone %><br>
+  Email: <%= applicant.email %><br>
+  Address: <%= applicant.address %><br>
+  Dogs: <%= applicant.dogs %><br>
+  Cats: <%= applicant.cats %><br>
+  Kids: <%= applicant.kids %><br>
+  About: <%= applicant.about %>
+  <p><%= link_to "Delete", applicant_path(applicant),
+  :data => {:confirm => "You sure?",
+    :method => "delete"} %></p>
+<% end %>

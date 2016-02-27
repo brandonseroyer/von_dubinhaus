@@ -37,22 +37,22 @@
 </div>
 <hr>
 <div id="dog-comments">
-<h3>Comments:</h3>
+  <h3>Comments:</h3>
   <% if @dog.comments.any? %>
     <% @comments.each do |comment| %>
-    <ul>
+      <ul>
       <b><%= comment.author %>:</b> <i><%= comment.content %></i>
       <%= link_to "Edit", edit_dog_comment_path(@dog, comment) %> |
       <%= link_to "Delete", dog_comment_path(@dog, comment),
       :data => {:confirm => "Are you sure?",
         :method => "delete"} %>
       </ul>
-      <% end %>
-    <% else %>
-    <p>There are no comments yet!</p>
     <% end %>
-    <%= link_to "Add an comment", new_dog_comment_path(@dog) %>
-  </div>
+  <% else %>
+    <p>There are no comments yet!</p>
+  <% end %>
+  <%= link_to "Add an comment", new_dog_comment_path(@dog) %>
+</div>
 
 <div id='edit-dog-form'>
 </div>

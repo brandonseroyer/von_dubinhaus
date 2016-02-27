@@ -1,5 +1,4 @@
 class Applicant < ActiveRecord::Base
-
   default_scope { order('created_at ASC')}
   validates :name, presence: true
   validates :phone, presence: true
@@ -7,6 +6,5 @@ class Applicant < ActiveRecord::Base
   validates :address, presence: true
   validates :dog, presence: true
   validates :about, presence:true
-
   belongs_to :user
 end

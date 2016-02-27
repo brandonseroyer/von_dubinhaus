@@ -1,16 +1,16 @@
 require 'rails_helper'
 
-describe "the edit a post process" do
+describe "the edit a testimonial post process" do
   it "edits a post on the app" do
     login_user
-    post = FactoryGirl.create(:dog)
-    visit dogs_path
-    click_on "Sky"
+    post = FactoryGirl.create(:testimonial)
+    visit testimonials_path
     click_on "Edit"
     fill_in "Name",  with: "Angel"
-    click_on "Update Dog"
+    click_on "Update Testimonial"
     expect(page).to have_content "Angel"
   end
+
   def login_user
     visit dogs_path
     click_link "Sign up"
