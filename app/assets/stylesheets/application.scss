@@ -207,7 +207,7 @@ header {
 }
 
 #index-profile-font {
-  font-size: 24px;
+  font-size: 30px;
 }
 
 #apply-font {
@@ -222,25 +222,29 @@ header {
 }
 
 #carousel-text {
-  font-size: 35px;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, .75);
+  font-size: 30px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, .30);
+  display: inline-block;
+  padding-left: 1%;
+  padding-right: 1%;
+
 }
 
 #home-page-text {
   width: 700px;
   margin: 0 auto;
   text-align: center;
-  background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, .15)
-}
-
-#background-wrap {
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 #my-carousel {
   border-style: solid;
   border-width: 1px;
+}
+
+.carousel {
+  width:850px;
+  height:300px;
+  margin: 0 auto;
 }
