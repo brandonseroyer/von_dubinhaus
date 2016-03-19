@@ -98,7 +98,7 @@ header {
 }
 
 #social {
-
+  text-align: left;
   width: 180px;
   height: 90px;
   float: right;
@@ -109,7 +109,7 @@ header {
   border-left:  3px solid;
   border-bottom: 2px solid;
   background-color: black;
-  color: white;
+  color: black;
   font-size: 20px;
   font-weight: bold;
   text-shadow:
@@ -120,12 +120,11 @@ header {
   border-style-top: outset;
   border-style-left: outset;
   border-style-bottom: outset;
-  background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, .75);
 }
 
 #donate {
-
+  text-align: left;
   width: 180px;
   height: 50px;
   float: right;
@@ -135,7 +134,7 @@ header {
   border-left:  3px solid;
   border-bottom: 2px solid;
   background-color: black;
-  color: white;
+  color: black;
   font-size: 100%;
   font-weight: bold;
   text-shadow:
@@ -146,7 +145,6 @@ header {
   border-style-top: outset;
   border-style-left: outset;
   border-style-bottom: outset;
-  background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, .75);
 }
 
@@ -155,16 +153,18 @@ header {
   border-radius: 25px;
   padding-bottom: 10px;
   padding-top: 10px;
-  width: 45em;
-  background-color: #FAFAFA;
+  width: 40em;
+  background: rgba(255, 255, 255, .90);
 }
 
 #dog-story {
+  text-align: left;
   padding-right: 25px;
   padding-left: 25px;
 }
 
 #dog-comments {
+  text-align: left;
   padding-right: 25px;
   padding-left: 25px;
 }
@@ -175,15 +175,18 @@ header {
 }
 
 #profile-head {
+  text-align: left;
   padding-left: 25px;
 }
 
 #profile-pic-stats {
+  text-align: left;
   padding-left: 25px;
   font-size: 24px;
 }
 
 #dog-links {
+  text-align: left;
   padding-left: 25px;
 }
 

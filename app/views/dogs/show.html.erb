@@ -1,4 +1,5 @@
 <div id="profile-page">
+<center>
 <div id="profile-box">
 <div id="profile-head"><%= @dog.name %></div>
 
@@ -7,7 +8,8 @@
 </div><br><br>
 
 <div id="social">
-  Help <%= @dog.name %> get adopted!
+  <div id="text-color2">Help <%= @dog.name %> get adopted!
+  </div>
     <div class="fb-share-button" data-href="http://localhost:3000/dogs" data-layout="button_count">
     </div>
     <br>
@@ -66,4 +68,5 @@
   <%= link_to "Return to Home", dogs_path %></p>
 </div>
 </div>
+</center>
 </div>

@@ -16,5 +16,9 @@ Rails.application.routes.draw do
 
   resources :testimonials
 
+  resources :training, :only => [:index]
+
+  resources :about, :only => [:index]
+
   resources :home, :only => [:index]
 end
