@@ -12,6 +12,7 @@ gem 'devise'
 gem 'sqlite3'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
+gem 'bootstrap-social-rails'
 gem 'rest-client'
 gem "paperclip", '~> 4.1'
 gem 'stripe'

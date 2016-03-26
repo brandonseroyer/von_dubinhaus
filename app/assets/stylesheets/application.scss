@@ -239,16 +239,31 @@ header {
   font-weight: bold;
   background: rgba(0, 0, 0, .30);
   display: inline-block;
-  padding-left: 1%;
-  padding-right: 1%;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 25px;
+}
 
+#icon-text {
+  font-size: 30px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, .30);
+  display: inline-block;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 25px;
+  position: relative;
+  right: 25px;
+  top: 25px;
 }
 
 #home-page-text {
   width: 700px;
   margin: 0 auto;
   text-align: center;
-  background: rgba(0, 0, 0, .15)
+  border-radius: 25px;
+  padding: 2%;
+  background: rgba(0, 0, 0, .20);
 }
 
 #my-carousel {
@@ -257,7 +272,13 @@ header {
 }
 
 .carousel {
-  width:850px;
-  height:300px;
+  width: 895px;
+  height: 315px;
   margin: 0 auto;
+}
+
+.row {
+  padding-left: 138px;
+  margin-right: 40px !important;
+
 }
