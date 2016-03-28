@@ -18457,3 +18457,1275 @@ Started GET "/home" for ::1 at 2016-03-26 14:06:33 -0700
 Processing by HomeController#index as HTML
   Rendered home/index.html.erb within layouts/application (15.8ms)
 Completed 200 OK in 79ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charges/new" for ::1 at 2016-03-27 10:37:26 -0700
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (65.0ms)
+Completed 200 OK in 2126ms (Views: 2119.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charges/new" for ::1 at 2016-03-27 10:37:29 -0700
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 80ms (Views: 78.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-27 10:37:32 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 97ms (Views: 96.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 12:05:06 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (63.1ms)
+Completed 200 OK in 226ms (Views: 221.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charges/new" for ::1 at 2016-03-28 12:05:52 -0700
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 76ms (Views: 75.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dogs" for ::1 at 2016-03-28 12:06:06 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (3.1ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 126ms (Views: 99.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/dogs/19" for ::1 at 2016-03-28 12:06:13 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mDog Load (1.1ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", "19"]]
+  [1m[36mComment Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1[0m  [["dog_id", 19]]
+  Rendered dogs/show.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 136ms (Views: 79.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 12:06:24 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 82ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/training" for ::1 at 2016-03-28 12:06:54 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 65ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:05:30 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (110.5ms)
+Completed 200 OK in 215ms (Views: 212.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:05:35 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (1.8ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (53.9ms)
+Completed 200 OK in 144ms (Views: 128.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/d/users/sign_in" for ::1 at 2016-03-28 13:05:43 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fno+GtK/bg7Y98GL0dhi+sLPBGfMvLJeIpn1aLKwNo3MYK8MMIwP+Pi1O6q83x7o2HXI2iSGdaFrIwKVikUZfw==", "user"=>{"email"=>"admin@vondubinhaus.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "admin@vondubinhaus.com"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["remember_created_at", "2016-03-28 20:05:43.540762"], ["updated_at", "2016-03-28 20:05:43.541795"], ["id", 1]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-25 19:56:10.376289"], ["current_sign_in_at", "2016-03-28 20:05:43.552051"], ["sign_in_count", 13], ["updated_at", "2016-03-28 20:05:43.553179"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 132ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/" for ::1 at 2016-03-28 13:05:43 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dogs/new" for ::1 at 2016-03-28 13:05:46 -0700
+Processing by DogsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered dogs/_form.html.erb (11.5ms)
+  Rendered dogs/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 102ms (Views: 90.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/dogs" for ::1 at 2016-03-28 13:06:02 -0700
+Processing by DogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "dog"=>{"name"=>"Luna", "breed"=>"German Shepherd", "age"=>"4", "sex"=>"Female", "info"=>"dafdssa", "user_id"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fe4b3573d80 @tempfile=#<Tempfile:/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/RackMultipart20160328-7733-1rnuu0c.jpg>, @original_filename="luna.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"dog[image]\"; filename=\"luna.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Dog"}
+Can't verify CSRF token authenticity
+Command :: file -b --mime '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160328-7733-1ddqv4v.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160328-7733-f6eath.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160328-7733-f6eath.jpg[0]'
+Command :: convert '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160328-7733-f6eath.jpg[0]' -auto-orient -resize "750x500" '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/b93e1fd1759f1baecc8d4fbeb5ab7ea820160328-7733-1c6kflg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160328-7733-f6eath.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160328-7733-f6eath.jpg[0]'
+Command :: convert '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160328-7733-f6eath.jpg[0]' -auto-orient -resize "450x300" '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/b93e1fd1759f1baecc8d4fbeb5ab7ea820160328-7733-19npxde'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160328-7733-f6eath.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160328-7733-f6eath.jpg[0]'
+Command :: convert '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160328-7733-f6eath.jpg[0]' -auto-orient -resize "x100" -crop "100x100+16+0" +repage '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/b93e1fd1759f1baecc8d4fbeb5ab7ea820160328-7733-71h2mn'
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160328-7733-2cbo25.jpg'
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "dogs" ("name", "sex", "age", "breed", "info", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Luna"], ["sex", "Female"], ["age", "4"], ["breed", "German Shepherd"], ["info", "dafdssa"], ["image_file_name", "luna.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 30090], ["image_updated_at", "2016-03-28 20:06:02.450016"], ["user_id", 1], ["created_at", "2016-03-28 20:06:02.728857"], ["updated_at", "2016-03-28 20:06:02.728857"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 308ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/dogs" for ::1 at 2016-03-28 13:06:02 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.3ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (10.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 82ms (Views: 80.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dogs/24" for ::1 at 2016-03-28 13:06:09 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[35mDog Load (0.2ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "24"]]
+  [1m[35mComment Exists (0.5ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 24]]
+  Rendered dogs/show.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 83ms (Views: 75.0ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/dogs/24" for ::1 at 2016-03-28 13:06:13 -0700
+Processing by DogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ueAQHo09TejQ0Eka+4UsXn8lOnMk3wK8/yig2+37gJwlBOUoK9Gaok1ZVeKDu0F5NkbxTwNJ+tdDJdjiGn1r9Q==", "id"=>"24"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 24]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "24"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dog_id" = ?  ORDER BY created_at ASC[0m  [["dog_id", 24]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "dogs" WHERE "dogs"."id" = ?  [["id", 24]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/024/original/luna.jpg
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/024/standard/luna.jpg
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/024/profile/luna.jpg
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/024/thumb/luna.jpg
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 18ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/dogs" for ::1 at 2016-03-28 13:06:13 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.2ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 74ms (Views: 73.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/new" for ::1 at 2016-03-28 13:06:16 -0700
+Processing by DogsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered dogs/_form.html.erb (4.7ms)
+  Rendered dogs/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 80ms (Views: 79.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/dogs" for ::1 at 2016-03-28 13:06:24 -0700
+Processing by DogsController#create as JS
+  Parameters: {"utf8"=>"✓", "dog"=>{"name"=>"Luna", "breed"=>"German Shepherd", "age"=>"4", "sex"=>"F", "info"=>"sdfdaf", "user_id"=>"1"}, "commit"=>"Create Dog"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "dogs" ("name", "sex", "age", "breed", "info", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Luna"], ["sex", "F"], ["age", "4"], ["breed", "German Shepherd"], ["info", "sdfdaf"], ["user_id", 1], ["created_at", "2016-03-28 20:06:24.541729"], ["updated_at", "2016-03-28 20:06:24.541729"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 8ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/dogs" for ::1 at 2016-03-28 13:06:24 -0700
+Processing by DogsController#index as JS
+  [1m[35mDog Load (0.7ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (20.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 112ms (Views: 110.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/dogs" for ::1 at 2016-03-28 13:06:31 -0700
+Processing by DogsController#create as JS
+  Parameters: {"utf8"=>"✓", "dog"=>{"name"=>"Luna", "breed"=>"German Shepherd", "age"=>"4", "sex"=>"F", "info"=>"sdfdaf", "user_id"=>"1"}, "commit"=>"Create Dog"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "dogs" ("name", "sex", "age", "breed", "info", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Luna"], ["sex", "F"], ["age", "4"], ["breed", "German Shepherd"], ["info", "sdfdaf"], ["user_id", 1], ["created_at", "2016-03-28 20:06:31.204382"], ["updated_at", "2016-03-28 20:06:31.204382"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/dogs" for ::1 at 2016-03-28 13:06:31 -0700
+Processing by DogsController#index as JS
+  [1m[36mDog Load (0.3ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (13.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/dogs" for ::1 at 2016-03-28 13:06:36 -0700
+Processing by DogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "dog"=>{"name"=>"Luna", "breed"=>"German Shepherd", "age"=>"4", "sex"=>"F", "info"=>"sdfdaf", "user_id"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0x007fe4aa9e2668 @tempfile=#<Tempfile:/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/RackMultipart20160328-7733-5incb9.jpg>, @original_filename="lyla2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"dog[image]\"; filename=\"lyla2.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Dog"}
+Can't verify CSRF token authenticity
+Command :: file -b --mime '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/8253ffc76a2409ef2cca4ab181198dba20160328-7733-1xyfqyb.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/8253ffc76a2409ef2cca4ab181198dba20160328-7733-118bykd.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/8253ffc76a2409ef2cca4ab181198dba20160328-7733-118bykd.jpg[0]'
+Command :: convert '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/8253ffc76a2409ef2cca4ab181198dba20160328-7733-118bykd.jpg[0]' -auto-orient -resize "750x500" '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/1eb5020a1a8835aac22e98a260434f2d20160328-7733-11hsghs'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/8253ffc76a2409ef2cca4ab181198dba20160328-7733-118bykd.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/8253ffc76a2409ef2cca4ab181198dba20160328-7733-118bykd.jpg[0]'
+Command :: convert '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/8253ffc76a2409ef2cca4ab181198dba20160328-7733-118bykd.jpg[0]' -auto-orient -resize "450x300" '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/1eb5020a1a8835aac22e98a260434f2d20160328-7733-duz61j'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/8253ffc76a2409ef2cca4ab181198dba20160328-7733-118bykd.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/8253ffc76a2409ef2cca4ab181198dba20160328-7733-118bykd.jpg[0]'
+Command :: convert '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/8253ffc76a2409ef2cca4ab181198dba20160328-7733-118bykd.jpg[0]' -auto-orient -resize "x100" -crop "100x100+16+0" +repage '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/1eb5020a1a8835aac22e98a260434f2d20160328-7733-i1okqx'
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/8253ffc76a2409ef2cca4ab181198dba20160328-7733-4h12u4.jpg'
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "dogs" ("name", "sex", "age", "breed", "info", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Luna"], ["sex", "F"], ["age", "4"], ["breed", "German Shepherd"], ["info", "sdfdaf"], ["image_file_name", "lyla2.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 13495], ["image_updated_at", "2016-03-28 20:06:36.673999"], ["user_id", 1], ["created_at", "2016-03-28 20:06:36.902050"], ["updated_at", "2016-03-28 20:06:36.902050"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 256ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/dogs" for ::1 at 2016-03-28 13:06:36 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.2ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 73ms (Views: 72.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/original/missing.png" for ::1 at 2016-03-28 13:06:37 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.8ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.7ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (110.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.2ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.2ms)
+
+
+Started GET "/dogs/26" for ::1 at 2016-03-28 13:06:47 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "26"]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 26]]
+  Rendered dogs/show.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 81ms (Views: 78.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/profile/missing.png" for ::1 at 2016-03-28 13:06:47 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/profile/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (70.9ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (117.3ms)
+
+
+Started DELETE "/dogs/26" for ::1 at 2016-03-28 13:06:51 -0700
+Processing by DogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"e34GGis9kjz9q028ESNPWBFVwOir5a7pQxp5Yk7dfOHnmvMsjdFFdmAiUURpHSJ/WDYL1IxzVoL/FwFbuVuXiA==", "id"=>"26"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "26"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dog_id" = ?  ORDER BY created_at ASC[0m  [["dog_id", 26]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "dogs" WHERE "dogs"."id" = ?  [["id", 26]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/dogs" for ::1 at 2016-03-28 13:06:51 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.3ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (11.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 84ms (Views: 82.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/images/original/missing.png" for ::1 at 2016-03-28 13:06:51 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (101.6ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.7ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (82.6ms)
+
+
+Started GET "/dogs/25" for ::1 at 2016-03-28 13:06:55 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "25"]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 25]]
+  Rendered dogs/show.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 80ms (Views: 78.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/profile/missing.png" for ::1 at 2016-03-28 13:06:55 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/profile/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.7ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (110.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.1ms)
+
+
+Started DELETE "/dogs/25" for ::1 at 2016-03-28 13:07:00 -0700
+Processing by DogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kwmRukpstGBpNxXUrZjOSvbf0g2/v3GIOvTPNpJH3aAP7WSM7IBjKvS+CSzVpqNtv7wZMZgpieOG+bcPZcE2yQ==", "id"=>"25"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 25]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "25"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dog_id" = ?  ORDER BY created_at ASC[0m  [["dog_id", 25]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "dogs" WHERE "dogs"."id" = ?  [["id", 25]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 13ms (ActiveRecord: 8.7ms)
+
+
+Started GET "/dogs" for ::1 at 2016-03-28 13:07:00 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.2ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 71ms (Views: 70.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs" for ::1 at 2016-03-28 13:07:10 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.4ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 94ms (Views: 89.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/dogs/new" for ::1 at 2016-03-28 13:07:14 -0700
+Processing by DogsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered dogs/_form.html.erb (4.9ms)
+  Rendered dogs/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 77ms (Views: 75.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/dogs" for ::1 at 2016-03-28 13:07:22 -0700
+Processing by DogsController#create as JS
+  Parameters: {"utf8"=>"✓", "dog"=>{"name"=>"Angel", "breed"=>"German Shepherd", "age"=>"5", "sex"=>"Female", "info"=>"sdfadf", "user_id"=>"1"}, "commit"=>"Create Dog"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "dogs" ("name", "sex", "age", "breed", "info", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Angel"], ["sex", "Female"], ["age", "5"], ["breed", "German Shepherd"], ["info", "sdfadf"], ["user_id", 1], ["created_at", "2016-03-28 20:07:22.770110"], ["updated_at", "2016-03-28 20:07:22.770110"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 13ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/dogs" for ::1 at 2016-03-28 13:07:22 -0700
+Processing by DogsController#index as JS
+  [1m[35mDog Load (0.2ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 94ms (Views: 93.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs" for ::1 at 2016-03-28 13:07:26 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.2ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 68ms (Views: 66.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/images/original/missing.png" for ::1 at 2016-03-28 13:07:26 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/original/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (84.1ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.0ms)
+
+
+Started GET "/dogs/28" for ::1 at 2016-03-28 13:07:35 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "28"]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 28]]
+  Rendered dogs/show.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 98ms (Views: 81.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/images/profile/missing.png" for ::1 at 2016-03-28 13:07:35 -0700
+
+ActionController::RoutingError (No route matches [GET] "/images/profile/missing.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/brandonseroyer/.rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.7ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (90.9ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (109.3ms)
+
+
+Started DELETE "/dogs/28" for ::1 at 2016-03-28 13:07:43 -0700
+Processing by DogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZpJsd0wECtEdHt4vPz0YKCeKG5gFEQHhnthAI4rN+M36dplB6ujdm4CXwtdHA3UPbunQpCKH+Yoi1TgafUsTpA==", "id"=>"28"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 28]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "28"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dog_id" = ?  ORDER BY created_at ASC[0m  [["dog_id", 28]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "dogs" WHERE "dogs"."id" = ?  [["id", 28]]
+  [1m[36m (8.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 14ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/dogs" for ::1 at 2016-03-28 13:07:43 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.2ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:07:59 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 76ms (Views: 75.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:10:44 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 81ms (Views: 80.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:11:10 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 70ms (Views: 69.8ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/d/users/sign_out" for ::1 at 2016-03-28 13:11:16 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3hshfOvBixh4w4vj+1LHO5FWtpLofF+QlZURzH3eUTBC/9RKTS1cUuVKlxuDbKoc2DV9rs/qp/spmGn1ili6WQ=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", "2016-03-28 20:11:16.055303"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-28 13:11:16 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 66ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:11:21 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 89ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/d/users/sign_in" for ::1 at 2016-03-28 13:11:26 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FzvGja0fOWhdx9pt1fQfEDe3e5Mj4/H3HCgj71l6ZOQvVY5esSuhsXzx5qMm1ybuHLvEuX6z0mVl3k3tyJOgXQ==", "user"=>{"email"=>"admin@vondubinhaus.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "admin@vondubinhaus.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-28 20:05:43.552051"], ["current_sign_in_at", "2016-03-28 20:11:26.694514"], ["sign_in_count", 14], ["updated_at", "2016-03-28 20:11:26.695410"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 89ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-03-28 13:11:26 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 83ms (Views: 82.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-28 13:12:54 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 70ms (Views: 69.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-03-28 13:16:36 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (39.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 160ms (Views: 154.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-03-28 13:16:39 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.4ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (27.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 133ms (Views: 122.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/testimonials/new" for ::1 at 2016-03-28 13:16:45 -0700
+Processing by TestimonialsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered testimonials/_form.html.erb (4.9ms)
+  Rendered testimonials/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 77ms (Views: 76.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:16:49 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 73ms (Views: 72.7ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/d/users/sign_out" for ::1 at 2016-03-28 13:16:57 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Tg7ZMqpMbe/vMupZ+weiIqJRiUofIcw6QCl4BGUtcoOl4BbJmig2TeHO52eg/PHr7MAYNvDNaUouhMEMyHySjQ=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-03-28 13:16:57 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 66ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:17:07 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 98ms (Views: 96.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:19:30 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (35.0ms)
+Completed 200 OK in 114ms (Views: 113.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:19:49 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 78ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:24:08 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 141ms (Views: 140.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:25:18 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (66.2ms)
+Completed 200 OK in 155ms (Views: 154.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:25:25 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 84ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:25:57 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 89ms (Views: 88.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:27:38 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 1944ms (Views: 1943.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:28:25 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 1654ms (Views: 1653.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:28:59 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 1751ms (Views: 1750.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:29:11 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 66ms (Views: 64.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:29:12 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 69ms (Views: 68.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:29:13 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 63ms (Views: 62.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:29:16 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.2ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 63ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:29:17 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 60ms (Views: 58.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:29:17 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 63ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:29:18 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 72ms (Views: 71.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2016-03-28 13:29:24 -0700
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 60ms (Views: 59.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:29:29 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 74ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:30:23 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 83ms (Views: 82.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:30:29 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 88ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2016-03-28 13:30:31 -0700
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 84ms (Views: 83.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:30:33 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 101ms (Views: 100.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:30:55 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 98ms (Views: 97.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:31:12 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 1716ms (Views: 1715.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:32:06 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 98ms (Views: 97.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:32:30 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 1850ms (Views: 1849.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2016-03-28 13:32:46 -0700
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 53ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:32:48 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 61ms (Views: 60.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:33:08 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 1676ms (Views: 1675.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:33:21 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 1720ms (Views: 1719.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:33:29 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 78ms (Views: 77.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:33:41 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 80ms (Views: 79.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dogs" for ::1 at 2016-03-28 13:33:43 -0700
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (0.5ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 81ms (Views: 79.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-03-28 13:33:45 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.3ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 81ms (Views: 79.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/training" for ::1 at 2016-03-28 13:33:46 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 57ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/training" for ::1 at 2016-03-28 13:33:47 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 62ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/charges/new" for ::1 at 2016-03-28 13:33:48 -0700
+Processing by ChargesController#new as HTML
+  Rendered charges/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 63ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2016-03-28 13:33:49 -0700
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:33:51 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 72ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:33:53 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.4ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/d/users/sign_in" for ::1 at 2016-03-28 13:34:06 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7SoLjd9t7YKTsoKonH0lDxpib/+HkaBFgHC0ArYCFT1RRgRsVAboY98JpBJIVzVORbpmQ0pkphqQ1UjhwvLnDQ==", "user"=>{"email"=>"admin@vondubinhaus.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "admin@vondubinhaus.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-28 20:11:26.694514"], ["current_sign_in_at", "2016-03-28 20:34:06.197615"], ["sign_in_count", 15], ["updated_at", "2016-03-28 20:34:06.198806"], ["id", 1]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 97ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2016-03-28 13:34:06 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 70ms (Views: 69.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/d/users/sign_out" for ::1 at 2016-03-28 13:34:13 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nYNVXpvyYs4SUbvahLsyv2wsfNFgD8YDzyWId0z2lCTk/aEi2oJ2qV3fv2r5Czl5xQT4VaS5HtwTk+LnDPL/Ew=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-03-28 13:34:13 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 78ms (Views: 77.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:34:21 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 72ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/d/users/sign_in" for ::1 at 2016-03-28 13:34:27 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QJt6QnyU5vvCnSVymp2D9R2RaI4bnpY07d2AZQmi8v6CY7HcefjcPFS0lHwovYMnGDlY7PmGD0K+msUgM/ZndQ==", "user"=>{"email"=>"admin@vondubinhaus.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "admin@vondubinhaus.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-03-28 20:34:06.197615"], ["current_sign_in_at", "2016-03-28 20:34:27.276935"], ["sign_in_count", 16], ["updated_at", "2016-03-28 20:34:27.277957"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 88ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-03-28 13:34:27 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 79ms (Views: 78.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/applicants" for ::1 at 2016-03-28 13:34:45 -0700
+Processing by ApplicantsController#index as HTML
+  [1m[35mApplicant Load (0.2ms)[0m  SELECT "applicants".* FROM "applicants"  ORDER BY created_at ASC, "applicants"."created_at" DESC
+  Rendered applicants/index.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 87ms (Views: 82.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2016-03-28 13:34:49 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 70ms (Views: 68.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:34:53 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 72ms (Views: 71.9ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/d/users/sign_out" for ::1 at 2016-03-28 13:35:08 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h0iQtK2AEd/NUAsOH9RyKS3pxAegATCn2GU2+oDf1lFMjHnB9iwLRy3H6RufrDS1Mtm3pkvPjiH+ZKdSOhatGg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-03-28 13:35:08 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 68ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:35:10 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 72ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:36:48 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 106ms (Views: 105.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:36:50 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 88ms (Views: 87.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:38:36 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:38:38 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 61ms (Views: 60.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:39:15 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 66ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:39:17 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 79ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:39:19 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.3ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 109ms (Views: 107.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:59:23 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/sessions/new.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 361ms (Views: 335.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:59:33 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 83ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 13:59:56 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 94ms (Views: 92.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 13:59:59 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 110ms (Views: 101.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 14:00:09 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 68ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 14:00:32 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 83ms (Views: 82.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 14:00:35 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 81ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 14:00:42 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 83ms (Views: 81.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/d/users/sign_in" for ::1 at 2016-03-28 14:00:52 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZFVM/QEHvjlFPl/e4bwy8q6TrX7g2qi6lZWOJDYA/l4FQfhaqr/OX1To6F964dT7daR5hNUMvhJG+THaM0yb4Q==", "user"=>{"email"=>"brandon@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "brandon@gmail.com"]]
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.2ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZFVM/QEHvjlFPl/e4bwy8q6TrX7g2qi6lZWOJDYA/l4FQfhaqr/OX1To6F964dT7daR5hNUMvhJG+THaM0yb4Q==", "user"=>{"email"=>"brandon@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered users/sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 149ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 14:00:55 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 72ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 14:01:18 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 1686ms (Views: 1685.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 14:01:29 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 1732ms (Views: 1731.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 14:01:43 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 1701ms (Views: 1700.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-03-28 14:01:49 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 14:02:01 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 92ms (Views: 91.9ms | ActiveRecord: 0.0ms)

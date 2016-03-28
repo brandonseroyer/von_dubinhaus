@@ -88,3 +88,15 @@
   <h4>Animal Rescue • Boarding • Basic & Advanced Obedience<br>Puppy & Adult Training
     • Group & One-on-One Sessions • Aggression & Behaviour Issues</h4>
 </div>
+<br>
+<footer>
+  <div>
+  <% unless current_user %>
+    <div><%= link_to 'Sign in', new_user_session_path, id:'footer-text' %>
+    </div>
+  <% else %>
+    <div><%= link_to 'Log out',  destroy_user_session_path, method: 'delete', id:'footer-text' %>
+    </div>
+  <% end %>
+</div>
+</footer>

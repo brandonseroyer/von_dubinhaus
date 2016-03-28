@@ -15,6 +15,7 @@ gem "font-awesome-rails"
 gem 'bootstrap-social-rails'
 gem 'rest-client'
 gem "paperclip", '~> 4.1'
+gem 'aws-sdk'
 gem 'stripe'
 
 group :development do

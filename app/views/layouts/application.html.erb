@@ -41,37 +41,37 @@
     <div id="nav-right">
     <ul class="nav navbar-nav navbar-right">
       <% unless current_user %>
-      <li><%= link_to 'Home', home_index_path, id:'text-color' %></li>
-      <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-      <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rescue<span class="caret"></span></a>
-      <ul class="dropdown-menu" id="dropdown">
-      <li><%= link_to 'Available', dogs_path %></li>
-      <li><%= link_to 'Testimonials', testimonials_path %></li>
-      </ul>
-      <li><%= link_to 'Training', training_index_path, id:'text-color' %></li>
-      <li><%= link_to 'Donate', new_charge_path, id:'text-color' %></li>
-      <li><%= link_to 'About', about_index_path, id:'text-color' %></li>
-      <li><%= link_to 'Sign in', new_user_session_path, id:'text-color', class: "navbar-brand"  %></li>
+        <li><%= link_to 'Home', home_index_path, id:'text-color' %></li>
+        <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+        <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rescue<span class="caret"></span></a>
+        <ul class="dropdown-menu" id="dropdown">
+        <li><%= link_to 'Available', dogs_path %></li>
+        <li><%= link_to 'Alumni ', testimonials_path %></li>
+        </ul>
+        <li><%= link_to 'Training', training_index_path, id:'text-color' %></li>
+        <li><%= link_to 'Donate', new_charge_path, id:'text-color' %></li>
+        <li><%= link_to 'About', about_index_path, id:'text-color' %></li>
       <% else %>
-      <ul class="nav navbar-nav navbar-right">
-      <li class="dropdown">
-      <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Tools<span class="caret"></span></a>
-      <ul class="dropdown-menu" id="dropdown">
-      <li><%= link_to 'Add Dog', new_dog_path %></li>
-      <li><%= link_to 'Add Testimonial', new_testimonial_path %></li>
-      <li><%= link_to 'Adoption Applications', applicants_path %></li>
-      <li><%= link_to 'Admin View', users_path %></li>
-      </ul>
-      <li class="dropdown">
-      <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dogs<span class="caret"></span></a>
-      <ul class="dropdown-menu" id="dropdown">
-      <li><%= link_to 'Available', dogs_path %></li>
-      <li><%= link_to 'Testimonials', testimonials_path %></li>
-      </ul>
-      <li><%= link_to 'Donate', new_charge_path, id:'text-color' %></li>
-      <li><%= link_to current_user.email, edit_user_registration_path, id:'text-color', class: "navbar-brand"  %></li>
-      <li><%= link_to 'Log out',  destroy_user_session_path, method: 'delete', id:'text-color', class: "navbar-brand"  %></li>
+        <li><%= link_to 'Home', home_index_path, id:'text-color' %></li>
+        <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+        <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Tools<span class="caret"></span></a>
+        <ul class="dropdown-menu" id="dropdown">
+        <li><%= link_to 'Add Rescue', new_dog_path %></li>
+        <li><%= link_to 'Add Alumni', new_testimonial_path %></li>
+        <li><%= link_to 'Adoption Applications', applicants_path %></li>
+        <li><%= link_to 'Admin View', users_path %></li>
+        </ul>
+        <li class="dropdown">
+        <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rescue<span class="caret"></span></a>
+        <ul class="dropdown-menu" id="dropdown">
+        <li><%= link_to 'Available', dogs_path %></li>
+        <li><%= link_to 'Alumni', testimonials_path %></li>
+        </ul>
+        <li><%= link_to 'Training', training_index_path, id:'text-color' %></li>
+        <li><%= link_to 'Donate', new_charge_path, id:'text-color' %></li>
+        <li><%= link_to 'About', about_index_path, id:'text-color' %></li>
       <% end %>
   </p>
     </ul>
