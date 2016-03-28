@@ -54,21 +54,34 @@
 </div>
 <br>
 <div class="row">
-  <div class="col-sm-4"><%= link_to image_tag("index_icon_1.png"), training_index_path %>
-    <div class="carousel-caption">
-      <div id="icon-text">Training</div>
+  <div class="col-sm-4">
+    <div id ="index-icons">
+      <%= link_to image_tag("index_icon_1.png"), training_index_path %>
+      <div class="carousel-caption">
+        <div id="icon-text">
+          <%= link_to "Training", training_index_path, id: "icon-text-2" %>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="col-sm-4"><%= link_to image_tag("index_icon_2.jpg"), dogs_path %>
-    <div class="carousel-caption">
-      <div id="icon-text">Rescue</div>
+  <div class="col-sm-4">
+    <div id ="index-icons">
+      <%= link_to image_tag("index_icon_2.jpg"), dogs_path %>
+      <div class="carousel-caption">
+        <div id="icon-text">
+          <%= link_to "Rescue", dogs_path, id: "icon-text-2" %>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="col-sm-4"><%= link_to image_tag("index_icon_3.png"), new_charge_path %>
-    <div class="carousel-caption">
-      <div id="icon-text">Donate</div>
+  <div class="col-sm-4">
+    <div id ="index-icons">
+    <%= link_to image_tag("index_icon_3.png"), new_charge_path %>
+      <div class="carousel-caption">
+        <div id="icon-text">
+          <%= link_to "Donate", new_charge_path, id: "icon-text-2" %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -86,16 +99,18 @@
   <hr>
   <h1>Our Services</h1>
   <h4>Animal Rescue • Boarding • Basic & Advanced Obedience<br>Puppy & Adult Training
-    • Group & One-on-One Sessions • Aggression & Behaviour Issues</h4>
+    • Group & One-on-One Sessions • Aggression & Behavioral Issues</h4>
 </div>
 <br>
 <footer>
-  <div>
+  <div id="footer-text">
   <% unless current_user %>
-    <div><%= link_to 'Sign in', new_user_session_path, id:'footer-text' %>
+    <div><h5>Von Dubinhaus LLC | © Copyright 2016 | All Rights Reserved |
+       <%= link_to 'Sign in', new_user_session_path, id:'footer-text' %></h5>
     </div>
   <% else %>
-    <div><%= link_to 'Log out',  destroy_user_session_path, method: 'delete', id:'footer-text' %>
+    <div><h5>Von Dubinhaus LLC | © Copyright 2016 | All Rights Reserved |
+      <%= link_to 'Log out',  destroy_user_session_path, method: 'delete', id:'footer-text' %></h5>
     </div>
   <% end %>
 </div>

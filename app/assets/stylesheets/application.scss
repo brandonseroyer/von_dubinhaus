@@ -89,6 +89,7 @@ header {
   text-shadow: 0 .5px 0 #000;
   font-size: 25px;
   text-align: center;
+  box-shadow: 1px 1px 5px black;
 }
 
 #testimonial-profile {
@@ -257,24 +258,50 @@ header {
   top: 25px;
 }
 
+#icon-text-2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
 #home-page-text {
   width: 700px;
   margin: 0 auto;
   text-align: center;
   border-radius: 25px;
   padding: 2%;
-  background: rgba(0, 0, 0, .20);
+  background: rgba(0, 0, 0, .10);
+  box-shadow: 1px 1px 3px black
+}
+
+#rescue-page-text {
+  font-size: 22px;
+  text-align: left;
+  border-radius: 25px;
+  padding: 2%;
+  background: rgba(0, 0, 0, .10);
+  box-shadow: 1px 1px 3px black
 }
 
 #my-carousel {
   border-style: solid;
   border-width: 1px;
+  box-shadow: 2px 2px 5px black
 }
 
 #footer-text {
   color: black;
-  padding-left: 95%;
-  font-size: 16px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#index-icons {
+  box-shadow: 2px 2px 5px black;
+  width: 243px;
+}
+
+#dog-box {
+  box-shadow: 1px 0px 5px black;
 }
 
 .carousel {
@@ -286,5 +313,4 @@ header {
 .row {
   padding-left: 138px;
   margin-right: 40px !important;
-
 }

@@ -1,33 +1,36 @@
 <header>Adoptions & Rescues</header>
-German Shepherds are our specialty, our passion, and protecting the breed and their integrity is our priority.
-We strive to make sure German Shepherd dogs that are no longer wanted can be
-rescued and do not end up at the pound or worse. We typically only accept pure-bred
-German Shepherds that can no longer be cared for due to life changes or that other rescues have
-turned away due to their behavioral problems.
-We want to ensure these dogs get a second chance, and enjoy the challenge of rehabiliating them if need be.
-<br><br>
- We may accept other breeds depending on the situation as well. Please call to see if your dog, or one
- you know of might be a good candidate for our services. That said, our first objective is always
-  to keep them with you and focus on training, but circumstances often tend to prevail.
-<br><br>
-Re-homing fee varies from dog to dog depending on: food, training and if there are
-any vet bills. All rescues from Von Dubinhaus Shepherds come with lifetime training
-included as part of their adoption.
-<br><br>
-If you're interested in one of our current available rescues, please submit an adoption form, which
-can be found on each individual animals adoption page. All dog showings are by appointment only. Once
-your application has been reviewed, you will be contacted shortly.
-<br><br>
-If you know of a German Shepherd Dog in need of re-homing, please contact Brandon at: brandonseroyer@gmail.com
-or (503) 806-2572.
-<br><br>
+<br>
+<div id="rescue-page-text">
+  German Shepherds are our specialty, our passion, and protecting the breed and their integrity is our priority.
+  We strive to make sure German Shepherd dogs that are no longer wanted can be
+  rescued and do not end up at the pound or worse. We typically only accept pure-bred
+  German Shepherds that can no longer be cared for due to life changes or that other rescues have
+  turned away due to their behavioral problems.
+  We want to ensure these dogs get a second chance, and enjoy the challenge of rehabiliating them if need be.
+  <br><br>
+   We may accept other breeds depending on the situation as well. Please call to see if your dog, or one
+   you know of might be a good candidate for our services. That said, our first objective is always
+    to keep them with you and focus on training, but circumstances often tend to prevail.
+  <br><br>
+  Re-homing fee varies from dog to dog depending on: food, training and if there are
+  any vet bills. All rescues from Von Dubinhaus Shepherds come with lifetime training
+  included as part of their adoption.
+  <br><br>
+  If you're interested in one of our current available rescues, please submit an adoption form, which
+  can be found on each individual animals adoption page. All dog showings are by appointment only. Once
+  your application has been reviewed, you will be contacted shortly.
+  <br><br>
+  If you know of a German Shepherd Dog in need of re-homing, please contact Brandon at: brandonseroyer@gmail.com
+  or (503) 806-2572.
+</div>
+<br>
 <center><header>Available for Adoption</header></center>
 <br>
 <div>
   <% @dogs.each_slice(3) do |dogs| %>
     <% dogs.each do |dog| %>
       <div class="col-sm-4">
-      <%= link_to image_tag(dog.image), dog_path(dog) %>
+      <%= link_to image_tag(dog.image, id:"dog-box"), dog_path(dog) %>
         <div id="rescue-profile">
           Click to learn more about <%= link_to dog.name, dog_path(dog), id:'index-profile-font' %>
         </div>

@@ -55,18 +55,19 @@
   <% end %>
   <%= link_to "Add an comment", new_dog_comment_path(@dog) %>
 </div>
-
-<div id='edit-dog-form'>
-</div>
-<hr>
-<div id='dog-links'>
-<p>
-<%= link_to "Edit", edit_dog_path(@dog), id:'edit-dog-link', remote: true %><br>
-<%= link_to "Delete", dog_path(@dog),
-:data => {:confirm => "You sure?",
-  :method => "delete"} %><br>
-  <%= link_to "Return to Home", dogs_path %></p>
-</div>
+<% if current_user %>
+  <div id='edit-dog-form'>
+  </div>
+  <hr>
+  <div id='dog-links'>
+  <p>
+  <%= link_to "Edit", edit_dog_path(@dog), id:'edit-dog-link', remote: true %><br>
+  <%= link_to "Delete", dog_path(@dog),
+  :data => {:confirm => "You sure?",
+    :method => "delete"} %><br>
+  </div>
+<% end %>
+<%= link_to "Return to Available Dogs", dogs_path %></p>
 </div>
 </center>
 </div>
