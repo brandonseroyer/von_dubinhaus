@@ -21948,3 +21948,209 @@ Started GET "/home" for ::1 at 2016-03-28 20:08:54 -0700
 Processing by HomeController#index as HTML
   Rendered home/index.html.erb within layouts/application (21.6ms)
 Completed 200 OK in 94ms (Views: 92.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 20:11:54 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 97ms (Views: 96.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-03-28 20:12:08 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 66ms (Views: 64.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 20:12:25 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 67ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dogs" for ::1 at 2016-03-28 22:05:35 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.2ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 103ms (Views: 101.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dogs/27" for ::1 at 2016-03-28 22:06:00 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", 27]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", "27"]]
+  [1m[36mComment Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1[0m  [["dog_id", 27]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dog_id" = ?  ORDER BY created_at ASC  [["dog_id", 27]]
+  Rendered dogs/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 121ms (Views: 116.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 22:06:09 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 109ms (Views: 108.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2016-03-28 22:06:13 -0700
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 83ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-28 22:06:15 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 89ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:32:31 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (151.0ms)
+Completed 200 OK in 368ms (Views: 361.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:33:42 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 106ms (Views: 105.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:34:34 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 99ms (Views: 98.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:35:57 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 99ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:36:11 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 92ms (Views: 91.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:45:57 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (164.5ms)
+Completed 200 OK in 2775ms (Views: 2765.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:51:56 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (55.4ms)
+Completed 200 OK in 2451ms (Views: 2445.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:53:51 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (29.5ms)
+Completed 200 OK in 2433ms (Views: 2428.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:53:56 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 70ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:54:07 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 2116ms (Views: 2115.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:54:41 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 2188ms (Views: 2187.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:55:00 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 2165ms (Views: 2164.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:55:15 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 2237ms (Views: 2236.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:55:25 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 69ms (Views: 68.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:56:54 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 2605ms (Views: 2600.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:57:14 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 2124ms (Views: 2122.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:57:25 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 2180ms (Views: 2178.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:57:51 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 2207ms (Views: 2206.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:58:33 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 87ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:58:40 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 80ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:58:53 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 77ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 10:59:02 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 67ms (Views: 66.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 11:06:36 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 459ms (Views: 453.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 11:07:33 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 126ms (Views: 125.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-03-29 11:20:10 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (44.2ms)
+Completed 200 OK in 190ms (Views: 185.6ms | ActiveRecord: 0.0ms)
