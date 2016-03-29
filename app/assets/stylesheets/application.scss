@@ -310,6 +310,18 @@ header {
   margin: 0 auto;
 }
 
+.col-sm-4 {
+  -webkit-transition: all 1s ease;
+   -moz-transition: all 1s ease;
+     -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+        transition: all 1s ease;
+}
+
+.col-sm-4:hover {
+  -webkit-filter: grayscale(75%);
+}
+
 .row {
   padding-left: 138px;
   margin-right: 40px !important;

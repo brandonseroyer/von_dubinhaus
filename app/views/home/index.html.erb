@@ -10,35 +10,30 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-
       <div class="item active">
         <%= link_to image_tag("welcome.jpg") %>
         <div class="carousel-caption">
           <div id="carousel-text">Welcome to Von Dubinhaus Shepherds!</div>
         </div>
       </div>
-
       <div class="item">
         <%= link_to image_tag("rescue.jpg"), dogs_path %>
         <div class="carousel-caption">
           <div id="carousel-text">Portland's Exclusive German Shepherd Dog Rescue</div>
         </div>
       </div>
-
       <div class="item">
         <%= link_to image_tag("training.jpg") %>
         <div class="carousel-caption">
           <div id="carousel-text">Professional trainers with 15+ years experience</div>
         </div>
       </div>
-
       <div class="item">
         <%= link_to image_tag("boarding.jpg")%>
         <div class="carousel-caption">
           <div id="carousel-text">Board your dogs with Von Dubinhaus year round</div>
         </div>
       </div>
-
     </div>
 
     <!-- Left and right controls -->
@@ -56,7 +51,7 @@
 <div class="row">
   <div class="col-sm-4">
     <div id ="index-icons">
-      <%= link_to image_tag("index_icon_1.png"), training_index_path %>
+      <%= link_to image_tag("index_icon_1.png"), training_index_path, id: "derp" %>
       <div class="carousel-caption">
         <div id="icon-text">
           <%= link_to "Training", training_index_path, id: "icon-text-2" %>
