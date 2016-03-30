@@ -23,53 +23,251 @@
   font-size: 20px;
 }
 
+body {
+  background-color: #FFFFCC;
+}
 
- /* navbar */
-  .navbar-default {
-   background-color: black;
-   border-color: black;
- }
+header {
+   background-size: 100%;
+   font-size: 55px;
+   font-weight: bold;
+}
 
+hr {
+   border: 1px solid #000000;
+   border-style: solid;
+   color: #000000;
+}
+
+.carousel {
+  width: 895px;
+  height: 315px;
+  margin: 0 auto;
+}
+
+.col-sm-4 {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+     transition: all 1s ease;
+}
+
+.col-sm-4:hover {
+  -webkit-filter: grayscale(75%);
+}
+
+.navbar-default {
+  background-color: black;
+  border-color: black;
+}
+
+.row {
+  padding-left: 150px;
+  margin-right: 100px !important;
+}
+
+.social {
+  padding-left: 475px;
+}
+
+.social ul {
+  margin: 0;
+  padding: 5px;
+}
+
+.social ul li {
+  margin: 5px;
+  list-style: none outside none;
+  display: inline-block;
+}
+
+.social i {
+  width: 40px;
+  height: 40px;
+  color: #FFF;
+  background-color: #909AA0;
+  font-size: 22px;
+  text-align:center;
+  padding-top: 12px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+}
+
+.social i:hover {
+  color: #FFF;
+  text-decoration: none;
+  transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+}
+
+.social .fa-facebook:hover { /* round facebook icon*/
+  background: #4060A5;
+}
+
+.social .fa-instagram:hover { /* round instagram icon*/
+  background: #375989;
+}
+
+.social .fa-twitter:hover { /* round twitter icon*/
+  background: #00ABE3;
+}
+
+#apply-font {
+  font-size: 36px;
+}
+
+#carousel-text {
+  font-size: 30px;
+  font-weight: bold;
+  background: rgba(0, 0, 0, .30);
+  display: inline-block;
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 25px;
+}
+
+#dog-box {
+  box-shadow: 1px 0px 5px black;
+}
+
+#dog-comments {
+  text-align: left;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+#dog-links {
+  text-align: left;
+  padding-left: 25px;
+}
+
+#dog-stats {
+  font-size: 20px;
+}
+
+#dog-story {
+  text-align: left;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+#donate {
+  text-align: left;
+  width: 180px;
+  height: 50px;
+  float: right;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-top:    2px solid;
+  border-left:  3px solid;
+  border-bottom: 2px solid;
+  background-color: black;
+  color: black;
+  font-size: 100%;
+  font-weight: bold;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  border-style-top: outset;
+  border-style-left: outset;
+  border-style-bottom: outset;
+  background: rgba(0, 0, 0, .75);
+}
 
 #dropdown {
   font-size: 16px;
   font-weight: bold;
 }
 
-body {
-  background-color: #FFFFCC;
- }
-
-hr {
-   border: 1px solid #000000;
-   border-style: solid;
-   color: #000000;
- }
-
- header {
-   background-size: 100%;
- }
-
-#text-color {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  padding-right: 35px;
-  padding-left: 2px;
+#edit-dog-form {
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
-#text-color2 {
-  color: white;
-  font-size: 20px;
+#footer-text {
+  color: black;
+  text-align: center;
+  font-size: 14px;
+}
+
+#header {
+  background: url(header.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 250px;
+  border-right: solid;
+  border-left: solid;
+  border-top: solid;
+  border-width: 1px;
+}
+
+#home-page-text {
+  width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 25px;
+  padding: 2%;
+  background: rgba(0, 0, 0, .10);
+  box-shadow: 1px 1px 3px black;
+}
+
+#icon-text {
+  font-size: 30px;
   font-weight: bold;
+  background: rgba(0, 0, 0, .30);
+  display: inline-block;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 25px;
+  position: relative;
+  right: 25px;
+  top: 25px;
+}
+
+#icon-text-2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+#index-icons {
+  box-shadow: 2px 2px 5px black;
+  width: 243px;
+}
+
+#index-profile-font {
+  font-size: 30px;
+}
+
+#my-carousel {
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 2px 2px 5px black;
+}
+
+#nav-right {
+  padding-top: 12px;
 }
 
 #nav-text {
-   color: white;
-   font-weight: bold;
-   font-size: 20px;
-   padding-left: 135px;
- }
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding-left: 135px;
+}
 
 #new-dog-link {
   color: white;
@@ -78,9 +276,44 @@ hr {
   padding-right: 20px;
 }
 
-header {
-  font-size: 55px;
-  font-weight: bold;
+#pic {
+  border-style: solid;
+  border-width: 2px;
+}
+
+#profile-box {
+  border-style: solid;
+  border-radius: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 40em;
+  background: rgba(255, 255, 255, .90);
+}
+
+#profile-head {
+  font-family: 'Satisfy', cursive;
+  font-size: 65px;
+  text-align: left;
+  padding-left: 25px;
+}
+
+#profile-page {
+  padding-left: 25px;
+}
+
+#profile-pic-stats {
+  text-align: left;
+  padding-left: 25px;
+  font-size: 24px;
+}
+
+#rescue-page-text {
+  font-size: 22px;
+  text-align: left;
+  border-radius: 25px;
+  padding: 2%;
+  background: rgba(0, 0, 0, .10);
+  box-shadow: 1px 1px 3px black;
 }
 
 #rescue-profile {
@@ -92,22 +325,6 @@ header {
   font-size: 25px;
   text-align: center;
   box-shadow: 1px 1px 5px black;
-}
-
-#testimonial-profile {
-  width: 475px;
-  margin: 0 auto;
-}
-
-#pic {
-  border-style: solid;
-  border-width: 2px;
-
-}
-
-#profile-head {
-  font-family: 'Satisfy', cursive;
-  font-size: 65px;
 }
 
 #social {
@@ -136,251 +353,21 @@ header {
   background: rgba(0, 0, 0, .75);
 }
 
-#donate {
-  text-align: left;
-  width: 180px;
-  height: 50px;
-  float: right;
-  padding-left: 10px;
-  padding-bottom: 10px;
-  border-top:    2px solid;
-  border-left:  3px solid;
-  border-bottom: 2px solid;
-  background-color: black;
-  color: black;
-  font-size: 100%;
-  font-weight: bold;
-  text-shadow:
-  -1px -1px 0 #000,
-  1px -1px 0 #000,
-  -1px 1px 0 #000,
-  1px 1px 0 #000;
-  border-style-top: outset;
-  border-style-left: outset;
-  border-style-bottom: outset;
-  background: rgba(0, 0, 0, .75);
+#testimonial-profile {
+  width: 475px;
+  margin: 0 auto;
 }
 
-#profile-box {
-  border-style: solid;
-  border-radius: 25px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  width: 40em;
-  background: rgba(255, 255, 255, .90);
-}
-
-#dog-story {
-  text-align: left;
-  padding-right: 25px;
-  padding-left: 25px;
-}
-
-#dog-comments {
-  text-align: left;
-  padding-right: 25px;
-  padding-left: 25px;
-}
-
-#edit-dog-form {
-  padding-right: 25px;
-  padding-left: 25px;
-}
-
-#profile-head {
-  text-align: left;
-  padding-left: 25px;
-}
-
-#profile-pic-stats {
-  text-align: left;
-  padding-left: 25px;
-  font-size: 24px;
-}
-
-#dog-links {
-  text-align: left;
-  padding-left: 25px;
-}
-
-#profile-page {
-  padding-left: 25px;
-}
-
-#nav-right {
-  padding-top: 12px;
-}
-
-#header {
-  background: url(header.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  height: 250px;
-  border-right: solid;
-  border-left: solid;
-  border-top: solid;
-  border-width: 1px;
-}
-
-#index-profile-font {
-  font-size: 30px;
-}
-
-#apply-font {
-  font-size: 36px;
-}
-
-#dog-stats {
-  font-size: 20px;
-}
-
-#pay-block-2 {
-}
-
-#carousel-text {
-  font-size: 30px;
-  font-weight: bold;
-  background: rgba(0, 0, 0, .30);
-  display: inline-block;
-  padding-left: 3%;
-  padding-right: 3%;
-  border-radius: 25px;
-}
-
-#icon-text {
-  font-size: 30px;
-  font-weight: bold;
-  background: rgba(0, 0, 0, .30);
-  display: inline-block;
-  padding-left: 5%;
-  padding-right: 5%;
-  border-radius: 25px;
-  position: relative;
-  right: 25px;
-  top: 25px;
-}
-
-#icon-text-2 {
-  font-size: 30px;
-  font-weight: bold;
+#text-color {
   color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding-right: 35px;
+  padding-left: 2px;
 }
 
-#home-page-text {
-  width: 700px;
-  margin: 0 auto;
-  text-align: center;
-  border-radius: 25px;
-  padding: 2%;
-  background: rgba(0, 0, 0, .10);
-  box-shadow: 1px 1px 3px black
-}
-
-#rescue-page-text {
-  font-size: 22px;
-  text-align: left;
-  border-radius: 25px;
-  padding: 2%;
-  background: rgba(0, 0, 0, .10);
-  box-shadow: 1px 1px 3px black
-}
-
-#my-carousel {
-  border-style: solid;
-  border-width: 1px;
-  box-shadow: 2px 2px 5px black
-}
-
-#footer-text {
-  color: black;
-  text-align: center;
-  font-size: 14px;
-}
-
-#index-icons {
-  box-shadow: 2px 2px 5px black;
-  width: 243px;
-}
-
-#dog-box {
-  box-shadow: 1px 0px 5px black;
-}
-
-.carousel {
-  width: 895px;
-  height: 315px;
-  margin: 0 auto;
-}
-
-.col-sm-4 {
-  -webkit-transition: all 1s ease;
-   -moz-transition: all 1s ease;
-     -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-        transition: all 1s ease;
-}
-
-.col-sm-4:hover {
-  -webkit-filter: grayscale(75%);
-}
-
-.row {
-  padding-left: 138px;
-  margin-right: 40px !important;
-}
-
-.social {
-  padding-left: 475px;
-}
-
-.social ul {
-    margin: 0;
-    padding: 5px;
-}
-
-.social ul li {
-    margin: 5px;
-    list-style: none outside none;
-    display: inline-block;
-}
-
-.social i {
-    width: 40px;
-    height: 40px;
-    color: #FFF;
-    background-color: #909AA0;
-    font-size: 22px;
-    text-align:center;
-    padding-top: 12px;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -o-border-radius: 50%;
-    transition: all ease 0.3s;
-    -moz-transition: all ease 0.3s;
-    -webkit-transition: all ease 0.3s;
-    -o-transition: all ease 0.3s;
-    -ms-transition: all ease 0.3s;
-}
-
-.social i:hover {
-    color: #FFF;
-    text-decoration: none;
-    transition: all ease 0.3s;
-    -moz-transition: all ease 0.3s;
-    -webkit-transition: all ease 0.3s;
-    -o-transition: all ease 0.3s;
-    -ms-transition: all ease 0.3s;
-}
-
-.social .fa-facebook:hover { /* round facebook icon*/
-    background: #4060A5;
-}
-
-.social .fa-twitter:hover { /* round twitter icon*/
-    background: #00ABE3;
-}
-
-.social .fa-instagram:hover { /* round instagram icon*/
-    background: #375989;
+#text-color2 {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
 }

@@ -1,13 +1,13 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/controllers/charges_controller_spec.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/spec/controllers/charges_controller_spec.rb": [
         1,
         null,
         1,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/rails_helper.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/spec/rails_helper.rb": [
         1,
         1,
         null,
@@ -31,14 +31,14 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/environment.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/application.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/application.rb": [
         1,
         null,
         1,
@@ -66,12 +66,12 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/boot.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/environments/test.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/environments/test.rb": [
         1,
         null,
         null,
@@ -115,7 +115,7 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/assets.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -128,7 +128,7 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/backtrace_silencers.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -137,12 +137,12 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/cookies_serializer.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/devise.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -353,7 +353,7 @@
         null,
         null,
         null,
-        null,
+        1,
         null,
         null,
         null,
@@ -406,50 +406,50 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/filter_parameter_logging.rb": [
-        null,
-        null,
-        null,
-        1
-      ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/inflections.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/mime_types.rb": [
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/session_store.rb": [
-        null,
-        null,
-        1
-      ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/stripe.rb": [
-        1,
-        null,
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/initializers/wrap_parameters.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/initializers/inflections.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/initializers/mime_types.rb": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/initializers/session_store.rb": [
+        null,
+        null,
+        1
+      ],
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/initializers/stripe.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        1
+      ],
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -465,7 +465,7 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/factories.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/spec/factories.rb": [
         1,
         1,
         1,
@@ -482,7 +482,7 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/config/routes.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/routes.rb": [
         1,
         1,
         1,
@@ -494,6 +494,10 @@
         1,
         1,
         null,
+        null,
+        1,
+        null,
+        1,
         null,
         1,
         null,
@@ -504,7 +508,7 @@
         1,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/models/user.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/app/models/user.rb": [
         1,
         null,
         null,
@@ -515,15 +519,15 @@
         1,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/helpers/application_helper.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/helpers/charges_helper.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/app/helpers/charges_helper.rb": [
         1,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/controllers/charges_controller.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/app/controllers/charges_controller.rb": [
         1,
         1,
         null,
@@ -550,163 +554,163 @@
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/controllers/application_controller.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/features/add_dog_spec.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/spec/features/add_dog_spec.rb": [
         1,
         null,
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/features/add_testimonial_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/features/delete_dog_spec.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/spec/features/add_testimonial_spec.rb": [
         1,
         null,
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/features/delete_testimonial_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/features/edit_dog_spec.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/spec/features/delete_dog_spec.rb": [
         1,
         null,
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/features/edit_testimonial_spec.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/spec/features/delete_testimonial_spec.rb": [
         1,
         null,
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/helpers/charges_helper_spec.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/spec/features/edit_dog_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/spec/features/edit_testimonial_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/spec/helpers/charges_helper_spec.rb": [
 
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/models/applicant_spec.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/spec/models/applicant_spec.rb": [
         1,
         null,
         1,
@@ -718,7 +722,7 @@
         2,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/models/applicant.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/app/models/applicant.rb": [
         1,
         7,
         1,
@@ -730,7 +734,7 @@
         1,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/models/comment_spec.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/spec/models/comment_spec.rb": [
         1,
         null,
         1,
@@ -739,15 +743,15 @@
         2,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/models/comment.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/app/models/comment.rb": [
         1,
-        12,
+        4,
         1,
         1,
         1,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/models/dog_spec.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/spec/models/dog_spec.rb": [
         1,
         null,
         1,
@@ -758,29 +762,10 @@
         2,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/models/dog.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/app/models/dog.rb": [
         1,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/models/testimonial_spec.rb": [
-        1,
-        null,
-        1,
-        2,
-        2,
-        2,
-        null
-      ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/models/testimonial.rb": [
         1,
         1,
         1,
@@ -790,7 +775,26 @@
         1,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/spec/models/user_spec.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/spec/models/testimonial_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/app/models/testimonial.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/spec/models/user_spec.rb": [
         1,
         null,
         1,
@@ -800,119 +804,61 @@
         2,
         null
       ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/controllers/dogs_controller.rb": [
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/app/controllers/dogs_controller.rb": [
         1,
-        1,
-        1,
-        11,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        0,
-        null,
-        null,
-        null,
-        1,
-        3,
-        3,
-        3,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        0,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        null,
-        1,
-        2,
-        null,
-        null,
-        1,
-        6,
-        null,
-        null
-      ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/controllers/home_controller.rb": [
-        1,
-        null
-      ],
-      "/Users/bseroyer/Desktop/Brandon/von_dubinhaus/app/controllers/testimonials_controller.rb": [
         1,
         1,
         6,
         null,
         null,
         1,
-        1,
-        1,
+        0,
+        0,
         null,
         null,
         1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
         null,
         0,
         null,
         null,
         null,
         1,
+        0,
+        0,
+        0,
+        null,
+        null,
         1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         null,
         1,
-        1,
-        1,
-        1,
+        0,
+        null,
+        0,
+        0,
         null,
         0,
         null,
         null,
         null,
         1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
         null,
         null,
         1,
         null,
         1,
-        2,
+        0,
         null,
         null,
         1,
@@ -921,6 +867,6 @@
         null
       ]
     },
-    "timestamp": 1456551827
+    "timestamp": 1459303136
   }
 }
