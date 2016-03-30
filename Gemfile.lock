@@ -63,6 +63,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    ckeditor (4.1.6)
+      cocaine
+      orm_adapter (~> 0.5.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.7)
@@ -268,6 +271,7 @@ DEPENDENCIES
   bootstrap-social-rails
   byebug
   capybara
+  ckeditor
   coffee-rails
   devise
   dotenv-rails

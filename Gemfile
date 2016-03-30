@@ -17,6 +17,7 @@ gem 'rest-client'
 gem "paperclip", '~> 4.1'
 gem 'aws-sdk'
 gem 'stripe'
+gem 'ckeditor'
 
 group :development do
   gem 'letter_opener'

@@ -1,53 +1,59 @@
 <div id="profile-page">
 <center>
 <div id="profile-box">
-<div id="profile-head"><%= @dog.name %></div>
-
-<div id="donate">
-  <%= link_to 'Donate', new_charge_path, id:'text-color2' %>
-</div><br><br>
-
-<div id="social">
-  <div id="text-color2">Help <%= @dog.name %> get adopted!
-  </div>
-    <div class="fb-share-button" data-href="http://localhost:3000/dogs" data-layout="button_count">
+<div id="profile-head">
+  <div id="donate-social">
+    <div id="donate">
+      <%= link_to 'Donate', new_charge_path, id:'text-color2' %>
+    </div><br><br>
+    <div id="social">
+      <div id="text-color2">
+        Help <%= @dog.name %> get adopted!
+      </div>
+        <div class="fb-share-button" data-href="http://localhost:3000/dogs" data-layout="button_count">
+        </div>
+        <br>
+        <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+        <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+        if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}
+        (document, 'script', 'twitter-wjs');
+        </script>
     </div>
-    <br>
-    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-    <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-    if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}
-    (document, 'script', 'twitter-wjs');
-    </script>
+  </div>
+  <%= @dog.name %>
 </div>
-
-<br>
-
 <div id="profile-pic-stats">
   <%= image_tag @dog.image.url(:profile), id: 'pic' %>
   <br>
-  <%= link_to "Apply for Adoption!", new_applicant_path, id:'apply-font' %><br>
-  Breed: <i><%= @dog.breed %></i><br>
-  Age: <i><%= @dog.age %> years old</i><br>
-  Sex: <i><%= @dog.sex %></i>
+  <div id="stats">
+    <%= link_to "Apply for Adoption", new_applicant_path, id:'apply-font' %>
+    <br>
+    <%= @dog.breed %>
+    <br>
+    <%= @dog.age %> years old
+    <br>
+    <%= @dog.sex %>
+  </div>
 </div>
-
-<hr>
+<hr id="dog-hr">
 <div id="dog-story">
-  <h3><%= @dog.name %>'s Story:</h3>
-  <p><%= @dog.info %></p>
+  <h2><%= @dog.name %>'s Story:</h2>
+  <p><%= simple_format(@dog.info) %></p>
 </div>
-<hr>
+<hr id="dog-hr">
 <div id="dog-comments">
-  <h3>Comments:</h3>
+  <h2>Comments:</h2>
   <% if @dog.comments.any? %>
     <% @comments.each do |comment| %>
       <ul>
-      <b><%= comment.author %>:</b> <i><%= comment.content %></i>
-      <%= link_to "Edit", edit_dog_comment_path(@dog, comment) %> |
-      <%= link_to "Delete", dog_comment_path(@dog, comment),
-      :data => {:confirm => "Are you sure?",
-        :method => "delete"} %>
+      <%= comment.author %>: <i><%= comment.content %></i>
+      <% if current_user %>
+        <%= link_to "Edit", edit_dog_comment_path(@dog, comment) %> |
+        <%= link_to "Delete", dog_comment_path(@dog, comment),
+        :data => {:confirm => "Are you sure?",
+          :method => "delete"} %>
+      <% end %>
       </ul>
     <% end %>
   <% else %>
@@ -71,3 +77,4 @@
 </div>
 </center>
 </div>
+<br>
