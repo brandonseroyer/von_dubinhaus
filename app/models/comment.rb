@@ -1,6 +1,5 @@
 class Comment < ActiveRecord::Base
+  belongs_to :dog
   default_scope { order('created_at ASC')}
   validates :content, presence: true
-  belongs_to :dog
-  belongs_to :user
 end
