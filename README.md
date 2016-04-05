@@ -31,7 +31,7 @@ rails server        # starts the rails server
 
 ## Technologies Used
 
-_Ruby, Rails, Postgres, Rake, Active Record, Devise, AJAX, Bootstrap, Stripe API_
+_Ruby, Rails, PostgreSQL, Active Record, Devise Encryption, AJAX, Bootstrap, Stripe API, Amazon S3,_
 _Testing was preformed with RSpec and Capybara_
 
 ### Legal

@@ -65,6 +65,14 @@ ul {
   text-align: left;
 }
 
+.dropdown-menu li:hover .sub-menu {
+    visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
 .navbar-default {
   background-color: black;
   border-color: black;

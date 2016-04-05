@@ -36789,3 +36789,1055 @@ Processing by DonationsController#new as HTML
   Rendered donations/_form.html.erb (3.5ms)
   Rendered donations/new.html.erb within layouts/application (5.1ms)
 Completed 200 OK in 98ms (Views: 97.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donations/new" for ::1 at 2016-04-04 21:01:56 -0700
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (10.9ms)
+  Rendered donations/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 262ms (Views: 255.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-04 21:01:59 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 118ms (Views: 117.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-04 21:02:04 -0700
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (0.8ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 109ms (Views: 107.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dogs/43" for ::1 at 2016-04-04 21:02:10 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "43"]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 43]]
+  Rendered dogs/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 136ms (Views: 133.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/donations/new" for ::1 at 2016-04-04 21:02:20 -0700
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (2.7ms)
+  Rendered donations/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 109ms (Views: 108.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-04 21:02:25 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 110ms (Views: 109.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-04 21:02:28 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.5ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 98ms (Views: 96.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for ::1 at 2016-04-04 21:02:37 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 104ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-04-04 21:02:39 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 92ms (Views: 90.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/d/users/sign_in" for ::1 at 2016-04-04 21:02:45 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lTtoWC5K4q5sm6QEAUdY2CHjul1QVQbg30uYF/sQi9IvcVc3qRO0AocOUGE5L8uO4JKHRCAhh/JJVHkWYlE/yA==", "user"=>{"email"=>"admin@vondubinhaus.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "admin@vondubinhaus.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-04-05 03:10:14.067650"], ["current_sign_in_at", "2016-04-05 04:02:45.427547"], ["sign_in_count", 27], ["updated_at", "2016-04-05 04:02:45.428772"], ["id", 1]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 95ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2016-04-04 21:02:45 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 102ms (Views: 101.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-04-04 21:02:47 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 100ms (Views: 99.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-04 21:02:51 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.3ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (13.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 101ms (Views: 98.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dogs/43" for ::1 at 2016-04-04 21:02:55 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"43"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "43"]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 43]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 138ms (Views: 136.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/dogs/43" for ::1 at 2016-04-04 21:02:59 -0700
+Processing by DogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wUa5gzt4nxuc6pr3bCaQbIkBQCk3/dEJHhKqqC+FQl2CaTeIN03r/3wU6npanEJ/X4qfYsBlgO/jFEheSts1NA==", "id"=>"43"}
+  [1m[35mDog Load (8.5ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 43]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "43"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dog_id" = ?  ORDER BY created_at ASC[0m  [["dog_id", 43]]
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "dogs" WHERE "dogs"."id" = ?  [["id", 43]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/043/original/lyla2.jpg
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/043/standard/lyla2.jpg
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/043/profile/lyla2.jpg
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/043/thumb/lyla2.jpg
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 34ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-04 21:02:59 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.2ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 84ms (Views: 83.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/42" for ::1 at 2016-04-04 21:03:02 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 42]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "42"]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 42]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 108ms (Views: 106.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/dogs/42" for ::1 at 2016-04-04 21:03:07 -0700
+Processing by DogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Gpo9i+mZtq9EGniQn70lhVfQauRCFerDEtTQ1OzE0p9ZtbOA5azCS6TkCB2pB/eWgVu1r7WNuyXv0jIiiZql9g==", "id"=>"42"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 42]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "42"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dog_id" = ?  ORDER BY created_at ASC[0m  [["dog_id", 42]]
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "dogs" WHERE "dogs"."id" = ?  [["id", 42]]
+  [1m[36m (8.5ms)[0m  [1mcommit transaction[0m
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/042/original/angel.jpg
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/042/standard/angel.jpg
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/042/profile/angel.jpg
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/042/thumb/angel.jpg
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 31ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-04 21:03:07 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.2ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 85ms (Views: 83.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/41" for ::1 at 2016-04-04 21:03:10 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "41"]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 41]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 113ms (Views: 110.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/dogs/41" for ::1 at 2016-04-04 21:03:14 -0700
+Processing by DogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mutHB0Z7AuR8D+bnqnGqbjk5lfAoGGzu6+LpthUg/EzZxMkMSk52AJzxlmqcy3h977JKu9+APQgW5AtAcH6LJQ==", "id"=>"41"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 41]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "41"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dog_id" = ?  ORDER BY created_at ASC[0m  [["dog_id", 41]]
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "dogs" WHERE "dogs"."id" = ?  [["id", 41]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/041/original/kihei.jpg
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/041/standard/kihei.jpg
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/041/profile/kihei.jpg
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/dogs/images/000/000/041/thumb/kihei.jpg
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 26ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-04 21:03:14 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.2ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 86ms (Views: 84.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/32" for ::1 at 2016-04-04 21:03:21 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "32"]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 32]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dog_id" = ?  ORDER BY created_at ASC[0m  [["dog_id", 32]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 186ms (Views: 181.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home" for ::1 at 2016-04-04 21:03:40 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 97ms (Views: 96.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/training" for ::1 at 2016-04-04 21:03:45 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 112ms (Views: 111.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-04 21:03:47 -0700
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (0.2ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (8.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 129ms (Views: 128.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-04 21:04:00 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered testimonials/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 84ms (Views: 82.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for ::1 at 2016-04-04 21:08:27 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 168ms (Views: 162.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/training" for ::1 at 2016-04-04 21:09:17 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 107ms (Views: 106.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-04 21:09:19 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.3ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered testimonials/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 116ms (Views: 114.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for ::1 at 2016-04-04 21:15:02 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (78.5ms)
+Completed 200 OK in 274ms (Views: 271.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-04 22:34:58 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (1.9ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (38.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 231ms (Views: 219.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/testimonials/new" for ::1 at 2016-04-05 10:45:23 -0700
+Processing by TestimonialsController#new as HTML
+  Rendered testimonials/_form.html.erb (100.4ms)
+  Rendered testimonials/new.html.erb within layouts/application (130.3ms)
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 620ms (Views: 562.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/testimonials" for ::1 at 2016-04-05 10:45:50 -0700
+Processing by TestimonialsController#create as HTML
+  Parameters: {"utf8"=>"✓", "testimonial"=>{"name"=>"Majestic", "date"=>"1/2/2014", "story"=>"Sky was successfully adopted", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f8f0d5d3678 @tempfile=#<Tempfile:/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/RackMultipart20160405-1174-a0ozf.jpg>, @original_filename="luna.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"testimonial[image]\"; filename=\"luna.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Testimonial"}
+Can't verify CSRF token authenticity
+Command :: file -b --mime '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160405-1174-yffin0.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160405-1174-1ga2cto.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160405-1174-1ga2cto.jpg[0]'
+Command :: convert '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160405-1174-1ga2cto.jpg[0]' -auto-orient -resize "750x500" '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/6a2192571a47f6c1b755b274fcbf137520160405-1174-1gbwkyb'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160405-1174-1ga2cto.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160405-1174-1ga2cto.jpg[0]'
+Command :: convert '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160405-1174-1ga2cto.jpg[0]' -auto-orient -resize "500x350" '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/6a2192571a47f6c1b755b274fcbf137520160405-1174-wpwocg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160405-1174-1ga2cto.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160405-1174-1ga2cto.jpg[0]'
+Command :: convert '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160405-1174-1ga2cto.jpg[0]' -auto-orient -resize "x100" -crop "100x100+16+0" +repage '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/6a2192571a47f6c1b755b274fcbf137520160405-1174-kg1b8v'
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/var/folders/9_/9q1s6h_52gbf9xgpdpccjhyc0000gp/T/ba8a48b0e34226a2992d871c65600a7c20160405-1174-1yfl4cg.jpg'
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "testimonials" ("name", "date", "story", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["name", "Majestic"], ["date", "1/2/2014"], ["story", "Sky was successfully adopted"], ["image_file_name", "luna.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 30090], ["image_updated_at", "2016-04-05 17:45:50.408887"], ["created_at", "2016-04-05 17:45:50.744855"], ["updated_at", "2016-04-05 17:45:50.744855"]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/testimonials
+Completed 302 Found in 436ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 10:45:50 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.3ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered testimonials/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 155ms (Views: 153.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 10:46:23 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 159ms (Views: 157.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 14:43:45 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (70.7ms)
+Completed 200 OK in 343ms (Views: 336.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 14:46:53 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 213ms (Views: 211.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-05 14:46:58 -0700
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (1.7ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (15.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 136ms (Views: 132.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 14:49:12 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 171ms (Views: 170.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 14:49:16 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 127ms (Views: 126.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 14:49:19 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 102ms (Views: 101.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 14:49:30 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 105ms (Views: 103.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 14:51:55 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 130ms (Views: 127.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 14:51:58 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 102ms (Views: 101.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-05 14:52:02 -0700
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (0.3ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (10.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 109ms (Views: 107.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dogs/40" for ::1 at 2016-04-05 14:52:04 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mDog Load (0.2ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", "40"]]
+  [1m[36mComment Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1[0m  [["dog_id", 40]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 292ms (Views: 284.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dogs/40" for ::1 at 2016-04-05 14:56:56 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", "40"]]
+  [1m[36mComment Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1[0m  [["dog_id", 40]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 139ms (Views: 137.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 14:56:57 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 163ms (Views: 162.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 14:57:00 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 90ms (Views: 89.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/donations/new" for ::1 at 2016-04-05 14:57:01 -0700
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (3.0ms)
+  Rendered donations/new.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 93ms (Views: 92.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/about" for ::1 at 2016-04-05 14:57:02 -0700
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 90ms (Views: 89.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 14:57:04 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 89ms (Views: 88.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 14:59:18 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 104ms (Views: 103.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 14:59:50 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 105ms (Views: 104.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:03:54 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 138ms (Views: 137.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 15:03:57 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 91ms (Views: 90.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 15:03:58 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 78ms (Views: 77.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:03:59 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 97ms (Views: 95.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:08:13 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 117ms (Views: 116.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/d/users/sign_out" for ::1 at 2016-04-05 15:08:20 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VqGLBh9ndcGbAUtE7gm0QjA7TPAQWymT5ARi2VM+0X8VjgUNE1IBJXv/O8nYs2ZR5rCTu+fDeHUZAoAvNmCmFg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 15:08:20 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 119ms (Views: 118.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:08:22 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 89ms (Views: 89.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:08:38 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 118ms (Views: 117.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 15:08:41 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 91ms (Views: 90.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:08:44 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 93ms (Views: 92.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:08:46 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 99ms (Views: 98.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-04-05 15:08:48 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 85ms (Views: 83.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/d/users/sign_in" for ::1 at 2016-04-05 15:08:54 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3aaPvfcLPPvTZUZeK9kUimL3JSCmgnutvCAxU5veOnZ6SJ4MYbP9M0PiDxla9h15ffE2ssKPUZpNHcYzZpspyw==", "user"=>{"email"=>"admin@vondubinhaus.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "admin@vondubinhaus.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-04-05 04:02:45.427547"], ["current_sign_in_at", "2016-04-05 22:08:54.124268"], ["sign_in_count", 28], ["updated_at", "2016-04-05 22:08:54.125034"], ["id", 1]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 100ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 15:08:54 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 87ms (Views: 86.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 15:22:06 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 115ms (Views: 114.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-05 15:22:13 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.2ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 98ms (Views: 96.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/new" for ::1 at 2016-04-05 15:22:15 -0700
+Processing by DogsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered dogs/_form.html.erb (5.9ms)
+  Rendered dogs/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 84ms (Views: 83.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/testimonials/new" for ::1 at 2016-04-05 15:22:17 -0700
+Processing by TestimonialsController#new as HTML
+  Rendered testimonials/_form.html.erb (2.2ms)
+  Rendered testimonials/new.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 91ms (Views: 89.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/d/users/sign_out" for ::1 at 2016-04-05 15:22:21 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Z2tYnFckOVc4uHAEsEuP0M7FsTpLz72ry4wKQqWDzE0NnEmzYv32u9/YcYy7aRkVCLq/rDSypw4zAUrO2nfaUw=="}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 15:22:21 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 86ms (Views: 85.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 15:22:24 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 83ms (Views: 82.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 15:22:25 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 97ms (Views: 96.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 15:22:27 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 95ms (Views: 94.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:22:28 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 100ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-04-05 15:22:37 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 91ms (Views: 90.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/d/users/sign_in" for ::1 at 2016-04-05 15:22:42 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gMGSdxNiVOgIwG45KwuXBpU59+j1TUwj3yyJsy04CTyfin2J71laLKZ6ztOs6lhvyXYuyWE0jQstDAS3HMLN/w==", "user"=>{"email"=>"admin@vondubinhaus.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "admin@vondubinhaus.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-04-05 22:08:54.124268"], ["current_sign_in_at", "2016-04-05 22:22:42.934171"], ["sign_in_count", 29], ["updated_at", "2016-04-05 22:22:42.935055"], ["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 92ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 15:22:42 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 92ms (Views: 91.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 15:26:35 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 114ms (Views: 113.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 15:26:39 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 96ms (Views: 95.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/d/users/sign_out" for ::1 at 2016-04-05 15:26:45 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NzvxXmog/SSqBQnBVQ98jTy0YYlpVLFdC5vl0HYwP0gYZW3d6AdvGnkHhzt2ypFE2MwPXhpAKpZ2tjdSOCucPw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 15:26:45 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 89ms (Views: 88.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 15:28:35 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 125ms (Views: 123.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-04-05 15:28:41 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 81ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/d/users/sign_in" for ::1 at 2016-04-05 15:28:49 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pv824IjfT6uucTECFFXv6UGRiDC5IIrQydCIDr7MWoATbXSoB8PxWhtXNOSzmm4Fsz4PSkgPPNn/in7sbEPmIg==", "user"=>{"email"=>"admin@vondubinhaus.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "admin@vondubinhaus.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-04-05 22:22:42.934171"], ["current_sign_in_at", "2016-04-05 22:28:49.197246"], ["sign_in_count", 30], ["updated_at", "2016-04-05 22:28:49.198153"], ["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 98ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 15:28:49 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 90ms (Views: 89.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:28:51 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 89ms (Views: 88.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:29:07 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 102ms (Views: 101.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 15:29:11 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 89ms (Views: 88.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 15:29:13 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 84ms (Views: 83.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/donations/new" for ::1 at 2016-04-05 15:29:13 -0700
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (2.3ms)
+  Rendered donations/new.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 90ms (Views: 88.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:29:15 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 102ms (Views: 101.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:29:16 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 94ms (Views: 92.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:29:18 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 94ms (Views: 92.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dogs/new" for ::1 at 2016-04-05 15:29:19 -0700
+Processing by DogsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered dogs/_form.html.erb (4.2ms)
+  Rendered dogs/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 94ms (Views: 93.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/testimonials/new" for ::1 at 2016-04-05 15:29:21 -0700
+Processing by TestimonialsController#new as HTML
+  Rendered testimonials/_form.html.erb (2.8ms)
+  Rendered testimonials/new.html.erb within layouts/application (4.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 95ms (Views: 94.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:29:22 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 94ms (Views: 93.1ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/d/users/sign_out" for ::1 at 2016-04-05 15:29:24 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VM5+LLqc79mEK7BaCaGnDxnPzO9JsCmCRnYIK2kFVHRBJUA4hgjN+FqB1/+ckzEJ01xtYPkXgEiZefeSX/xsvg=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 15:29:24 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 96ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:29:25 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 104ms (Views: 103.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:29:26 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 99ms (Views: 98.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-05 15:29:29 -0700
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (0.3ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 97ms (Views: 96.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 15:29:30 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 104ms (Views: 103.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 15:29:32 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 88ms (Views: 87.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donations/new" for ::1 at 2016-04-05 15:29:32 -0700
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (2.3ms)
+  Rendered donations/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 95ms (Views: 93.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/donations/new" for ::1 at 2016-04-05 15:29:33 -0700
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (1.8ms)
+  Rendered donations/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 96ms (Views: 95.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:29:34 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 96ms (Views: 95.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:32:15 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 97ms (Views: 96.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:32:16 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 93ms (Views: 92.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-05 15:32:19 -0700
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (0.2ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 88ms (Views: 85.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 15:32:23 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 93ms (Views: 91.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:32:24 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 86ms (Views: 85.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 15:32:25 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 91ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:32:27 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 94ms (Views: 93.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:36:36 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 111ms (Views: 110.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:36:38 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 106ms (Views: 105.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:40:08 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 2602ms (Views: 2601.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-04-05 15:40:23 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 92ms (Views: 90.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/d/users/sign_in" for ::1 at 2016-04-05 15:40:30 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dfuSn58q47QSVWipOMBU3a6sN21qKtIJXOd/Pki23/3vcVvL9T5QVD8IMQR6ygS92QRFD6nr4T8/MA08+eOPoQ==", "user"=>{"email"=>"admin@vondubinhaus.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "admin@vondubinhaus.com"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-04-05 22:28:49.197246"], ["current_sign_in_at", "2016-04-05 22:40:30.939037"], ["sign_in_count", 31], ["updated_at", "2016-04-05 22:40:30.940121"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 93ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 15:40:30 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 83ms (Views: 82.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/testimonials/new" for ::1 at 2016-04-05 15:40:39 -0700
+Processing by TestimonialsController#new as HTML
+  Rendered testimonials/_form.html.erb (2.2ms)
+  Rendered testimonials/new.html.erb within layouts/application (3.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 87ms (Views: 86.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dogs/new" for ::1 at 2016-04-05 15:40:41 -0700
+Processing by DogsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered dogs/_form.html.erb (4.7ms)
+  Rendered dogs/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 72ms (Views: 71.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-05 15:40:43 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.3ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (7.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 94ms (Views: 93.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:40:44 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 89ms (Views: 88.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:41:12 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 97ms (Views: 97.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dogs/new" for ::1 at 2016-04-05 15:41:19 -0700
+Processing by DogsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered dogs/_form.html.erb (4.0ms)
+  Rendered dogs/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 82ms (Views: 80.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:41:21 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 90ms (Views: 88.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:42:29 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 94ms (Views: 93.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-05 15:42:31 -0700
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (0.2ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (8.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 97ms (Views: 96.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/40" for ::1 at 2016-04-05 15:42:34 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", 40]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", "40"]]
+  [1m[36mComment Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1[0m  [["dog_id", 40]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 119ms (Views: 116.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:42:57 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 116ms (Views: 115.8ms | ActiveRecord: 0.1ms)
