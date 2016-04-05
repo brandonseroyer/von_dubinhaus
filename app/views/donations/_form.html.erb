@@ -1,16 +1,14 @@
 <%= form_for @donation do |f| %>
-  <div class='form-group'>
+  <div class='col-xs-2'>
     <%= f.label :first_name %>
     <%= f.text_field :first_name, class: "form-control", required: 'required' %><br>
     <%= f.label :last_name %>
     <%= f.text_field :last_name, class: "form-control", required: 'required' %><br>
-    <%= f.label :email %>
+    <%= f.label :email_address %>
     <%= f.text_field :email, class: "form-control", required: 'required' %><br>
-    <%= f.label :amount %>
+    <%= f.label :donation_amount %>
     <%= f.text_field :amount, class: "form-control", required: 'required' %><br>
-  </div>
-
-  <div class='form-group'>
-    <%= f.submit class: 'btn btn-success' %>
+    <%= f.submit "Submit Donation", class: 'btn btn-success' %>
   </div>
 <% end %>
+<br>

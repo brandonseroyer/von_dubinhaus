@@ -61,6 +61,10 @@ ul {
   -webkit-filter: grayscale(75%);
 }
 
+.col-xs-3 {
+  text-align: left;
+}
+
 .navbar-default {
   background-color: black;
   border-color: black;
@@ -90,7 +94,7 @@ ul {
   width: 40px;
   height: 40px;
   color: #FFF;
-  background-color: #909AA0;
+  background-color: #000000;
   font-size: 22px;
   text-align:center;
   padding-top: 12px;
@@ -127,6 +131,31 @@ ul {
   background: #00ABE3;
 }
 
+#alumni-name {
+  position: relative;
+  bottom: 58px;
+  left: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 45px;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+
+#alumni-page-text {
+  font-size: 20px;
+  width: 550px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 25px;
+  padding: 1%;
+  background: rgba(0, 0, 0, .10);
+  box-shadow: 1px 1px 3px black;
+}
+
 #apply-font {
   font-size: 36px;
 }
@@ -155,7 +184,7 @@ ul {
 
 #dog-hr {
   position: relative;
-  bottom: 25px;
+  bottom: 30px;
   border: 1px solid #000000;
   border-style: solid;
   color: #000000;
@@ -181,7 +210,7 @@ ul {
 #donate {
   text-align: left;
   width: 180px;
-  height: 50px;
+  height: 45px;
   float: right;
   padding-left: 10px;
   padding-bottom: 10px;
@@ -204,9 +233,19 @@ ul {
   box-shadow: 1px 1px 5px black;
 }
 
+#donation-page-text {
+  font-size: 30px;
+  text-align: left;
+  border-radius: 25px;
+  padding: 2%;
+  width: 60%;
+  background: rgba(0, 0, 0, .10);
+  box-shadow: 1px 1px 3px black;
+}
+
 #donate-social {
   position: relative;
-  top: 100px;
+  top: 120px;
 }
 
 #dropdown {
@@ -260,13 +299,13 @@ ul {
 }
 
 #icon-text-2 {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   color: white;
 }
 
 #index-icons {
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 15px black;
   width: 243px;
 }
 
@@ -316,7 +355,7 @@ ul {
 
 #profile-head {
   position: relative;
-  bottom: 45px;
+  bottom: 75px;
   font-family: 'Satisfy', cursive;
   font-size: 85px;
   text-align: left;
@@ -329,7 +368,7 @@ ul {
 
 #profile-pic-stats {
   position: relative;
-  bottom: 25px;
+  bottom: 55px;
   text-align: left;
   padding-left: 30px;
 }
@@ -346,7 +385,7 @@ ul {
 #rescue-profile {
   border-style: solid;
   border-width: 1px;
-  width: 300px;
+  width: 301px;
   background: rgba(255, 255, 255, .75);
   text-shadow: 0 .5px 0 #000;
   font-size: 25px;

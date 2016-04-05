@@ -27,15 +27,13 @@
 <center><header>Available for Adoption</header></center>
 <br>
 <div>
-  <% @dogs.each_slice(3) do |dogs| %>
-    <% dogs.each do |dog| %>
-      <div class="col-sm-4">
-      <%= link_to image_tag(dog.image, id:"dog-box"), dog_path(dog) %>
-        <div id="rescue-profile">
-          Click to learn more about <%= link_to dog.name, dog_path(dog), id:'index-profile-font' %>
-        </div>
-        <br>
-      </div>
-    <% end %>
+  <% @dogs.each do |dog| %>
+  <div class="col-sm-4">
+    <%= link_to image_tag(dog.image, id:"dog-box"), dog_path(dog) %>
+    <div id="rescue-profile">
+      Click to learn more about <%= link_to dog.name, dog_path(dog), id:'index-profile-font' %>
+    </div>
+    <br>
+  </div>
   <% end %>
 </div>

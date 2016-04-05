@@ -1,24 +1,23 @@
 <center><header>Von Dubinhaus Alumni</header></center>
-<br>
-<div id="testimonial-profile">
-<% @testimonials.each do |testimonial| %>
-  <%= image_tag testimonial.image.url(:profile), id:'pic' =%>
-  <br>
-    <h3>Name: <%=  testimonial.name %></h3>
-    <h3>Adopted: <%= testimonial.date %></h3>
-    <h4><%= testimonial.story %></h4>
-    <% if current_user %>
- <div id='edit-testimonial-form'>
- </div>
- <div id='testimonial-links'>
-    <p>
-    <%= link_to "Edit", edit_testimonial_path(testimonial), id:'edit-testimonial-link', remote: true %><br>
-    <%= link_to "Delete", testimonial_path(testimonial),
-    :data => {:confirm => "You sure?",
-      :method => "delete"} %>
+<div id="alumni-page-text">
+  The following are former rescue dogs whom have been successfully rehomed
+</div>
+<br><br>
+<div>
+  <% @testimonials.each do |testimonial| %>
+    <div class="col-md-4">
+      <%= image_tag testimonial.image, id:"dog-box" %>
+      <div id='alumni-name'>
+        <%= testimonial.name %>
+      </div>
+      <% if current_user %>
+        <div id='edit-testimonial-form'>
+        </div>
+        <%= link_to "Edit", edit_testimonial_path(testimonial), id:'edit-testimonial-link', remote: true %><br>
+        <%= link_to "Delete", testimonial_path(testimonial),
+        :data => {:confirm => "You sure?",
+          :method => "delete"} %>
       <% end %>
-<hr>
-<% end %>
-<%= link_to "Return to Home", home_index_path %></p>
- </div>
+    </div>
+  <% end %>
 </div>

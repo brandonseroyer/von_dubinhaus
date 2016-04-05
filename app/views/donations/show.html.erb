@@ -1,5 +1,5 @@
-<h1>You have selected a donation of $<%= @donation.amount %></h1>
-
+<div id="donation-page-text">
+<%= @donation.first_name %>, you have selected a donation amount of $<%= @donation.amount %>.00 USD
 <%= form_tag donation_charges_path(@donation) do %>
 <article>
   <% if flash[:error].present? %>
@@ -7,14 +7,14 @@
       <p><%= flash[:error] %></p>
     </div>
   <% end %>
-  <label class="amount">
-    <span>Amount: $<%= @donation.amount %></span>
-  </label>
 </article>
 
 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
         data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-        data-description= "$<%= @donation.amount %> donation"
-        data-amount="<% @donation.amount %>""
+        data-description= "$<%= @donation.amount %>.00 donation"
+        data-amount="<% @donation.amount %>"
         data-locale="auto"></script>
 <% end %>
+</div>
+<br>
+<%= link_to "Cancel, Return to Donation Page", new_donation_path %></p>
