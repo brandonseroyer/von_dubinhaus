@@ -12,11 +12,13 @@
  *
  *= require_tree .
  *= require_self
+ *= require social-share-button
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "bootstrap-social";
  @import "font-awesome";
+ @import "social-share-button";
 
 * {
   font-family: 'Homenaje', arial, sans-serif;
@@ -410,7 +412,7 @@ ul {
 #social {
   text-align: left;
   width: 180px;
-  height: 90px;
+  height: 60px;
   float: right;
   padding-left: 10px;
   padding-bottom: 10px;
@@ -456,6 +458,6 @@ ul {
 
 #text-color2 {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }

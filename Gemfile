@@ -18,6 +18,8 @@ gem "paperclip", '~> 4.1'
 gem 'aws-sdk'
 gem 'stripe'
 gem 'ckeditor'
+gem 'social-share-button'
+
 
 group :development do
   gem 'letter_opener'

@@ -14,11 +14,13 @@ Rails.application.routes.draw do
     resources :charges, :only => [:create]
   end
 
-  resources :applicants
-
   resources :testimonials
 
+  resources :applicants, :only => [:index, :new, :create, :destroy]
+
   resources :training, :only => [:index]
+
+  resources :faq, :only => [:index]
 
   resources :about, :only => [:index]
 

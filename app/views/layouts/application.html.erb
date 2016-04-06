@@ -7,145 +7,134 @@
   <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Homenaje' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
+  <meta property="og:url"           content="http://localhost:3000/dogs.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Von Dubinhaus Shepherds" />
 
-    <meta property="og:url"           content="http://localhost:3000/dogs" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Von Dubinhaus Shepherds" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="background-wrap">
-    <div id="fb-root">
-      <script>
-        (function(d, s, id) {
-          var js, fjs = d.getElementsByTagName(s)[0];
-          if (d.getElementById(id)) return;
-          js = d.createElement(s); js.id = id;
-          js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
-          fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-      </script>
-    </div>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <%= link_to image_tag('logo.png'), home_index_path, class: "navbar-brand" %>
-        </div>
-        <div id="nav-right">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <%= link_to image_tag('logo.png'), home_index_path, class: "navbar-brand" %>
+      </div>
+      <div id="nav-right">
+        <ul class="nav navbar-nav navbar-right">
+        <% unless current_user %>
+          <li>
+            <%= link_to 'Home', home_index_path, id:'text-color' %>
+          </li>
           <ul class="nav navbar-nav navbar-right">
-          <% unless current_user %>
-            <li>
-              <%= link_to 'Home', home_index_path, id:'text-color' %>
+            <li class="dropdown">
+              <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Rescue
+                <span class="caret">
+                </span>
+              </a>
+              <ul class="dropdown-menu" id="dropdown">
+                <li>
+                  <%= link_to 'Available', dogs_path %>
+                </li>
+                <li>
+                  <%= link_to 'Alumni ', testimonials_path %>
+                </li>
+              </ul>
             </li>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  Rescue
-                  <span class="caret">
-                  </span>
-                </a>
-                <ul class="dropdown-menu" id="dropdown">
-                  <li>
-                    <%= link_to 'Available', dogs_path %>
-                  </li>
-                  <li>
-                    <%= link_to 'Alumni ', testimonials_path %>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  Training
-                  <span class="caret">
-                  </span>
-                </a>
-                <ul class="dropdown-menu" id="dropdown">
-                  <li>
-                    <%= link_to 'Services & Rates', training_index_path %>
-                  </li>
-                  <li>
-                    <%= link_to 'FAQ ', testimonials_path %>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <%= link_to 'Donate', new_donation_path, id:'text-color' %>
-              </li>
-              <li>
-                <%= link_to 'About', about_index_path, id:'text-color' %>
-              </li>
-            </ul>
-          <% else %>
-            <li>
-              <%= link_to 'Home', home_index_path, id:'text-color' %>
+            <li class="dropdown">
+              <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Training
+                <span class="caret">
+                </span>
+              </a>
+              <ul class="dropdown-menu" id="dropdown">
+                <li>
+                  <%= link_to 'Services & Rates', training_index_path %>
+                </li>
+                <li>
+                  <%= link_to 'FAQ', faq_index_path %>
+                </li>
+              </ul>
             </li>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="dropdown">
-                <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  Admin Tools
-                  <span class="caret">
-                  </span>
-                </a>
-                <ul class="dropdown-menu" id="dropdown">
-                  <li><%= link_to 'Add Rescue', new_dog_path %></li>
-                  <li><%= link_to 'Add Alumni', new_testimonial_path %></li>
-                  <li><%= link_to 'Adoption Applications', applicants_path %></li>
-                  <li><%= link_to 'Admin View', users_path %></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  Rescue
-                  <span class="caret">
-                  </span>
-                </a>
-                <ul class="dropdown-menu" id="dropdown">
-                  <li><%= link_to 'Available', dogs_path %>
-                  </li>
-                  <li><%= link_to 'Alumni', testimonials_path %>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                  Training
-                  <span class="caret">
-                  </span>
-                </a>
-                <ul class="dropdown-menu" id="dropdown">
-                  <li>
-                    <%= link_to 'Services & Rates', training_index_path %>
-                  </li>
-                  <li>
-                    <%= link_to 'FAQ ', testimonials_path %>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <%= link_to 'Donate', new_donation_path, id:'text-color' %>
-              </li>
-              <li>
-                <%= link_to 'About', about_index_path, id:'text-color' %>
-              </li>
-            </ul>
-            <% end %>
+            <li>
+              <%= link_to 'Donate', new_donation_path, id:'text-color' %>
+            </li>
+            <li>
+              <%= link_to 'About', about_index_path, id:'text-color' %>
+            </li>
           </ul>
-        </div>
+        <% else %>
+          <li>
+            <%= link_to 'Home', home_index_path, id:'text-color' %>
+          </li>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Admin Tools
+                <span class="caret">
+                </span>
+              </a>
+              <ul class="dropdown-menu" id="dropdown">
+                <li><%= link_to 'Add Rescue', new_dog_path %></li>
+                <li><%= link_to 'Add Alumni', new_testimonial_path %></li>
+                <li><%= link_to 'Adoption Applications', applicants_path %></li>
+                <li><%= link_to 'Admin View', users_path %></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Rescue
+                <span class="caret">
+                </span>
+              </a>
+              <ul class="dropdown-menu" id="dropdown">
+                <li><%= link_to 'Available', dogs_path %>
+                </li>
+                <li><%= link_to 'Alumni', testimonials_path %>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Training
+                <span class="caret">
+                </span>
+              </a>
+              <ul class="dropdown-menu" id="dropdown">
+                <li>
+                  <%= link_to 'Services & Rates', training_index_path %>
+                </li>
+                <li>
+                  <%= link_to 'FAQ', faq_index_path %>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <%= link_to 'Donate', new_donation_path, id:'text-color' %>
+            </li>
+            <li>
+              <%= link_to 'About', about_index_path, id:'text-color' %>
+            </li>
+          </ul>
+          <% end %>
+        </ul>
       </div>
-    </nav>
-    <div class='container'>
-      <% if alert %>
-      <div class="alert alert-danger" role="alert">
-        <%= flash[:alert] %>
-      </div>
-      <% end %>
-      <% if notice %>
-      <div class="alert alert-success" role="alert">
-        <%= flash[:notice] %>
-      </div>
-      <% end %>
-      <br>
-      <%= yield %>
     </div>
+  </nav>
+  <div class='container'>
+    <% if alert %>
+    <div class="alert alert-danger" role="alert">
+      <%= flash[:alert] %>
+    </div>
+    <% end %>
+    <% if notice %>
+    <div class="alert alert-success" role="alert">
+      <%= flash[:notice] %>
+    </div>
+    <% end %>
+    <br>
+    <%= yield %>
   </div>
 </body>
 </html>
