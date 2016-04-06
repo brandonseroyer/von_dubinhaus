@@ -52,8 +52,20 @@
                   </li>
                 </ul>
               </li>
-              <li>
-                <%= link_to 'Training', training_index_path, id:'text-color' %>
+              <li class="dropdown">
+                <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  Training
+                  <span class="caret">
+                  </span>
+                </a>
+                <ul class="dropdown-menu" id="dropdown">
+                  <li>
+                    <%= link_to 'Services & Rates', training_index_path %>
+                  </li>
+                  <li>
+                    <%= link_to 'FAQ ', testimonials_path %>
+                  </li>
+                </ul>
               </li>
               <li>
                 <%= link_to 'Donate', new_donation_path, id:'text-color' %>
@@ -92,15 +104,27 @@
                   <li><%= link_to 'Alumni', testimonials_path %>
                   </li>
                 </ul>
-                <li>
-                  <%= link_to 'Training', training_index_path, id:'text-color' %>
-                </li>
-                <li>
-                  <%= link_to 'Donate', new_donation_path, id:'text-color' %>
-                </li>
-                <li>
-                  <%= link_to 'About', about_index_path, id:'text-color' %>
-                </li>
+              </li>
+              <li class="dropdown">
+                <a href="#" id="text-color" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  Training
+                  <span class="caret">
+                  </span>
+                </a>
+                <ul class="dropdown-menu" id="dropdown">
+                  <li>
+                    <%= link_to 'Services & Rates', training_index_path %>
+                  </li>
+                  <li>
+                    <%= link_to 'FAQ ', testimonials_path %>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <%= link_to 'Donate', new_donation_path, id:'text-color' %>
+              </li>
+              <li>
+                <%= link_to 'About', about_index_path, id:'text-color' %>
               </li>
             </ul>
             <% end %>

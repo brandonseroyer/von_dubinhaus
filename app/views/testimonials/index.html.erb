@@ -1,23 +1,54 @@
 <center><header>Von Dubinhaus Alumni</header></center>
+<br>
+<div class="container">
+  <div id="carousel-alumni" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-alumni" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-alumni" data-slide-to="1"></li>
+      <li data-target="#carousel-alumni" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <center><%= link_to image_tag("mars_rescue.jpg") %></center>
+      </div>
+      <div class="item">
+        <center><%= link_to image_tag("hunter_rescue.jpg") %></center>
+      </div>
+      <div class="item">
+        <center><%= link_to image_tag("cyrus_rescue.jpg") %></center>
+      </div>
+    </div>
+
+    <a class="left carousel-control" href="#carousel-alumni" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-alumni" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
 <div id="alumni-page-text">
   The following are former rescue dogs whom have been successfully rehomed
 </div>
 <br><br>
 <div>
   <% @testimonials.each do |testimonial| %>
-    <div class="col-md-4">
-      <%= image_tag testimonial.image, id:"dog-box" %>
-      <div id='alumni-name'>
-        <%= testimonial.name %>
-      </div>
-      <% if current_user %>
-        <div id='edit-testimonial-form'>
-        </div>
-        <%= link_to "Edit", edit_testimonial_path(testimonial), id:'edit-testimonial-link', remote: true %><br>
-        <%= link_to "Delete", testimonial_path(testimonial),
-        :data => {:confirm => "You sure?",
-          :method => "delete"} %>
-      <% end %>
+  <div class="col-md-4">
+    <%= image_tag testimonial.image, id:"dog-box" %>
+    <div id='alumni-name'>
+      <%= testimonial.name %>
+    <% if current_user %>
+      <%= link_to "Delete", testimonial_path(testimonial),
+      :data => {:confirm => "You sure?",
+        :method => "delete"} %>
+    <% end %>
     </div>
+  </div>
   <% end %>
 </div>
+<br>

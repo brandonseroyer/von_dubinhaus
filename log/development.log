@@ -37841,3 +37841,1394 @@ Processing by HomeController#index as HTML
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
   Rendered home/index.html.erb within layouts/application (18.6ms)
 Completed 200 OK in 116ms (Views: 115.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/about" for ::1 at 2016-04-05 15:45:52 -0700
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 89ms (Views: 88.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/donations/new" for ::1 at 2016-04-05 15:45:54 -0700
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (3.4ms)
+  Rendered donations/new.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 89ms (Views: 87.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-05 15:46:08 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.2ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 91ms (Views: 89.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/40" for ::1 at 2016-04-05 15:46:12 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 40]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "40"]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 40]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 128ms (Views: 126.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/applicants/new" for ::1 at 2016-04-05 15:46:14 -0700
+Processing by ApplicantsController#new as HTML
+  Rendered applicants/_form.html.erb (5.7ms)
+  Rendered applicants/new.html.erb within layouts/application (7.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 96ms (Views: 83.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:46:30 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 103ms (Views: 102.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 15:53:39 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (1.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered testimonials/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 201ms (Views: 190.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:53:45 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 129ms (Views: 128.1ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/d/users/sign_out" for ::1 at 2016-04-05 15:53:52 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qD8sv/72zdIqvV48p59vzt8JpKoEmH/hsdGYLJa826Aes61M5BFNaYqsK4p68bZY3o52wEJGG82s19ok284ivg=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 15:53:52 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 112ms (Views: 111.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 15:53:55 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.3ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 99ms (Views: 98.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 15:56:45 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 154ms (Views: 153.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-05 16:12:56 -0700
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (0.4ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 165ms (Views: 163.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dogs/36" for ::1 at 2016-04-05 16:13:01 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 36]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "36"]]
+  [1m[35mComment Exists (0.2ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 36]]
+  Rendered dogs/show.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 153ms (Views: 148.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/donations/new" for ::1 at 2016-04-05 16:13:12 -0700
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (7.2ms)
+  Rendered donations/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 122ms (Views: 121.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/donations" for ::1 at 2016-04-05 16:13:26 -0700
+Processing by DonationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tc1xVGgkaMg68Bya9B0Czwz0xQ9mbqNbvTenSG8vkBfBRXvPFUH3QKyBNmg7/gzIOj+N859+SikbkwtxI9ZMLA==", "donation"=>{"first_name"=>"Billy", "last_name"=>"Seroyer", "email"=>"wseroyer@gmail.com", "amount"=>"100"}, "commit"=>"Submit Donation"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "donations" ("first_name", "last_name", "email", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Billy"], ["last_name", "Seroyer"], ["email", "wseroyer@gmail.com"], ["amount", 100], ["created_at", "2016-04-05 23:13:26.107267"], ["updated_at", "2016-04-05 23:13:26.107267"]]
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+  Rendered donations/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 134ms (Views: 121.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 16:13:41 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.5ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 195ms (Views: 193.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 16:13:46 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 91ms (Views: 90.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2016-04-05 16:13:50 -0700
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 98ms (Views: 97.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:13:52 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 112ms (Views: 111.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:15:55 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 293ms (Views: 292.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:19:28 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 154ms (Views: 153.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2016-04-05 16:19:44 -0700
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 111ms (Views: 110.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 16:19:46 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 107ms (Views: 106.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 16:19:59 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (1.0ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 104ms (Views: 102.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 16:24:30 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (2.8ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 164ms (Views: 145.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:24:34 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 113ms (Views: 112.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/d/users/sign_in" for ::1 at 2016-04-05 16:24:38 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendered users/sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 116ms (Views: 102.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/d/users/sign_in" for ::1 at 2016-04-05 16:24:52 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bMxGWfeSil1Ep9zeBVdxFylQFGbMDlyLgGVAMAUM6jkYREzCivcV1dLW9izKtH8QH5tcmjUetfkmwewJSfU2Ag==", "user"=>{"email"=>"admin@vondubinhaus.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "admin@vondubinhaus.com"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-04-05 22:40:30.939037"], ["current_sign_in_at", "2016-04-05 23:24:52.282764"], ["sign_in_count", 32], ["updated_at", "2016-04-05 23:24:52.284782"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 99ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 16:24:52 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 109ms (Views: 108.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 16:24:56 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered testimonials/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 104ms (Views: 102.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 16:25:26 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered testimonials/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 116ms (Views: 115.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 16:25:54 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered testimonials/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 107ms (Views: 105.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 16:26:32 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered testimonials/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 111ms (Views: 110.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/testimonials/16" for ::1 at 2016-04-05 16:26:48 -0700
+Processing by TestimonialsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"PB0TcSTHYEEoc7sXU5+OYWmzlwQxJCMoPDWIpgSIFqZg7awj0uTaHC2ODUUtH35zoeA73xzmOzlJWVW+1fOTWA==", "id"=>"16"}
+  [1m[35mTestimonial Load (0.4ms)[0m  SELECT  "testimonials".* FROM "testimonials" WHERE "testimonials"."id" = ? LIMIT 1  [["id", 16]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "testimonials" WHERE "testimonials"."id" = ?  [["id", 16]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/testimonials/images/000/000/016/original/luna.jpg
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/testimonials/images/000/000/016/standard/luna.jpg
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/testimonials/images/000/000/016/profile/luna.jpg
+[paperclip] deleting /Users/brandonseroyer/Desktop/von_dubinhaus/public/system/testimonials/images/000/000/016/thumb/luna.jpg
+Redirected to http://localhost:3000/testimonials
+Completed 302 Found in 33ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 16:26:48 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered testimonials/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 101ms (Views: 99.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:26:52 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 105ms (Views: 104.4ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/d/users/sign_out" for ::1 at 2016-04-05 16:26:55 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DYjw014Arrq6i6ex+kEyekmbj1EuY/c9eD+QJGpb6/JReE+BqCMU5792EeOEwcJogcgjigOh7ywNU008uyBuDA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 16:26:55 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 102ms (Views: 101.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 16:26:57 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.6ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 89ms (Views: 88.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 16:31:53 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 97ms (Views: 96.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 16:31:56 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.1ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 75ms (Views: 74.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 16:31:58 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 75ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:33:22 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (40.5ms)
+Completed 200 OK in 191ms (Views: 188.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 16:33:32 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 122ms (Views: 121.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:33:34 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 109ms (Views: 108.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:35:57 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (36.5ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:37: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+...er.append=( link_to <span class="glyphicon glyphicon-home"><...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:37: syntax error, unexpected '<'
+...ss="glyphicon glyphicon-home"></span>, home_index_path, id:'...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:38: unknown regexp option - l
+unmatched close parenthesis: /span>, home_index_path, id:'text-color' );@output_buffer.safe_append='
+            </i
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:39: syntax error, unexpected '<'
+            <ul class="nav navbar-nav navbar-right">
+             ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:40: syntax error, unexpected '<'
+              <li class="dropdown">
+               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:41: syntax error, unexpected '<'
+                <a href="#" id="text-color" da...
+                 ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting ')'
+                <a href="#" id="text-color" data-toggle="dr...
+                              ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting ')'
+...a href="#" id="text-color" data-toggle="dropdown" role="butt...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting ')'
+...or" data-toggle="dropdown" role="button" aria-haspopup="true...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e="dropdown" role="button" aria-haspopup="true" aria-expande...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting ')'
+...tton" aria-haspopup="true" aria-expanded="false">
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:43: syntax error, unexpected '<', expecting ')'
+                  <span class="caret">
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+                  </span>
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:45: unknown regexp option - a
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:46: syntax error, unexpected '<'
+                <ul class="dropdown-menu" id="dropdown">
+                 ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting ')'
+                <ul class="dropdown-menu" id="dropdown">
+                                            ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:47: syntax error, unexpected '<'
+                  <li>
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:48: syntax error, unexpected tCONSTANT, expecting ')'
+...fer.append=( link_to 'Available', dogs_path );@output_buffer...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:49: syntax error, unexpected '<', expecting ')'
+                  </li>
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:52: unknown regexp option - l
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+                </ul>
+                 ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:54: unknown regexp option - l
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:55: syntax error, unexpected '<'
+              <li class="dropdown">
+               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:56: syntax error, unexpected '<'
+                <a href="#" id="text-color" da...
+                 ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:56: syntax error, unexpected tIDENTIFIER, expecting ')'
+                <a href="#" id="text-color" data-toggle="dr...
+                              ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:56: syntax error, unexpected tIDENTIFIER, expecting ')'
+...a href="#" id="text-color" data-toggle="dropdown" role="butt...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:56: syntax error, unexpected tIDENTIFIER, expecting ')'
+...or" data-toggle="dropdown" role="button" aria-haspopup="true...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:56: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e="dropdown" role="button" aria-haspopup="true" aria-expande...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:56: syntax error, unexpected tIDENTIFIER, expecting ')'
+...tton" aria-haspopup="true" aria-expanded="false">
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:58: syntax error, unexpected '<', expecting ')'
+                  <span class="caret">
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:59: syntax error, unexpected '<'
+                  </span>
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:60: unknown regexp option - a
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:61: syntax error, unexpected '<'
+                <ul class="dropdown-menu" id="dropdown">
+                 ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:61: syntax error, unexpected tIDENTIFIER, expecting ')'
+                <ul class="dropdown-menu" id="dropdown">
+                                            ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:62: syntax error, unexpected '<'
+                  <li>
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:63: syntax error, unexpected tCONSTANT, expecting ')'
+...ffer.append=( link_to 'Services & Rates', training_index_pat...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:63: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...nd=( link_to 'Services & Rates', training_index_path );@outp...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:64: syntax error, unexpected '<', expecting ')'
+                  </li>
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:67: unknown regexp option - l
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+                </ul>
+                 ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:69: unknown regexp option - l
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:70: syntax error, unexpected '<'
+              <li>
+               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:71: syntax error, unexpected tCONSTANT, expecting ')'
+...buffer.append=( link_to 'Donate', new_donation_path, id:'tex...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:71: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e', new_donation_path, id:'text-color' );@output_buffer.safe...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:71: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+..._donation_path, id:'text-color' );@output_buffer.safe_append...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:72: syntax error, unexpected '<', expecting ')'
+              </li>
+               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:75: unknown regexp option - l
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:76: syntax error, unexpected '<'
+            </ul>
+             ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:80: unknown regexp option - l
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:81: syntax error, unexpected '<'
+            <ul class="nav navbar-nav navbar-right">
+             ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:82: syntax error, unexpected '<'
+              <li class="dropdown">
+               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:83: syntax error, unexpected '<'
+                <a href="#" id="text-color" da...
+                 ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:83: syntax error, unexpected tIDENTIFIER, expecting ')'
+                <a href="#" id="text-color" data-toggle="dr...
+                              ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:83: syntax error, unexpected tIDENTIFIER, expecting ')'
+...a href="#" id="text-color" data-toggle="dropdown" role="butt...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:83: syntax error, unexpected tIDENTIFIER, expecting ')'
+...or" data-toggle="dropdown" role="button" aria-haspopup="true...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:83: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e="dropdown" role="button" aria-haspopup="true" aria-expande...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:83: syntax error, unexpected tIDENTIFIER, expecting ')'
+...tton" aria-haspopup="true" aria-expanded="false">
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:84: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:86: syntax error, unexpected '<'
+                  </span>
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:87: unknown regexp option - a
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:88: syntax error, unexpected '<'
+                <ul class="dropdown-menu" id="dropdown">
+                 ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:88: syntax error, unexpected tIDENTIFIER, expecting ')'
+                <ul class="dropdown-menu" id="dropdown">
+                                            ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:89: syntax error, unexpected '<'
+                  <li>'.freeze;@output_buffer.ap...
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:89: syntax error, unexpected tCONSTANT, expecting ')'
+...ut_buffer.append=( link_to 'Add Rescue', new_dog_path );@out...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:90: unknown regexp option - l
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:91: syntax error, unexpected '<'
+                  <li>'.freeze;@output_buffer.ap...
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:91: syntax error, unexpected tCONSTANT, expecting ')'
+...ffer.append=( link_to 'Adoption Applications', applicants_pa...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:92: unknown regexp option - l
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:93: syntax error, unexpected '<'
+                </ul>
+                 ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:94: unknown regexp option - l
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:95: syntax error, unexpected '<'
+              <li class="dropdown">
+               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:96: syntax error, unexpected '<'
+                <a href="#" id="text-color" da...
+                 ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:96: syntax error, unexpected tIDENTIFIER, expecting ')'
+                <a href="#" id="text-color" data-toggle="dr...
+                              ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:96: syntax error, unexpected tIDENTIFIER, expecting ')'
+...a href="#" id="text-color" data-toggle="dropdown" role="butt...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:96: syntax error, unexpected tIDENTIFIER, expecting ')'
+...or" data-toggle="dropdown" role="button" aria-haspopup="true...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:96: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e="dropdown" role="button" aria-haspopup="true" aria-expande...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:96: syntax error, unexpected tIDENTIFIER, expecting ')'
+...tton" aria-haspopup="true" aria-expanded="false">
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:98: syntax error, unexpected '<', expecting ')'
+                  <span class="caret">
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:99: syntax error, unexpected '<'
+                  </span>
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:100: unknown regexp option - a
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:101: syntax error, unexpected '<'
+                <ul class="dropdown-menu" id="dropdown">
+                 ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:101: syntax error, unexpected tIDENTIFIER, expecting ')'
+                <ul class="dropdown-menu" id="dropdown">
+                                            ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:102: syntax error, unexpected '<'
+                  <li>'.freeze;@output_buffer.ap...
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:102: syntax error, unexpected tCONSTANT, expecting ')'
+...fer.append=( link_to 'Available', dogs_path );@output_buffer...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:103: syntax error, unexpected '<', expecting ')'
+                  </li>
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:105: unknown regexp option - l
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:106: syntax error, unexpected '<'
+                </ul>
+                 ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:107: unknown regexp option - l
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:108: syntax error, unexpected '<'
+              <li class="dropdown">
+               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:109: syntax error, unexpected '<'
+                <a href="#" id="text-color" da...
+                 ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:109: syntax error, unexpected tIDENTIFIER, expecting ')'
+                <a href="#" id="text-color" data-toggle="dr...
+                              ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:109: syntax error, unexpected tIDENTIFIER, expecting ')'
+...a href="#" id="text-color" data-toggle="dropdown" role="butt...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:109: syntax error, unexpected tIDENTIFIER, expecting ')'
+...or" data-toggle="dropdown" role="button" aria-haspopup="true...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:109: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e="dropdown" role="button" aria-haspopup="true" aria-expande...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:109: syntax error, unexpected tIDENTIFIER, expecting ')'
+...tton" aria-haspopup="true" aria-expanded="false">
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:111: syntax error, unexpected '<', expecting ')'
+                  <span class="caret">
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:112: syntax error, unexpected '<'
+                  </span>
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:113: unknown regexp option - a
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:114: syntax error, unexpected '<'
+                <ul class="dropdown-menu" id="dropdown">
+                 ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:114: syntax error, unexpected tIDENTIFIER, expecting ')'
+                <ul class="dropdown-menu" id="dropdown">
+                                            ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:115: syntax error, unexpected '<'
+                  <li>
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:116: syntax error, unexpected tCONSTANT, expecting ')'
+...ffer.append=( link_to 'Services & Rates', training_index_pat...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:116: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...nd=( link_to 'Services & Rates', training_index_path );@outp...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:117: syntax error, unexpected '<', expecting ')'
+                  </li>
+                   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:120: unknown regexp option - l
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:121: syntax error, unexpected '<'
+                </ul>
+                 ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:122: unknown regexp option - l
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:123: syntax error, unexpected '<'
+              <li>
+               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:124: syntax error, unexpected tCONSTANT, expecting ')'
+...buffer.append=( link_to 'Donate', new_donation_path, id:'tex...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:124: syntax error, unexpected tIDENTIFIER, expecting ')'
+...e', new_donation_path, id:'text-color' );@output_buffer.safe...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:124: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+..._donation_path, id:'text-color' );@output_buffer.safe_append...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:125: syntax error, unexpected '<', expecting ')'
+              </li>
+               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:128: unknown regexp option - l
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:129: syntax error, unexpected '<'
+            </ul>
+             ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:131: unknown regexp option - l
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:132: syntax error, unexpected '<'
+        </div>
+         ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:133: unknown regexp options - dv
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:134: syntax error, unexpected '<'
+    </nav>
+     ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:139: unknown regexp options - dv
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:142: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+...r.safe_append='      <div class="alert alert-success" role="...
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:142: syntax error, unexpected tIDENTIFIER, expecting ')'
+...lass="alert alert-success" role="alert">
+...                               ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:144: syntax error, unexpected '<', expecting ')'
+      </div>
+       ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:148: unknown regexp options - dv
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:149: syntax error, unexpected '<'
+  </div>
+   ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:150: unknown regexp options - bdy
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:151: syntax error, unexpected '<'
+</html>
+ ^
+/Users/brandonseroyer/Desktop/von_dubinhaus/app/views/layouts/application.html.erb:151: unterminated regexp meets end of file):
+  app/views/layouts/application.html.erb:37: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+  app/views/layouts/application.html.erb:37: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:38: unknown regexp option - l
+  app/views/layouts/application.html.erb:39: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:40: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:41: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:41: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:43: syntax error, unexpected '<', expecting ')'
+  app/views/layouts/application.html.erb:44: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:45: unknown regexp option - a
+  app/views/layouts/application.html.erb:46: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:46: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:47: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:48: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/layouts/application.html.erb:49: syntax error, unexpected '<', expecting ')'
+  app/views/layouts/application.html.erb:52: unknown regexp option - l
+  app/views/layouts/application.html.erb:53: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:54: unknown regexp option - l
+  app/views/layouts/application.html.erb:55: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:56: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:56: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:56: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:56: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:56: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:56: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:58: syntax error, unexpected '<', expecting ')'
+  app/views/layouts/application.html.erb:59: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:60: unknown regexp option - a
+  app/views/layouts/application.html.erb:61: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:61: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:62: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:63: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/layouts/application.html.erb:63: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/layouts/application.html.erb:64: syntax error, unexpected '<', expecting ')'
+  app/views/layouts/application.html.erb:67: unknown regexp option - l
+  app/views/layouts/application.html.erb:68: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:69: unknown regexp option - l
+  app/views/layouts/application.html.erb:70: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:71: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/layouts/application.html.erb:71: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:71: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/layouts/application.html.erb:72: syntax error, unexpected '<', expecting ')'
+  app/views/layouts/application.html.erb:75: unknown regexp option - l
+  app/views/layouts/application.html.erb:76: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:80: unknown regexp option - l
+  app/views/layouts/application.html.erb:81: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:82: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:83: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:83: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:83: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:83: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:83: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:83: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:84: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+  app/views/layouts/application.html.erb:86: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:87: unknown regexp option - a
+  app/views/layouts/application.html.erb:88: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:88: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:89: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:89: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/layouts/application.html.erb:90: unknown regexp option - l
+  app/views/layouts/application.html.erb:91: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:91: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/layouts/application.html.erb:92: unknown regexp option - l
+  app/views/layouts/application.html.erb:93: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:94: unknown regexp option - l
+  app/views/layouts/application.html.erb:95: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:96: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:96: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:96: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:96: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:96: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:96: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:98: syntax error, unexpected '<', expecting ')'
+  app/views/layouts/application.html.erb:99: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:100: unknown regexp option - a
+  app/views/layouts/application.html.erb:101: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:101: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:102: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:102: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/layouts/application.html.erb:103: syntax error, unexpected '<', expecting ')'
+  app/views/layouts/application.html.erb:105: unknown regexp option - l
+  app/views/layouts/application.html.erb:106: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:107: unknown regexp option - l
+  app/views/layouts/application.html.erb:108: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:109: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:109: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:109: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:109: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:109: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:109: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:111: syntax error, unexpected '<', expecting ')'
+  app/views/layouts/application.html.erb:112: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:113: unknown regexp option - a
+  app/views/layouts/application.html.erb:114: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:114: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:115: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:116: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/layouts/application.html.erb:116: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/layouts/application.html.erb:117: syntax error, unexpected '<', expecting ')'
+  app/views/layouts/application.html.erb:120: unknown regexp option - l
+  app/views/layouts/application.html.erb:121: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:122: unknown regexp option - l
+  app/views/layouts/application.html.erb:123: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:124: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/layouts/application.html.erb:124: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:124: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/layouts/application.html.erb:125: syntax error, unexpected '<', expecting ')'
+  app/views/layouts/application.html.erb:128: unknown regexp option - l
+  app/views/layouts/application.html.erb:129: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:131: unknown regexp option - l
+  app/views/layouts/application.html.erb:132: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:133: unknown regexp options - dv
+  app/views/layouts/application.html.erb:134: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:139: unknown regexp options - dv
+  app/views/layouts/application.html.erb:142: syntax error, unexpected keyword_class, expecting keyword_do or '{' or '('
+  app/views/layouts/application.html.erb:142: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/layouts/application.html.erb:144: syntax error, unexpected '<', expecting ')'
+  app/views/layouts/application.html.erb:148: unknown regexp options - dv
+  app/views/layouts/application.html.erb:149: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:150: unknown regexp options - bdy
+  app/views/layouts/application.html.erb:151: syntax error, unexpected '<'
+  app/views/layouts/application.html.erb:151: unterminated regexp meets end of file
+
+
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.6ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.1ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.9ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/brandonseroyer/.gem/ruby/2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (89.3ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:38:10 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 119ms (Views: 118.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:38:18 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 93ms (Views: 91.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-05 16:38:21 -0700
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (0.5ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 103ms (Views: 95.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:38:22 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 112ms (Views: 111.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:39:59 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 2615ms (Views: 2614.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:40:33 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 2409ms (Views: 2408.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:41:36 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 2326ms (Views: 2325.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:41:55 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 2284ms (Views: 2282.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:42:22 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 2474ms (Views: 2473.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:42:31 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 2299ms (Views: 2298.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:42:40 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 2426ms (Views: 2425.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:43:21 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 2262ms (Views: 2261.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:43:31 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 2452ms (Views: 2451.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:43:44 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 2430ms (Views: 2428.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:44:14 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 2370ms (Views: 2368.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:44:32 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 2386ms (Views: 2385.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:45:09 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 2392ms (Views: 2391.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:45:23 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 2577ms (Views: 2576.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:45:32 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 2515ms (Views: 2514.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:45:41 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 84ms (Views: 83.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:46:22 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 110ms (Views: 110.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:46:25 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 84ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 16:46:27 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 83ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 16:47:56 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 85ms (Views: 84.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 16:48:00 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.4ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 84ms (Views: 83.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 16:49:09 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 101ms (Views: 99.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 16:49:50 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 104ms (Views: 102.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 16:49:59 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 120ms (Views: 119.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:15:05 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.4ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (76.8ms)
+Completed 200 OK in 3515ms (Views: 3512.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:19:41 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (1.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (111.3ms)
+Completed 200 OK in 254ms (Views: 242.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:20:22 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 119ms (Views: 118.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:21:42 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 148ms (Views: 146.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:21:55 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 112ms (Views: 111.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:22:38 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 138ms (Views: 137.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:22:55 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 176ms (Views: 174.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:23:55 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.3ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 137ms (Views: 135.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:24:01 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 102ms (Views: 100.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:24:06 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.3ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 124ms (Views: 123.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:24:07 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.4ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 101ms (Views: 99.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:24:18 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 96ms (Views: 95.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:25:00 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 122ms (Views: 120.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 17:26:26 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 97ms (Views: 96.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 17:26:28 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 103ms (Views: 102.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 17:26:41 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 126ms (Views: 125.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 17:26:44 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 87ms (Views: 86.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 17:27:06 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 108ms (Views: 107.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 17:27:32 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 2341ms (Views: 2340.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 17:27:36 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 89ms (Views: 88.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 17:28:20 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 96ms (Views: 95.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 17:29:00 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 2728ms (Views: 2727.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-04-05 17:30:36 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 2576ms (Views: 2575.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:30:53 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.5ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 93ms (Views: 91.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:31:34 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 2403ms (Views: 2402.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:31:47 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.3ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 2276ms (Views: 2274.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:32:23 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 89ms (Views: 88.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:32:51 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 2353ms (Views: 2352.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:33:08 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 2407ms (Views: 2405.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:33:38 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 2351ms (Views: 2349.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:35:19 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 2266ms (Views: 2264.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 17:35:42 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 93ms (Views: 92.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 17:36:50 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 2600ms (Views: 2595.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:37:02 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.5ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 95ms (Views: 93.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:38:43 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.4ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (139.8ms)
+Completed 200 OK in 279ms (Views: 272.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:40:36 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 2480ms (Views: 2478.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:40:57 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 2351ms (Views: 2350.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:41:02 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 87ms (Views: 86.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:47:55 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (1.1ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (101.1ms)
+Completed 200 OK in 3062ms (Views: 3055.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:49:47 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 99ms (Views: 97.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:50:18 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 99ms (Views: 98.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:50:32 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.3ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 92ms (Views: 91.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:50:40 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 84ms (Views: 81.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:51:03 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.3ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 2407ms (Views: 2405.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:51:13 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.5ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 2243ms (Views: 2241.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:51:22 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.3ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 2297ms (Views: 2295.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:51:57 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 2366ms (Views: 2364.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:52:08 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 2116ms (Views: 2115.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:52:40 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 2365ms (Views: 2363.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:53:08 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 85ms (Views: 84.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:53:46 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 97ms (Views: 96.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:54:29 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 96ms (Views: 94.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for ::1 at 2016-04-05 17:55:03 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 87ms (Views: 86.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dogs" for ::1 at 2016-04-05 17:55:07 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.3ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 84ms (Views: 83.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:55:15 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.2ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 79ms (Views: 77.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/training" for ::1 at 2016-04-05 17:55:28 -0700
+Processing by TrainingController#index as HTML
+  Rendered training/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 108ms (Views: 107.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/testimonials" for ::1 at 2016-04-05 17:55:32 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.5ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 114ms (Views: 113.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/donations/new" for ::1 at 2016-04-05 17:55:34 -0700
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (3.1ms)
+  Rendered donations/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 101ms (Views: 93.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/about" for ::1 at 2016-04-05 17:55:37 -0700
+Processing by AboutController#index as HTML
+  Rendered about/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 79ms (Views: 78.5ms | ActiveRecord: 0.0ms)
