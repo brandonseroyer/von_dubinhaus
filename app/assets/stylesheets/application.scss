@@ -68,6 +68,13 @@ ul {
   text-align: left;
 }
 
+.col-lg-6 {
+  position: relative;
+  left: 10px;
+  font-size: 17px;
+  text-align: left;
+}
+
 .dropdown-menu li:hover .sub-menu {
     visibility: visible;
 }
@@ -198,7 +205,7 @@ ul {
 
 #dog-comments {
   position: relative;
-  bottom: 25px;
+  bottom: 40px;
   text-align: left;
   padding-right: 25px;
   padding-left: 30px;
@@ -206,7 +213,7 @@ ul {
 
 #dog-hr {
   position: relative;
-  bottom: 30px;
+  bottom: 50px;
   border: 1px solid #000000;
   border-style: solid;
   color: #000000;
@@ -218,12 +225,15 @@ ul {
 }
 
 #dog-stats {
-  font-size: 20px;
+  position: relative;
+  top: 8px;
+  font-size: 26px;
+  font-weight: 600;
 }
 
 #dog-story {
   position: relative;
-  bottom: 25px;
+  bottom: 45px;
   text-align: left;
   padding-right: 25px;
   padding-left: 30px;
@@ -324,6 +334,10 @@ ul {
   font-size: 40px;
   font-weight: bold;
   color: white;
+}
+
+#index-email-link {
+  font-size: 16.25px;
 }
 
 #index-icons {
@@ -434,13 +448,6 @@ ul {
   border-style-bottom: outset;
   background: rgba(0, 0, 0, .75);
   box-shadow: 1px 1px 5px black;
-}
-
-#stats {
-  position: relative;
-  top: 8px;
-  font-size: 24px;
-  font-weight: 575;
 }
 
 #testimonial-profile {
