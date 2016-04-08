@@ -11,13 +11,13 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <center><%= link_to image_tag("mars_rescue.jpg") %></center>
+        <center><%= image_tag("mars_rescue.jpg") %></center>
       </div>
       <div class="item">
-        <center><%= link_to image_tag("hunter_rescue.jpg") %></center>
+        <center><%= image_tag("hunter_rescue.jpg") %></center>
       </div>
       <div class="item">
-        <center><%= link_to image_tag("cyrus_rescue.jpg") %></center>
+        <center><%= image_tag("cyrus_rescue.jpg") %></center>
       </div>
     </div>
     <a class="left carousel-control" href="#carousel-alumni" role="button" data-slide="prev">
@@ -33,7 +33,7 @@
 <div id="alumni-page-text">
   The following are former rescue dogs whom have been successfully rehomed
 </div>
-<br><br>
+<br>
 <div>
   <% @testimonials.each do |testimonial| %>
   <div class="col-md-4">
