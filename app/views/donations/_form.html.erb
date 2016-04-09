@@ -8,6 +8,8 @@
     <%= f.text_field :email, class: "form-control", required: 'required' %><br>
     <%= f.label :donation %> <b>Amount</b>
     <%= f.text_field :amount, class: "form-control", required: 'required' %><br>
+    <%= f.label :message %> (optional)
+    <%= f.text_area :message, class: "form-control" %><br>
     <%= f.submit "Submit Donation", class: 'btn btn-success' %>
   </div>
 <% end %>

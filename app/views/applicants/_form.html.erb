@@ -1,12 +1,16 @@
 <%= form_for @applicant, html: { multipart: true } do |f| %>
   <div>
-    <%= f.label :dog_name %>
+    <%= f.label :rescue_dog_name %>
     <br>
     <%= f.text_field :dog, required: 'required' %>
     <br><br>
-    <%= f.label :your_name %>
+    <%= f.label :first_name %>
     <br>
-    <%= f.text_field :name, required: 'required' %>
+    <%= f.text_field :first_name, required: 'required' %>
+    <br><br>
+    <%= f.label :last_name %>
+    <br>
+    <%= f.text_field :last_name, required: 'required' %>
     <br><br>
     <%= f.label :phone %>
     <br>
@@ -20,6 +24,18 @@
     <br>
     <%= f.text_field :address, required: 'required' %>
     <br><br>
+    <%= f.label :city %>
+    <br>
+    <%= f.text_field :city, required: 'required' %>
+    <br><br>
+    <%= f.label :state %>
+    <br>
+    <%= f.text_field :state, required: 'required' %>
+    <br><br>
+    <%= f.label :zip %>
+    <br>
+    <%= f.text_field :zip, required: 'required' %>
+    <br><br>
     <%= f.label :do_you_currently_own_a_cat? %>
     <br>
     <%= f.select :cats, [['Yes', true], ['No', false]] %>
@@ -32,8 +48,9 @@
     <br>
     <%= f.select :kids, [['Yes', true], ['No', false]] %>
     <br><br>
-    <%= f.label :tell_us_about_you! %>
-    <%= f.cktext_area :about, class: "form-control", required: 'required' %><br>
+    <%= f.label :about_you %> (Your housing situation, current pet situation, history with large-breed dogs, etc ...)
+    <br>
+    <%= f.cktext_area :about, required: 'required' %><br>
     <%= f.submit "Submit Application", class: 'btn btn-success' %>
   </div>
 <% end %>

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :donations, :only => [:new, :create, :show] do
+  resources :donations do
     resources :charges, :only => [:create]
   end
 

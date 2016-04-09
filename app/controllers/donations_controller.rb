@@ -1,4 +1,7 @@
 class DonationsController < ApplicationController
+  def index
+    @donations = Donation.all.order(created_at: :desc)
+  end
   def new
     @donation = Donation.new
     render :new
@@ -13,9 +16,15 @@ class DonationsController < ApplicationController
     end
   end
 
+  def destroy
+    @donation = Donation.find(params[:id])
+    @donation.destroy
+    redirect_to donations_path
+  end
+
   private
 
   def donation_params
-    params.require(:donation).permit(:first_name, :last_name, :email, :amount)
+    params.require(:donation).permit(:first_name, :last_name, :email, :amount, :message)
   end
 end
