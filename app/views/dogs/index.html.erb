@@ -28,7 +28,7 @@
 <br>
 <div>
   <% @dogs.each do |dog| %>
-  <div class="col-sm-4">
+  <div class="col-md-4">
     <%= link_to image_tag(dog.image, id:"dog-box"), dog_path(dog) %>
     <div id="rescue-profile">
       Click to learn more about <%= link_to dog.name, dog_path(dog), id:'index-profile-font' %>
