@@ -9,12 +9,14 @@
 _This application is the home to Von Dubinhaus Rescue Shepherds._
 _Using this app, users can:_
 * _Create user accounts_
-* _Set Admin privledges_
-* _View Dogs currently available for adoption and create profiles for them_
-* _Submit Adoption Applications_
-* _Donate to the resuce via Stripe API_
+* _Set Admin privileges_
+* _Create and View Dogs currently available for adoption_
+* _Create and View Dogs previously adopted_
+* _Submit and view Adoption Applications_
+* _Donate to the rescue via Stripe API_
+* _View index of donations_
 * _Share Animal profiles via Facebook and Twitter_
-* _Comment on profiles_
+* _Comment on rescue profiles_
 
 ## Setup
 

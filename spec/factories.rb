@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory(:dog) do
     name("Sky")
-    breed("German Shephrd Dog")
+    breed("German Shepherd Dog")
     age("5")
     sex("Female")
     info("I want this dog")
@@ -14,9 +14,15 @@ FactoryGirl.define do
   end
 
   factory :user do
-    email 'admin@vondubinhaus.com'
-    password 'admin123'
-    # if needed
-    # is_active true
+    email("admin@vondubinhaus.com")
+    password("admin123")
+  end
+
+  factory(:donation) do
+    first_name("John")
+    last_name("Doe")
+    email("johndoe@email.com")
+    amount("20")
+    message("I support what you do")
   end
 end

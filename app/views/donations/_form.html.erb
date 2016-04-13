@@ -1,12 +1,12 @@
 <%= form_for @donation do |f| %>
   <div class='col-xs-2'>
-    <%= f.label :first %> <b>Name</b>
+    <%= f.label :first_name %>
     <%= f.text_field :first_name, class: "form-control", required: 'required' %><br>
-    <%= f.label :last%> <b>Name</b>
+    <%= f.label :last_name %>
     <%= f.text_field :last_name, class: "form-control", required: 'required' %><br>
-    <%= f.label :email %> <b>Address</b>
+    <%= f.label :email %>
     <%= f.text_field :email, class: "form-control", required: 'required' %><br>
-    <%= f.label :donation %> <b>Amount</b>
+    <b>Donation</b> <%= f.label :amount %>
     <%= f.text_field :amount, class: "form-control", required: 'required' %><br>
     <%= f.label :message %> (optional)
     <%= f.text_area :message, class: "form-control" %><br>

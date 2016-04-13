@@ -40,10 +40,10 @@
   <% if @dog.comments.any? %>
     <% @comments.each do |comment| %>
       <ul>
-      <%= comment.author %>: <i><%= comment.content %></i>
+      <%= comment.name %>: <i><%= comment.comment %></i>
       <% if current_user %>
-        <%= link_to "Edit", edit_dog_comment_path(@dog, comment) %> |
-        <%= link_to "Delete", dog_comment_path(@dog, comment),
+        <%= link_to "Edit", edit_dog_comment_path(@dog, comment), id: 'edit-comment' %> |
+        <%= link_to "Delete", dog_comment_path(@dog, comment), id: 'delete-comment',
         :data => {:confirm => "Are you sure?",
           :method => "delete"} %>
       <% end %>
@@ -52,7 +52,7 @@
   <% else %>
     <p>There are no comments yet!</p>
   <% end %>
-  <%= link_to "Add an comment", new_dog_comment_path(@dog) %>
+  <%= link_to "Add a comment", new_dog_comment_path(@dog) %>
 </div>
 <% if current_user %>
   <div id='edit-dog-form'>

@@ -4,7 +4,7 @@ describe "the edit a dog post process" do
   it "edits a post on the app" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
-    post = FactoryGirl.create(:dog)
+    FactoryGirl.create(:dog)
     visit dogs_path
     click_on "Sky"
     click_on "Edit"
