@@ -12,4 +12,11 @@ FactoryGirl.define do
     date("1/2/2015")
     story("Sky was adopted by the Millers!")
   end
+
+  factory :user do
+    email 'admin@vondubinhaus.com'
+    password 'admin123'
+    # if needed
+    # is_active true
+  end
 end
