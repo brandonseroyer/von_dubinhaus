@@ -13,8 +13,6 @@ class ApplicantsController < ApplicationController
     if @applicant.save
       redirect_to  dogs_path
       flash[:notice] = 'Your Application Has Been Submitted!'
-    else
-      render :new
     end
   end
 

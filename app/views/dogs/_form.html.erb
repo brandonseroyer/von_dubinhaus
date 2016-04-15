@@ -1,19 +1,29 @@
 <%= form_for @dog, html: { multipart: true }, remote: true do |f| %>
-  <div class='form-group'>
+  <div>
     <%= f.label :name %>
-    <%= f.text_field :name, class: "form-control", required: 'required' %><br>
+    <br>
+    <%= f.text_field :name, required: 'required' %>
+    <br><br>
     <%= f.label :breed %>
-    <%= f.text_field :breed, class: "form-control", required: 'required' %><br>
+    <br>
+    <%= f.text_field :breed, required: 'required' %>
+    <br><br>
     <%= f.label :age %>
-    <%= f.text_field :age, class: "form-control", required: 'required' %><br>
+    <br>
+    <%= f.text_field :age, required: 'required' %>
+    <br><br>
     <%= f.label :sex %>
-    <%= f.text_field :sex, class: "form-control", required: 'required' %><br>
+    <br>
+    <%= f.text_field :sex, required: 'required' %>
+    <br><br>
     <%= f.label :info %>
-    <%= f.cktext_area :info, class: "form-control", required: 'required' %><br>
+    <br>
+    <%= f.cktext_area :info, required: 'required' %>
+    <br><br>
     <%= f.label :image %>
     <%= f.file_field :image %>
   </div>
-
+  <br>
   <div class='form-group'>
     <%= f.submit class: 'btn btn-success' %>
   </div>

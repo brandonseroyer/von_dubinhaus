@@ -1,6 +1,6 @@
 <%= form_for @applicant, html: { multipart: true } do |f| %>
   <div>
-    <%= f.label :rescue_dog_name %>
+    <b>Rescue</b> <%= f.label :dog %>
     <br>
     <%= f.text_field :dog, required: 'required' %>
     <br><br>
@@ -48,7 +48,7 @@
     <br>
     <%= f.select :kids, [['Yes', true], ['No', false]] %>
     <br><br>
-    <%= f.label :about_you %> (Your housing situation, current pet situation, history with large-breed dogs, etc ...)
+    <%= f.label :about %> (Tell us about yourself, your housing situation, current pet situation, history with large-breed dogs, etc ...)
     <br>
     <%= f.cktext_area :about, required: 'required' %><br>
     <%= f.submit "Submit Application", class: 'btn btn-success' %>

@@ -12,8 +12,6 @@ class TestimonialsController < ApplicationController
     @testimonial = Testimonial.new(testimonial_params)
     if @testimonial.save
       redirect_to  testimonials_path
-    else
-      render :new
     end
   end
 

@@ -11,8 +11,6 @@ class DonationsController < ApplicationController
     @donation = Donation.new(donation_params)
     if @donation.save
       render :show
-    else
-      render :new
     end
   end
 
