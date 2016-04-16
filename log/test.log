@@ -29711,3 +29711,691 @@ Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.2ms)
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.0ms)[0m  begin transaction
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by ApplicantsController#index as HTML
+  Rendered applicants/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by DogsController#index as HTML
+  Rendered dogs/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by DonationsController#index as HTML
+  Rendered donations/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by TestimonialsController#index as HTML
+  Rendered testimonials/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@vondubinhaus.com' LIMIT 1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@vondubinhaus.com"], ["encrypted_password", "$2a$04$tfNgtlnN0hTSd64TpeJOk.LEHD63nud/Ti6grKlSeT2rd6Igedsiu"], ["created_at", "2016-04-16 17:52:43.314755"], ["updated_at", "2016-04-16 17:52:43.314755"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "dogs" ("name", "breed", "age", "sex", "info", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Sky"], ["breed", "German Shepherd Dog"], ["age", "5"], ["sex", "Female"], ["info", "I want this dog"], ["created_at", "2016-04-16 17:52:43.325552"], ["updated_at", "2016-04-16 17:52:43.325552"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/home" for 127.0.0.1 at 2016-04-16 10:52:43 -0700
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-04-16 17:52:43.341675"], ["current_sign_in_at", "2016-04-16 17:52:43.341675"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-04-16 17:52:43.342857"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (172.3ms)
+Completed 200 OK in 6578ms (Views: 6577.4ms | ActiveRecord: 0.0ms)
+Started GET "/dogs" for 127.0.0.1 at 2016-04-16 10:52:49 -0700
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (0.9ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (7.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 1.1ms)
+Started GET "/dogs/1" for 127.0.0.1 at 2016-04-16 10:52:49 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.2ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mComment Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1[0m  [["dog_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 66ms (Views: 45.7ms | ActiveRecord: 0.9ms)
+Started GET "/applicants/new" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by ApplicantsController#new as HTML
+  Rendered applicants/_form.html.erb (24.0ms)
+  Rendered applicants/new.html.erb within layouts/application (30.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 44ms (Views: 34.7ms | ActiveRecord: 0.3ms)
+Started POST "/applicants" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by ApplicantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "applicant"=>{"dog"=>"Sky", "first_name"=>"John", "last_name"=>"Doe", "phone"=>"(503) 123-4567", "email"=>"johndoe@email.com", "address"=>"123 Waggy Tail Lane", "city"=>"Portland", "state"=>"Oregon", "zip"=>"97210", "cats"=>"true", "dogs"=>"true", "kids"=>"true", "about"=>"I own a home, have no pets or kids, and want to adopt Sky!"}, "commit"=>"Submit Application"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "applicants" ("first_name", "last_name", "dog", "phone", "email", "address", "city", "state", "zip", "dogs", "about", "kids", "cats", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Doe"], ["dog", "Sky"], ["phone", "(503) 123-4567"], ["email", "johndoe@email.com"], ["address", "123 Waggy Tail Lane"], ["city", "Portland"], ["state", "Oregon"], ["zip", "97210"], ["dogs", "t"], ["about", "I own a home, have no pets or kids, and want to adopt Sky!"], ["kids", "t"], ["cats", "t"], ["created_at", "2016-04-16 17:52:50.136681"], ["updated_at", "2016-04-16 17:52:50.136681"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/dogs
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+Started GET "/dogs" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (1.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+Started GET "/applicants" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by ApplicantsController#index as HTML
+  [1m[35mApplicant Load (0.1ms)[0m  SELECT "applicants".* FROM "applicants"  ORDER BY "applicants"."created_at" DESC
+  Rendered applicants/index.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "dogs" ("name", "breed", "age", "sex", "info", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sky"], ["breed", "German Shepherd Dog"], ["age", "5"], ["sex", "Female"], ["info", "I want this dog"], ["created_at", "2016-04-16 17:52:50.177776"], ["updated_at", "2016-04-16 17:52:50.177776"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/home" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+Started GET "/dogs" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+Started GET "/dogs/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mComment Exists (0.0ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms)
+Started GET "/dogs/1/comments/new" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by CommentsController#new as HTML
+  Parameters: {"dog_id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered layouts/_errors.html.erb (0.4ms)
+  Rendered comments/_form.html.erb (4.4ms)
+  Rendered comments/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 24ms (Views: 15.0ms | ActiveRecord: 0.1ms)
+Started POST "/dogs/1/comments" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"name"=>"John Doe", "comment"=>"Is Sky good with kids"}, "commit"=>"Create Comment", "dog_id"=>"1"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("comment", "name", "dog_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "Is Sky good with kids"], ["name", "John Doe"], ["dog_id", 1], ["created_at", "2016-04-16 17:52:50.249181"], ["updated_at", "2016-04-16 17:52:50.249181"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/dogs/1
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+Started GET "/dogs/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDog Load (0.0ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mComment Exists (0.0ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dog_id" = ?  ORDER BY created_at ASC[0m  [["dog_id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@vondubinhaus.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "admin@vondubinhaus.com"], ["encrypted_password", "$2a$04$6Ig3MW7n4AjTfVbteeTj6OZ/hXEHLY11t39MZunjgSNa5XqkBs7QW"], ["created_at", "2016-04-16 17:52:50.268229"], ["updated_at", "2016-04-16 17:52:50.268229"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/home" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-04-16 17:52:50.277546"], ["current_sign_in_at", "2016-04-16 17:52:50.277546"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-04-16 17:52:50.278137"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms)
+Started GET "/dogs/new" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#new as HTML
+  Rendered dogs/_form.html.erb (6.9ms)
+  Rendered dogs/new.html.erb within layouts/application (8.8ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.1ms)
+Started POST "/dogs" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "dog"=>{"name"=>"Sky", "breed"=>"German Shepherd Dog", "age"=>"6", "sex"=>"Female", "info"=>"I want this dog"}, "commit"=>"Create Dog"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "dogs" ("name", "sex", "age", "breed", "info", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Sky"], ["sex", "Female"], ["age", "6"], ["breed", "German Shepherd Dog"], ["info", "I want this dog"], ["created_at", "2016-04-16 17:52:50.328739"], ["updated_at", "2016-04-16 17:52:50.328739"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/dogs
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+Started GET "/dogs" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.1ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/home" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+Started GET "/donations/new" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DonationsController#new as HTML
+  Rendered donations/_form.html.erb (4.7ms)
+  Rendered donations/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 17ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+Started POST "/donations" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DonationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "donation"=>{"first_name"=>"John", "last_name"=>"Doe", "email"=>"johndoe@email.com", "amount"=>"20", "message"=>"I support what you do"}, "commit"=>"Submit Donation"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "donations" ("first_name", "last_name", "email", "amount", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "John"], ["last_name", "Doe"], ["email", "johndoe@email.com"], ["amount", 20], ["message", "I support what you do"], ["created_at", "2016-04-16 17:52:50.408299"], ["updated_at", "2016-04-16 17:52:50.408299"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered donations/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@vondubinhaus.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@vondubinhaus.com"], ["encrypted_password", "$2a$04$cDhZXMBPgxQ4m/kUwZhahu635qpZnfhzlnq.xKicjXYdIbN93KaxK"], ["created_at", "2016-04-16 17:52:50.424438"], ["updated_at", "2016-04-16 17:52:50.424438"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/home" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-04-16 17:52:50.426685"], ["current_sign_in_at", "2016-04-16 17:52:50.426685"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-04-16 17:52:50.427243"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+Started GET "/testimonials/new" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by TestimonialsController#new as HTML
+  Rendered testimonials/_form.html.erb (2.9ms)
+  Rendered testimonials/new.html.erb within layouts/application (5.3ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 18ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+Started POST "/testimonials" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by TestimonialsController#create as HTML
+  Parameters: {"utf8"=>"✓", "testimonial"=>{"name"=>"Sky"}, "commit"=>"Create Testimonial"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "testimonials" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Sky"], ["created_at", "2016-04-16 17:52:50.467683"], ["updated_at", "2016-04-16 17:52:50.467683"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/testimonials
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/testimonials" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.2ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered testimonials/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@vondubinhaus.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "admin@vondubinhaus.com"], ["encrypted_password", "$2a$04$uyS1oA9zfXN2.hJhLM0K3OYg5ZuXmT.JzSPsZPCk0zzMhQHxQpeSe"], ["created_at", "2016-04-16 17:52:50.496120"], ["updated_at", "2016-04-16 17:52:50.496120"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "dogs" ("name", "breed", "age", "sex", "info", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sky"], ["breed", "German Shepherd Dog"], ["age", "5"], ["sex", "Female"], ["info", "I want this dog"], ["created_at", "2016-04-16 17:52:50.500559"], ["updated_at", "2016-04-16 17:52:50.500559"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/home" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-04-16 17:52:50.503623"], ["current_sign_in_at", "2016-04-16 17:52:50.503623"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-04-16 17:52:50.504283"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+Started GET "/dogs" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.1ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.2ms)
+Started GET "/dogs/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+Started GET "/applicants/new" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by ApplicantsController#new as HTML
+  Rendered applicants/_form.html.erb (4.4ms)
+  Rendered applicants/new.html.erb within layouts/application (4.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.1ms)
+Started POST "/applicants" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by ApplicantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "applicant"=>{"dog"=>"Sky", "first_name"=>"John", "last_name"=>"Doe", "phone"=>"(503) 123-4567", "email"=>"johndoe@email.com", "address"=>"123 Waggy Tail Lane", "city"=>"Portland", "state"=>"Oregon", "zip"=>"97210", "cats"=>"true", "dogs"=>"true", "kids"=>"true", "about"=>"I own a home, have no pets or kids, and want to adopt Sky!"}, "commit"=>"Submit Application"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "applicants" ("first_name", "last_name", "dog", "phone", "email", "address", "city", "state", "zip", "dogs", "about", "kids", "cats", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["first_name", "John"], ["last_name", "Doe"], ["dog", "Sky"], ["phone", "(503) 123-4567"], ["email", "johndoe@email.com"], ["address", "123 Waggy Tail Lane"], ["city", "Portland"], ["state", "Oregon"], ["zip", "97210"], ["dogs", "t"], ["about", "I own a home, have no pets or kids, and want to adopt Sky!"], ["kids", "t"], ["cats", "t"], ["created_at", "2016-04-16 17:52:50.571919"], ["updated_at", "2016-04-16 17:52:50.571919"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/dogs
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+Started GET "/dogs" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.1ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+Started GET "/applicants" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by ApplicantsController#index as HTML
+  [1m[36mApplicant Load (0.1ms)[0m  [1mSELECT "applicants".* FROM "applicants"  ORDER BY "applicants"."created_at" DESC[0m
+  Rendered applicants/index.html.erb within layouts/application (1.6ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.2ms)
+Started DELETE "/applicants/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by ApplicantsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApplicant Load (0.2ms)[0m  [1mSELECT  "applicants".* FROM "applicants" WHERE "applicants"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "applicants" WHERE "applicants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/applicants
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/applicants" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by ApplicantsController#index as HTML
+  [1m[36mApplicant Load (0.1ms)[0m  [1mSELECT "applicants".* FROM "applicants"  ORDER BY "applicants"."created_at" DESC[0m
+  Rendered applicants/index.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@vondubinhaus.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@vondubinhaus.com"], ["encrypted_password", "$2a$04$k6J1J6mg7FvLlqXjQDzm4.Ryk.42xWKIIY4L17fz6H.Shm.F4z0TS"], ["created_at", "2016-04-16 17:52:50.626896"], ["updated_at", "2016-04-16 17:52:50.626896"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "dogs" ("name", "breed", "age", "sex", "info", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Sky"], ["breed", "German Shepherd Dog"], ["age", "5"], ["sex", "Female"], ["info", "I want this dog"], ["created_at", "2016-04-16 17:52:50.629836"], ["updated_at", "2016-04-16 17:52:50.629836"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/dogs" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-04-16 17:52:50.632764"], ["current_sign_in_at", "2016-04-16 17:52:50.632764"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-04-16 17:52:50.633628"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.1ms)
+Started GET "/dogs/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+Started GET "/dogs/1/comments/new" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by CommentsController#new as HTML
+  Parameters: {"dog_id"=>"1"}
+  [1m[35mDog Load (0.2ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_errors.html.erb (0.0ms)
+  Rendered comments/_form.html.erb (2.3ms)
+  Rendered comments/new.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.3ms)
+Started POST "/dogs/1/comments" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"name"=>"John Doe", "comment"=>"Is Sky good with kids?"}, "commit"=>"Create Comment", "dog_id"=>"1"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("comment", "name", "dog_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "Is Sky good with kids?"], ["name", "John Doe"], ["dog_id", 1], ["created_at", "2016-04-16 17:52:50.677557"], ["updated_at", "2016-04-16 17:52:50.677557"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/dogs/1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+Started GET "/dogs/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 1]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dog_id" = ?  ORDER BY created_at ASC[0m  [["dog_id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+Started DELETE "/dogs/1/comments/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by CommentsController#destroy as HTML
+  Parameters: {"dog_id"=>"1", "id"=>"1"}
+  [1m[36mComment Load (0.1ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ?  ORDER BY created_at ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to http://www.example.com/dogs/1
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+Started GET "/dogs/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@vondubinhaus.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "admin@vondubinhaus.com"], ["encrypted_password", "$2a$04$6lpgu1HGDaFZiXiOqUBYV..xzrirf0udAIbB03eHIbneYtb8I5n2."], ["created_at", "2016-04-16 17:52:50.724487"], ["updated_at", "2016-04-16 17:52:50.724487"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "dogs" ("name", "breed", "age", "sex", "info", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sky"], ["breed", "German Shepherd Dog"], ["age", "5"], ["sex", "Female"], ["info", "I want this dog"], ["created_at", "2016-04-16 17:52:50.726789"], ["updated_at", "2016-04-16 17:52:50.726789"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/dogs" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-04-16 17:52:50.729635"], ["current_sign_in_at", "2016-04-16 17:52:50.729635"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-04-16 17:52:50.730358"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.1ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+Started GET "/dogs/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mComment Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1[0m  [["dog_id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.2ms)
+Started DELETE "/dogs/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mComment Load (0.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dog_id" = ?  ORDER BY created_at ASC  [["dog_id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/dogs
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+Started GET "/dogs" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "donations" ("first_name", "last_name", "email", "amount", "message", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["first_name", "John"], ["last_name", "Doe"], ["email", "johndoe@email.com"], ["amount", 20], ["message", "I support what you do"], ["created_at", "2016-04-16 17:52:50.771054"], ["updated_at", "2016-04-16 17:52:50.771054"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@vondubinhaus.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "admin@vondubinhaus.com"], ["encrypted_password", "$2a$04$34JEGaYDnAouZ5yy4itjnuUYMUWm83y6LNXIINY/hCiCDQiGDpcY2"], ["created_at", "2016-04-16 17:52:50.775692"], ["updated_at", "2016-04-16 17:52:50.775692"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/home" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-04-16 17:52:50.778765"], ["current_sign_in_at", "2016-04-16 17:52:50.778765"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-04-16 17:52:50.779621"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 8ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+Started GET "/" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+Started GET "/donations" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DonationsController#index as HTML
+  [1m[35mDonation Load (0.1ms)[0m  SELECT "donations".* FROM "donations"  ORDER BY "donations"."created_at" DESC
+  Rendered donations/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+Started DELETE "/donations/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DonationsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDonation Load (0.1ms)[0m  SELECT  "donations".* FROM "donations" WHERE "donations"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "donations" WHERE "donations"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/donations
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+Started GET "/donations" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DonationsController#index as HTML
+  [1m[35mDonation Load (0.1ms)[0m  SELECT "donations".* FROM "donations"  ORDER BY "donations"."created_at" DESC
+  Rendered donations/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@vondubinhaus.com' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "admin@vondubinhaus.com"], ["encrypted_password", "$2a$04$6tloNgHnSD7zGQM0LjgdTuv9RDhvlTCxm3Vrjx0fm8HYPVZR4TS0e"], ["created_at", "2016-04-16 17:52:50.839058"], ["updated_at", "2016-04-16 17:52:50.839058"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "testimonials" ("name", "date", "story", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Sky"], ["date", "1/2/2015"], ["story", "Sky was adopted by the Millers!"], ["created_at", "2016-04-16 17:52:50.841288"], ["updated_at", "2016-04-16 17:52:50.841288"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/testimonials" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-04-16 17:52:50.843642"], ["current_sign_in_at", "2016-04-16 17:52:50.843642"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-04-16 17:52:50.844240"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by TestimonialsController#index as HTML
+  [1m[35mTestimonial Load (0.1ms)[0m  SELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC
+  Rendered testimonials/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms)
+Started DELETE "/testimonials/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by TestimonialsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTestimonial Load (0.1ms)[0m  [1mSELECT  "testimonials".* FROM "testimonials" WHERE "testimonials"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "testimonials" WHERE "testimonials"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/testimonials
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+Started GET "/testimonials" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by TestimonialsController#index as HTML
+  [1m[36mTestimonial Load (0.1ms)[0m  [1mSELECT "testimonials".* FROM "testimonials"  ORDER BY "testimonials"."created_at" DESC[0m
+  Rendered testimonials/index.html.erb within layouts/application (1.4ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.7ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@vondubinhaus.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "admin@vondubinhaus.com"], ["encrypted_password", "$2a$04$wwEfrJkd7yLSFupjC9QG6OnJpd3E.x8GAQUB3xC.WV8hA1fVgXQaO"], ["created_at", "2016-04-16 17:52:50.872687"], ["updated_at", "2016-04-16 17:52:50.872687"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "dogs" ("name", "breed", "age", "sex", "info", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "Sky"], ["breed", "German Shepherd Dog"], ["age", "5"], ["sex", "Female"], ["info", "I want this dog"], ["created_at", "2016-04-16 17:52:50.875491"], ["updated_at", "2016-04-16 17:52:50.875491"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/dogs" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-04-16 17:52:50.878700"], ["current_sign_in_at", "2016-04-16 17:52:50.878700"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-04-16 17:52:50.880682"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by DogsController#index as HTML
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC[0m
+  Rendered dogs/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.1ms)
+Started GET "/dogs/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.2ms)
+Started GET "/dogs/1/comments/new" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by CommentsController#new as HTML
+  Parameters: {"dog_id"=>"1"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered layouts/_errors.html.erb (0.0ms)
+  Rendered comments/_form.html.erb (1.5ms)
+  Rendered comments/new.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 0.1ms)
+Started POST "/dogs/1/comments" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"name"=>"John Doe", "comment"=>"Is Sky good with kids?"}, "commit"=>"Create Comment", "dog_id"=>"1"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "comments" ("comment", "name", "dog_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["comment", "Is Sky good with kids?"], ["name", "John Doe"], ["dog_id", 1], ["created_at", "2016-04-16 17:52:50.918871"], ["updated_at", "2016-04-16 17:52:50.918871"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/dogs/1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+Started GET "/dogs/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mComment Exists (0.1ms)[0m  SELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1  [["dog_id", 1]]
+  [1m[36mComment Load (0.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."dog_id" = ?  ORDER BY created_at ASC[0m  [["dog_id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+Started GET "/dogs/1/comments/1/edit" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by CommentsController#edit as HTML
+  Parameters: {"dog_id"=>"1", "id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (0.0ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ?  ORDER BY created_at ASC LIMIT 1  [["id", 1]]
+  Rendered layouts/_errors.html.erb (0.0ms)
+  Rendered comments/_form.html.erb (1.8ms)
+  Rendered comments/edit.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+Started PATCH "/dogs/1/comments/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by CommentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"name"=>"John Doe", "comment"=>"Is Sky good with cats?"}, "commit"=>"Update Comment", "dog_id"=>"1", "id"=>"1"}
+  [1m[35mComment Load (0.1ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."id" = ?  ORDER BY created_at ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "comments" SET "comment" = ?, "updated_at" = ? WHERE "comments"."id" = ?  [["comment", "Is Sky good with cats?"], ["updated_at", "2016-04-16 17:52:50.954629"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mDog Load (0.0ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://www.example.com/dogs/1
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+Started GET "/dogs/1" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mComment Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1[0m  [["dog_id", 1]]
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."dog_id" = ?  ORDER BY created_at ASC  [["dog_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'admin@vondubinhaus.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "admin@vondubinhaus.com"], ["encrypted_password", "$2a$04$n6JnbHbFp8CVNZYMCOsoferw0NJjhJf1NnoNj7rNEm9JpcduCZrru"], ["created_at", "2016-04-16 17:52:50.984623"], ["updated_at", "2016-04-16 17:52:50.984623"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "dogs" ("name", "breed", "age", "sex", "info", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Sky"], ["breed", "German Shepherd Dog"], ["age", "5"], ["sex", "Female"], ["info", "I want this dog"], ["created_at", "2016-04-16 17:52:50.987048"], ["updated_at", "2016-04-16 17:52:50.987048"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/dogs" for 127.0.0.1 at 2016-04-16 10:52:50 -0700
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-04-16 17:52:50.990187"], ["current_sign_in_at", "2016-04-16 17:52:50.990187"], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-04-16 17:52:50.990885"], ["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by DogsController#index as HTML
+  [1m[35mDog Load (0.1ms)[0m  SELECT "dogs".* FROM "dogs"  ORDER BY "dogs"."created_at" DESC
+  Rendered dogs/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.1ms)
+Started GET "/dogs/1" for 127.0.0.1 at 2016-04-16 10:52:51 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mComment Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1[0m  [["dog_id", 1]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+Started GET "/dogs/1/edit" for 127.0.0.1 at 2016-04-16 10:52:51 -0700
+Processing by DogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered dogs/_form.html.erb (4.5ms)
+  Rendered dogs/edit.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+Started PATCH "/dogs/1" for 127.0.0.1 at 2016-04-16 10:52:51 -0700
+Processing by DogsController#update as HTML
+  Parameters: {"utf8"=>"✓", "dog"=>{"name"=>"Angel", "breed"=>"German Shepherd Dog", "age"=>"5", "sex"=>"Female", "info"=>"I want this dog"}, "commit"=>"Update Dog", "id"=>"1"}
+  [1m[35mDog Load (0.1ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "dogs" SET "name" = ?, "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["name", "Angel"], ["updated_at", "2016-04-16 17:52:51.051636"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/dogs/1
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+Started GET "/dogs/1" for 127.0.0.1 at 2016-04-16 10:52:51 -0700
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mComment Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "comments" WHERE "comments"."dog_id" = ? LIMIT 1[0m  [["dog_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered dogs/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
