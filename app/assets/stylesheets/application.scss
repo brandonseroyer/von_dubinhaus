@@ -155,17 +155,20 @@ ul {
   background: #00ABE3;
 }
 
+#about-hr {
+  position: relative;
+  bottom: 5px;
+}
 #about-image {
   border-style: solid;
   border-width: 1px;
   box-shadow: 1px 1px 5px black;
-  position: relative;
-  bottom: 6px;
 }
 
 #about-text {
   position: relative;
-  bottom: 20px;
+  font-size: 18px;
+  bottom: 12px;
   padding-right: 50px;
 }
 
@@ -495,7 +498,7 @@ ul {
 
 #title-font {
   position: relative;
-  bottom: 12px;
+  bottom: 10px;
   font-size: 22px;
   font-style: italic;
 }

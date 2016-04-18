@@ -9,7 +9,6 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks'
 gem 'devise'
-gem 'sqlite3'
 gem 'bootstrap-sass'
 gem "font-awesome-rails"
 gem 'bootstrap-social-rails'
