@@ -13,12 +13,10 @@ gem 'bootstrap-sass'
 gem "font-awesome-rails"
 gem 'bootstrap-social-rails'
 gem 'rest-client'
-gem "paperclip", '~> 4.1'
-gem 'aws-sdk'
+gem "paperclip"
 gem 'stripe'
 gem 'ckeditor'
 gem 'social-share-button'
-
 
 group :development do
   gem 'letter_opener'
@@ -32,9 +30,7 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'launchy'
   gem 'pry'
-  gem 'vcr'
   gem 'dotenv-rails'
-  gem 'hirb'
 end
 
 group :test do
@@ -46,5 +42,5 @@ group :test do
 end
 
 group :production do
-  gem 'rails_12factor'
+  gem 'rails_12factor', group: :productions
 end
