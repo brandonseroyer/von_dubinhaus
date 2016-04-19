@@ -5,7 +5,7 @@ class Testimonial < ActiveRecord::Base
   has_attached_file :image,
                     :styles => {:standard => "750x500", :profile => "450x300", :thumb => "300x225" },
                     :storage => :s3,
-                    :s3_credentials => "#{Rails.root}/config/environments/production.rb",
+                    :s3_credentials => "#{Rails.root}/config/s3.yml",
                     :path => "/images/:id/:style.:extension",
                     :url => ":s3_domain_url"
-end
+                  end
