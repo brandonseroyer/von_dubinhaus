@@ -14,6 +14,7 @@ gem "font-awesome-rails"
 gem 'bootstrap-social-rails'
 gem 'rest-client'
 gem "paperclip"
+gem 'aws-sdk'
 gem 'stripe'
 gem 'ckeditor'
 gem 'social-share-button'
