@@ -37,7 +37,7 @@
 <div>
   <% @testimonials.each do |testimonial| %>
   <div class="col-md-4">
-    <%= image_tag testimonial.image, id:"dog-box" %>
+    <%= image_tag testimonial.image.url, id:"dog-box" %>
     <div id='alumni-name'>
       <%= testimonial.name %>
     <% if current_user %>
