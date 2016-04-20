@@ -97,10 +97,6 @@ ul {
   background-color: black;
   border-color: black;
   width: 100%;
-}
-
-.row {
-  width: 70%;
   margin: auto;
 }
 
@@ -170,6 +166,17 @@ ul {
   box-shadow: 1px 1px 5px black;
 }
 
+#about-page-text {
+  font-size: 22px;
+  text-align: left;
+  border-radius: 25px;
+  padding: 2%;
+  background: rgba(0, 0, 0, .10);
+  box-shadow: 1px 1px 3px black;
+  width: 100%;
+  margin: auto;
+}
+
 #about-text {
   position: relative;
   font-size: 18px;
@@ -201,19 +208,24 @@ ul {
   box-shadow: 1px 1px 3px black;
 }
 
+#alumni-row {
+  width: 90%;
+  margin: auto;
+}
+
 #apply-font {
   font-size: 36px;
 }
 
 #carousel-alumni {
-  width: 700px;
-  height: 317px;
-  margin: 0 auto;
+  width: 55%;
+  height: 30%;
+  margin: auto;
 }
 
 #carousel-home {
-  width: 975px;
-  height: 343px;
+  width: 90%;
+  height: 20%;
   margin: 0 auto;
 }
 
@@ -250,6 +262,11 @@ ul {
 #dog-links {
   text-align: left;
   padding-left: 25px;
+}
+
+#dog-row {
+  width: 90%;
+  margin: auto;
 }
 
 #dog-stats {
@@ -383,8 +400,16 @@ ul {
   font-size: 30px;
 }
 
+#index-row {
+  padding-left: 2%;
+  width: 80%;
+  margin: auto;
+}
+
 #nav-right {
   padding-top: 12px;
+  width: 100%;
+  margin: auto;
 }
 
 #nav-text {
@@ -412,7 +437,8 @@ ul {
   border-radius: 25px;
   padding-bottom: 10px;
   padding-top: 10px;
-  width: 40em;
+  width: 70%;
+  margin: auto;
   background: rgba(255, 255, 255, .90);
   box-shadow: 1px 1px 5px black;
 }
@@ -438,12 +464,20 @@ ul {
 }
 
 #rescue-page-text {
+  width: 100%;
+  margin: auto;
   font-size: 22px;
   text-align: left;
   border-radius: 25px;
   padding: 2%;
   background: rgba(0, 0, 0, .10);
   box-shadow: 1px 1px 3px black;
+}
+
+#rescue-page-text img {
+  display: block;
+  width:100%;
+  height:auto;
 }
 
 #rescue-profile {

@@ -24,7 +24,7 @@
 <br>
 <center><header>Available for Adoption</header></center>
 <br>
-<div>
+<div id="dog-row">
   <% @dogs.each do |dog| %>
   <div class="col-md-4">
     <%= link_to image_tag(dog.image.url, id:"dog-box"), dog_path(dog) %>
