@@ -186,7 +186,6 @@ ul {
   position: relative;
   font-size: 18px;
   bottom: 12px;
-  padding-right: 50px;
 }
 
 #alumni-name {
@@ -399,6 +398,12 @@ ul {
 
 #index-icons {
   width: 243px;
+}
+
+#index-icons img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 #index-profile-font {
