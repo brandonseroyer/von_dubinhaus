@@ -51,32 +51,26 @@
 <br><br>
 <div class="row" id="index-row">
   <div class="col-sm-4">
-    <div id ="index-icons">
-      <%= link_to image_tag("index_icon_1.png"), training_index_path %>
-      <div class="carousel-caption">
-        <div id="icon-text">
-          <%= link_to "Training", training_index_path, id: "icon-text-2" %>
-        </div>
+    <%= link_to image_tag("index_icon_1.png"), training_index_path %>
+    <div class="carousel-caption">
+      <div id="icon-text">
+        <%= link_to "Training", training_index_path, id: "icon-text-2" %>
       </div>
     </div>
   </div>
   <div class="col-sm-4">
-    <div id ="index-icons">
-      <%= link_to image_tag("index_icon_2.jpg"), dogs_path, id: "rescue-icon" %>
-      <div class="carousel-caption">
-        <div id="icon-text">
-          <%= link_to "Rescue", dogs_path, id: "icon-text-2" %>
-        </div>
+    <%= link_to image_tag("index_icon_2.jpg"), dogs_path, id: "rescue-icon" %>
+    <div class="carousel-caption">
+      <div id="icon-text">
+        <%= link_to "Rescue", dogs_path, id: "icon-text-2" %>
       </div>
     </div>
   </div>
   <div class="col-sm-4">
-    <div id ="index-icons">
-    <%= link_to image_tag("index_icon_3.png"), new_donation_path, id: "donate-icon" %>
-      <div class="carousel-caption">
-        <div id="icon-text">
-          <%= link_to "Donate", new_donation_path, id: "icon-text-2" %>
-        </div>
+  <%= link_to image_tag("index_icon_3.png"), new_donation_path, id: "donate-icon" %>
+    <div class="carousel-caption">
+      <div id="icon-text">
+        <%= link_to "Donate", new_donation_path, id: "icon-text-2" %>
       </div>
     </div>
   </div>

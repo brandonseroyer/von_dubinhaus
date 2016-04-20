@@ -53,8 +53,9 @@ ul {
 }
 
 .col-sm-4 img {
-  width: 243px;
-  height: 350px;
+  width: 80%;
+  height: auto;
+  margin: auto;
   box-shadow: 2px 2px 15px black;
 
     -webkit-transition: all 1s ease;
@@ -65,8 +66,9 @@ ul {
 }
 
 .col-sm-4 img:hover {
-  width: 250px;
-  height: 361px;
+  width: 83%;
+  height: auto;
+  margin: auto;
   box-shadow: 2px 2px 15px black;
 }
 
@@ -435,10 +437,6 @@ ul {
 
 #index-email-link {
   font-size: 22px;
-}
-
-#index-icons {
-  width: 243px;
 }
 
 #index-profile-font {
