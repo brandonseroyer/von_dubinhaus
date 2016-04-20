@@ -24,7 +24,7 @@
 <br>
 <center><header>Available for Adoption</header></center>
 <br>
-<div id="dog-row">
+<center><div id="dog-row">
   <% @dogs.each do |dog| %>
   <div class="col-md-4">
     <%= link_to image_tag(dog.image.url, id:"dog-box"), dog_path(dog) %>
@@ -34,5 +34,5 @@
     <br>
   </div>
   <% end %>
-</div>
+</div></center>
 <br>
