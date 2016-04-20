@@ -54,7 +54,7 @@ ul {
 
 .col-lg-6 {
   position: relative;
-  font-size: 17px;
+  font-size: 14px;
   text-align: left;
 }
 
@@ -97,6 +97,11 @@ ul {
   background-color: black;
   border-color: black;
   width: 100%;
+  margin: auto;
+}
+
+.row {
+  width: 50%;
   margin: auto;
 }
 
@@ -389,7 +394,7 @@ ul {
 }
 
 #index-email-link {
-  font-size: 16.25px;
+  font-size: 12px;
 }
 
 #index-icons {
@@ -401,7 +406,7 @@ ul {
 }
 
 #index-row {
-  padding-left: 2%;
+  padding-left: 1%;
   width: 80%;
   margin: auto;
 }
