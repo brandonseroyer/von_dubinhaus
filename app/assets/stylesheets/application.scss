@@ -52,12 +52,6 @@ ul {
   box-shadow: 2px 2px 15px black;
 }
 
-.col-lg-6 {
-  position: relative;
-  font-size: 14px;
-  text-align: left;
-}
-
 .col-sm-4 img {
   width: 243px;
   height: 350px;
@@ -106,7 +100,8 @@ ul {
 }
 
 .social {
-  padding-left: 42%;
+  width: 100%;
+  margin: auto;
 }
 
 .social ul {
@@ -177,8 +172,8 @@ ul {
   border-radius: 25px;
   padding: 2%;
   background: rgba(0, 0, 0, .10);
-  box-shadow: 1px 1px 3px black;
-  width: 100%;
+  box-shadow: 1px 1px 10px black;
+  width: 90%;
   margin: auto;
 }
 
@@ -222,15 +217,15 @@ ul {
 }
 
 #carousel-alumni {
-  width: 55%;
-  height: 30%;
+  width: 60%;
+  height: auto;
   margin: auto;
 }
 
 #carousel-home {
-  width: 90%;
-  height: 20%;
-  margin: 0 auto;
+  width: 85%;
+  height: auto;
+  margin: auto;
 }
 
 #carousel-text {
@@ -314,6 +309,28 @@ ul {
   box-shadow: 1px 1px 5px black;
 }
 
+#donate-form {
+  width: 90%;
+  margin: auto;
+}
+
+#donate-page-text {
+  font-size: 22px;
+  text-align: left;
+  border-radius: 25px;
+  padding: 2%;
+  background: rgba(0, 0, 0, .10);
+  box-shadow: 1px 1px 10px black;
+  width: 90%;
+  margin: auto;
+}
+
+#donate-page-text img {
+  display: block;
+  width:100%;
+  height:auto;
+}
+
 #donation-page-text {
   font-size: 30px;
   text-align: left;
@@ -337,6 +354,23 @@ ul {
 #edit-dog-form {
   padding-right: 25px;
   padding-left: 30px;
+}
+
+#faq-page-text {
+  font-size: 22px;
+  text-align: left;
+  border-radius: 25px;
+  padding: 2%;
+  background: rgba(0, 0, 0, .10);
+  box-shadow: 1px 1px 10px black;
+  width: 90%;
+  margin: auto;
+}
+
+#faq-page-text img {
+  display: block;
+  width:100%;
+  height:auto;
 }
 
 #faq-question {
@@ -363,6 +397,13 @@ ul {
   border-width: 1px;
 }
 
+#header-text {
+  font-size: 60px;
+  font-weight: bolder;
+  width: 90%;
+  margin: auto;
+}
+
 #home-page-text {
   width: 60%;
   margin: auto;
@@ -370,7 +411,7 @@ ul {
   border-radius: 25px;
   padding: 2%;
   background: rgba(0, 0, 0, .10);
-  box-shadow: 1px 1px 3px black;
+  box-shadow: 1px 1px 10px black;
 }
 
 #icon-text {
@@ -393,7 +434,7 @@ ul {
 }
 
 #index-email-link {
-  font-size: 12px;
+  font-size: 22px;
 }
 
 #index-icons {
@@ -405,7 +446,6 @@ ul {
 }
 
 #index-row {
-  padding-left: 1%;
   width: 80%;
   margin: auto;
 }
@@ -468,14 +508,14 @@ ul {
 }
 
 #rescue-page-text {
-  width: 100%;
+  width: 90%;
   margin: auto;
   font-size: 22px;
   text-align: left;
   border-radius: 25px;
   padding: 2%;
   background: rgba(0, 0, 0, .10);
-  box-shadow: 1px 1px 3px black;
+  box-shadow: 1px 1px 10px black;
 }
 
 #rescue-page-text img {
@@ -498,7 +538,7 @@ ul {
 #social {
   text-align: left;
   width: 180px;
-  height: 62px;
+  height: 65px;
   float: right;
   padding-left: 10px;
   padding-bottom: 10px;
@@ -546,4 +586,20 @@ ul {
   bottom: 10px;
   font-size: 22px;
   font-style: italic;
+}
+#training-page-text {
+  font-size: 22px;
+  text-align: left;
+  border-radius: 25px;
+  padding: 2%;
+  background: rgba(0, 0, 0, .10);
+  box-shadow: 1px 1px 10px black;
+  width: 90%;
+  margin: auto;
+}
+
+#training-page-text img {
+  display: block;
+  width:100%;
+  height:auto;
 }

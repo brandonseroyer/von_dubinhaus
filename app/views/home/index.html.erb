@@ -96,43 +96,25 @@
   <h1>Our Services</h1>
   <h4>Animal Rescue • Basic & Advanced Obedience<br>Puppy & Adult Training
     • Aggression & Behavioral Issues</h4>
-  <hr>
-  <h1>Contact</h1>
-  <div class="row">
-    <div class="col-lg-6">
-      <b>Training Inquires</b>
-      <br>
-      Phone: (503) 936-0641
-      <br>
-      Email: <a href="mailto:vondubinhaus@gmail.com" id="index-email-link">vondubinhaus@gmail.com</a>
-    </div>
-    <div class="col-lg-6">
-      <b>Adoption Inquires</b>
-      <br>
-      Phone: (503) 806-2572
-      <br>
-      Email: <a href="mailto:brandonseroyer@gmail.com" id="index-email-link">brandonseroyer@gmail.com</a>
-    </div>
-  </div>
 </div>
 <br>
-<div class="social">
-  <ul>
-    <li><a href="https://www.facebook.com/Von-Dubinhaus-Shepherds-202535683142444/"><i class="fa fa-lg fa-facebook"></i></a></li>
-    <li><a href="https://twitter.com/vondubshepherds"><i class="fa fa-lg fa-twitter"></i></a></li>
-    <li><a href="https://www.instagram.com/vondubinhaus/"><i class="fa fa-lg fa-instagram"></i></a></li>
-  </ul>
-</div>
 <footer>
   <div id="footer-text">
-  <% unless current_user %>
+    <div class="social">
+      <ul>
+        <li><a href="https://www.facebook.com/Von-Dubinhaus-Shepherds-202535683142444/"><i class="fa fa-lg fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/vondubshepherds"><i class="fa fa-lg fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/vondubinhaus/"><i class="fa fa-lg fa-instagram"></i></a></li>
+      </ul>
+    </div>
+    <% unless current_user %>
     <div><h5>Von Dubinhaus LLC | © Copyright 2016 | All Rights Reserved |
        <%= link_to 'Log in', new_user_session_path, id:'footer-text' %></h5>
     </div>
-  <% else %>
+    <% else %>
     <div><h5>Von Dubinhaus LLC | © Copyright 2016 | All Rights Reserved |
       <%= link_to 'Log out',  destroy_user_session_path, method: 'delete', id:'footer-text' %></h5>
     </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
 </footer>
