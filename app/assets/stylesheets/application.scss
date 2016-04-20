@@ -52,6 +52,13 @@ ul {
   box-shadow: 2px 2px 15px black;
 }
 
+.col-md-4 img {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  box-shadow: 2px 2px 15px black;
+}
+
 .col-sm-4 img {
   width: 80%;
   height: auto;
@@ -241,7 +248,7 @@ ul {
 }
 
 #dog-box {
-  box-shadow: 1px 0px 5px black;
+  box-shadow: 1px 0px 10px black;
 }
 
 #dog-comments {
@@ -518,19 +525,20 @@ ul {
 
 #rescue-page-text img {
   display: block;
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
 }
 
 #rescue-profile {
   border-style: solid;
   border-width: 1px;
-  width: 301px;
-  background: rgba(255, 255, 255, .75);
+  width: 90%;
+  height: auto;
+  margin: auto;
+  box-shadow: 2px 2px 15px black;  background: rgba(255, 255, 255, .75);
   text-shadow: 0 .5px 0 #000;
   font-size: 25px;
   text-align: center;
-  box-shadow: 1px 1px 5px black;
 }
 
 #social {
