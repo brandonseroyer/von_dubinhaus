@@ -54,7 +54,6 @@ ul {
 
 .col-lg-6 {
   position: relative;
-  left: 10px;
   font-size: 17px;
   text-align: left;
 }
@@ -81,6 +80,11 @@ ul {
   text-align: left;
 }
 
+.container {
+  margin: auto;
+  width: 100%;
+}
+
 .dropdown-menu li:hover .sub-menu {
     visibility: visible;
 }
@@ -92,15 +96,16 @@ ul {
 .navbar-default {
   background-color: black;
   border-color: black;
+  width: 100%;
 }
 
 .row {
-  padding-left: 150px;
-  margin-right: 100px !important;
+  width: 70%;
+  margin: auto;
 }
 
 .social {
-  padding-left: 475px;
+  padding-left: 42%;
 }
 
 .social ul {
@@ -322,6 +327,8 @@ ul {
   color: black;
   text-align: center;
   font-size: 14px;
+  width: 60%;
+  margin: auto;
 }
 
 #header {
@@ -336,8 +343,8 @@ ul {
 }
 
 #home-page-text {
-  width: 700px;
-  margin: 0 auto;
+  width: 60%;
+  margin: auto;
   text-align: center;
   border-radius: 25px;
   padding: 2%;
