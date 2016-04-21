@@ -423,6 +423,8 @@
         null,
         null,
         null,
+        null,
+        1,
         null
       ],
       "/Users/brandonseroyer/Desktop/von_dubinhaus/config/initializers/filter_parameter_logging.rb": [
@@ -453,6 +455,11 @@
         null,
         null,
         null,
+        null
+      ],
+      "/Users/brandonseroyer/Desktop/von_dubinhaus/config/initializers/paperclip.rb": [
+        1,
+        1,
         null
       ],
       "/Users/brandonseroyer/Desktop/von_dubinhaus/config/initializers/session_store.rb": [
@@ -1104,6 +1111,11 @@
         1,
         1,
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
         1,
         null
       ],
@@ -1139,6 +1151,11 @@
         1,
         1,
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
         1,
         null
       ],
@@ -1195,6 +1212,6 @@
         null
       ]
     },
-    "timestamp": 1460829171
+    "timestamp": 1461223221
   }
 }
