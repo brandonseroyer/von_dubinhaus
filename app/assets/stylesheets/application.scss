@@ -226,6 +226,11 @@ ul {
   font-size: 36px;
 }
 
+#back-link {
+  width: 90%;
+  margin: auto;
+}
+
 #carousel-alumni {
   width: 60%;
   height: auto;
@@ -346,7 +351,8 @@ ul {
   text-align: left;
   border-radius: 25px;
   padding: 2%;
-  width: 60%;
+  width: 90%;
+  margin: auto;
   background: rgba(0, 0, 0, .10);
   box-shadow: 1px 1px 7px black;
 }

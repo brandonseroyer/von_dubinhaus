@@ -1,3 +1,7 @@
+<div id="header-text">
+  Payment Confirmation
+</div>
+<br>
 <div id="donation-page-text">
 <%= @donation.first_name %>, you have selected a donation amount of $<%= @donation.amount %>.00 USD
 <%= form_tag donation_charges_path(@donation) do %>
@@ -17,4 +21,6 @@
 <% end %>
 </div>
 <br>
-<%= link_to "Cancel, Return to Donation Page", new_donation_path %></p>
+<div id="back-link">
+<%= link_to "Cancel Payment, Return to Donation Page", new_donation_path %>
+</div>
