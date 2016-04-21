@@ -120,19 +120,7 @@
       </div>
     </div>
   </nav>
-  <div class='container'>
-    <% if alert %>
-    <div class="alert alert-danger" role="alert">
-      <%= flash[:alert] %>
-    </div>
-    <% end %>
-    <% if notice %>
-    <div class="alert alert-success" role="alert">
-      <%= flash[:notice] %>
-    </div>
-    <% end %>
-    <br>
+</div>
     <%= yield %>
-  </div>
 </body>
 </html>
