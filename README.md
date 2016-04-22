@@ -1,6 +1,6 @@
 # _Von Dubinhaus Rescue Shepherds_
 
-##### _A website built in Rails for a German Shepherd Dog Rescue located in Portland, Oregon, 12/1/2015_
+##### _A website built in Rails for a German Shepherd Dog Rescue located in Portland, Oregon_
 
 #### By _**Brandon Seroyer**_
 
@@ -40,7 +40,7 @@ _Testing was preformed with RSpec and Capybara_
 
 
 
-Copyright (c) 2015 **_Brandon Seroyer_**
+Copyright (c) 2016 **_Brandon Seroyer_**
 
 This software is licensed under the MIT license.
 
