@@ -13,6 +13,8 @@ class DogsController < ApplicationController
     @dog = Dog.new(dog_params)
     if @dog.save
       redirect_to  dogs_path
+    else
+      render :new  
     end
   end
 

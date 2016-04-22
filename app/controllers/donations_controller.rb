@@ -2,6 +2,7 @@ class DonationsController < ApplicationController
   def index
     @donations = Donation.all.order(created_at: :desc)
   end
+  
   def new
     @donation = Donation.new
     render :new
@@ -13,6 +14,8 @@ class DonationsController < ApplicationController
     @donation = Donation.new(donation_params)
     if @donation.save
       render :show
+    else
+      render :new
     end
   end
 
@@ -29,6 +32,6 @@ class DonationsController < ApplicationController
   end
 
   def clean_dollars
-    clean_number = params[:donation][:amount] = params[:donation][:amount].gsub("$","")
+    params[:donation][:amount] = params[:donation][:amount].gsub("$","")
   end
 end

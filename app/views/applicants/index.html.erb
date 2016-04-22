@@ -1,19 +1,21 @@
-<header>Adoption Applications</header>
-
-<% @applicants.each do |applicant| %>
+<div id="forms">
+  <header>Adoption Applications</header>
   <br>
-  Date: <%= applicant.created_at %><br><br>
-  Rescue: <%= applicant.dog %><br>
-  Name: <%= applicant.first_name %> <%= applicant.last_name %><br>
-  Phone: <%= applicant.phone %><br>
-  Email: <%= applicant.email %><br>
-  Address: <%= applicant.address %><br>
-  Dogs: <%= applicant.dogs %><br>
-  Cats: <%= applicant.cats %><br>
-  Kids: <%= applicant.kids %><br>
-  About: <%= simple_format(applicant.about) %>
-  <p><%= link_to "Delete", applicant_path(applicant),
-  :data => {:confirm => "You sure?",
-    :method => "delete"} %></p>
-  <hr>
-<% end %>
+  <% @applicants.each do |applicant| %>
+    <br>
+    Date: <%= applicant.created_at %><br><br>
+    Rescue: <%= applicant.dog %><br>
+    Name: <%= applicant.first_name %> <%= applicant.last_name %><br>
+    Phone: <%= applicant.phone %><br>
+    Email: <%= applicant.email %><br>
+    Address: <%= applicant.address %><br>
+    Dogs: <%= applicant.dogs %><br>
+    Cats: <%= applicant.cats %><br>
+    Kids: <%= applicant.kids %><br>
+    About: <%= simple_format(applicant.about) %>
+    <p><%= link_to "Delete", applicant_path(applicant),
+    :data => {:confirm => "You sure?",
+      :method => "delete"} %></p>
+    <hr>
+  <% end %>
+</div>

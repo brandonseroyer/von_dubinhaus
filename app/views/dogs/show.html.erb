@@ -33,16 +33,16 @@
 </div>
 <hr id="dog-hr">
 <div id="dog-story">
-  <h2><%= @dog.name %>'s Story:</h2>
+  <h1><%= @dog.name %>'s Story</h1>
   <p><%= simple_format(@dog.info) %></p>
 </div>
 <hr id="dog-hr">
 <div id="dog-comments">
-  <h2>Comments:</h2>
+  <h2>Questions & Comments:</h2>
   <% if @dog.comments.any? %>
     <% @comments.each do |comment| %>
       <ul>
-      <%= comment.name %>: <i><%= comment.comment %></i>
+      <b><%= comment.name %></b>: <h4><%= comment.comment %></h4>
       <% if current_user %>
         <%= link_to "Edit", edit_dog_comment_path(@dog, comment), id: 'edit-comment' %> |
         <%= link_to "Delete", dog_comment_path(@dog, comment), id: 'delete-comment',

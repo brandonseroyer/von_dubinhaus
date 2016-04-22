@@ -1,57 +1,60 @@
-<%= form_for @applicant, html: { multipart: true } do |f| %>
-  <div>
-    <b>Rescue</b> <%= f.label :dog %>
-    <br>
-    <%= f.text_field :dog, required: 'required' %>
-    <br><br>
-    <%= f.label :first_name %>
-    <br>
-    <%= f.text_field :first_name, required: 'required' %>
-    <br><br>
-    <%= f.label :last_name %>
-    <br>
-    <%= f.text_field :last_name, required: 'required' %>
-    <br><br>
-    <%= f.label :phone %>
-    <br>
-    <%= f.text_field :phone, required: 'required' %>
-    <br><br>
-    <%= f.label :email %>
-    <br>
-    <%= f.text_field :email, required: 'required' %>
-    <br><br>
-    <%= f.label :address %>
-    <br>
-    <%= f.text_field :address, required: 'required' %>
-    <br><br>
-    <%= f.label :city %>
-    <br>
-    <%= f.text_field :city, required: 'required' %>
-    <br><br>
-    <%= f.label :state %>
-    <br>
-    <%= f.text_field :state, required: 'required' %>
-    <br><br>
-    <%= f.label :zip %>
-    <br>
-    <%= f.text_field :zip, required: 'required' %>
-    <br><br>
-    <%= f.label :do_you_currently_own_a_cat? %>
-    <br>
-    <%= f.select :cats, [['Yes', true], ['No', false]] %>
-    <br><br>
-    <%= f.label :do_you_currently_own_a_dog? %>
-    <br>
-    <%= f.select :dogs, [['Yes', true], ['No', false]] %>
-    <br><br>
-    <%= f.label :do_you_have_children_under_age_7? %>
-    <br>
-    <%= f.select :kids, [['Yes', true], ['No', false]] %>
-    <br><br>
-    <%= f.label :about %> (Tell us about yourself, your housing situation, current pet situation, history with large-breed dogs, etc ...)
-    <br>
-    <%= f.cktext_area :about, required: 'required' %><br>
-    <%= f.submit "Submit Application", class: 'btn btn-success' %>
-  </div>
-<% end %>
-<br>
+<div id="forms">
+  <header>Adoption Application</header>
+  <br>
+  <%= form_for @applicant, html: { multipart: true } do |f| %>
+    <div>
+      <b>Rescue</b> <%= f.label :dog %>
+      <br>
+      <%= f.text_field :dog, required: 'required' %>
+      <br><br>
+      <%= f.label :first_name %>
+      <br>
+      <%= f.text_field :first_name, required: 'required' %>
+      <br><br>
+      <%= f.label :last_name %>
+      <br>
+      <%= f.text_field :last_name, required: 'required' %>
+      <br><br>
+      <%= f.label :phone %>
+      <br>
+      <%= f.text_field :phone, required: 'required' %>
+      <br><br>
+      <%= f.label :email %>
+      <br>
+      <%= f.text_field :email, required: 'required' %>
+      <br><br>
+      <%= f.label :address %>
+      <br>
+      <%= f.text_field :address, required: 'required' %>
+      <br><br>
+      <%= f.label :city %>
+      <br>
+      <%= f.text_field :city, required: 'required' %>
+      <br><br>
+      <%= f.label :state %>
+      <br>
+      <%= f.text_field :state, required: 'required' %>
+      <br><br>
+      <%= f.label :zip %>
+      <br>
+      <%= f.text_field :zip, required: 'required' %>
+      <br><br>
+      <%= f.label :do_you_currently_own_a_cat? %>
+      <br>
+      <%= f.select :cats, [['Yes', true], ['No', false]] %>
+      <br><br>
+      <%= f.label :do_you_currently_own_a_dog? %>
+      <br>
+      <%= f.select :dogs, [['Yes', true], ['No', false]] %>
+      <br><br>
+      <%= f.label :do_you_have_children_under_age_7? %>
+      <br>
+      <%= f.select :kids, [['Yes', true], ['No', false]] %>
+      <br><br>
+      <%= f.label :about %> (Tell us about yourself, your housing situation, current pet situation, history with large-breed dogs, etc ...)
+      <br>
+      <%= f.cktext_area :about, required: 'required' %><br>
+      <%= f.submit "Submit Application", class: 'btn btn-success' %>
+    </div>
+  <% end %>
+</div>

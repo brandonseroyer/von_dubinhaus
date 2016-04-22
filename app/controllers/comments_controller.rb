@@ -9,6 +9,8 @@ class CommentsController < ApplicationController
     @comment = @dog.comments.new(comment_params)
     if @comment.save
       redirect_to dog_path(@comment.dog)
+    else
+      render :new  
     end
   end
 

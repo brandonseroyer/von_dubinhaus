@@ -1,14 +1,16 @@
-<header>Donation Index</header>
+<div id="forms">
+  <header>Donation Index</header>
 
-<% @donations.each do |donation| %>
-  <br>
-  Date: <%= donation.created_at %><br><br>
-  Name: <%= donation.first_name %> <%= donation.last_name %><br>
-  Email: <%= donation.email %><br>
-  Donation: $<%= donation.amount %><br>
-  Message: <%= donation.message %>
-  <p><%= link_to "Delete", donation_path(donation),
-  :data => {:confirm => "You sure?",
-    :method => "delete"} %></p>
-  <hr>
-<% end %>
+  <% @donations.each do |donation| %>
+    <br>
+    Date: <%= donation.created_at %><br><br>
+    Name: <%= donation.first_name %> <%= donation.last_name %><br>
+    Email: <%= donation.email %><br>
+    Donation: $<%= donation.amount %><br>
+    Message: <%= donation.message %>
+    <p><%= link_to "Delete", donation_path(donation),
+    :data => {:confirm => "You sure?",
+      :method => "delete"} %></p>
+    <hr>
+  <% end %>
+</div>
