@@ -9,6 +9,8 @@ class DonationsController < ApplicationController
 
   def create
     @donation = Donation.new(donation_params)
+    @donation = clean_dollars
+    @donation = Donation.new(donation_params)
     if @donation.save
       render :show
     end
@@ -24,5 +26,9 @@ class DonationsController < ApplicationController
 
   def donation_params
     params.require(:donation).permit(:first_name, :last_name, :email, :amount, :message)
+  end
+
+  def clean_dollars
+    clean_number = params[:donation][:amount] = params[:donation][:amount].gsub("$","")
   end
 end

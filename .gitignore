@@ -17,5 +17,3 @@
 /tmp
 
 #ignore stripe config
-config/initializers/stripe.rb
-config/secrets.yml
