@@ -22,7 +22,7 @@ FactoryGirl.define do
     first_name("John")
     last_name("Doe")
     email("johndoe@email.com")
-    amount("20")
+    amount("$20")
     message("I support what you do")
   end
 end
