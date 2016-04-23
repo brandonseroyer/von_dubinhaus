@@ -15,8 +15,3 @@
 /log/*
 !/log/.keep
 /tmp
-
-#ignore stripe config
-config/initializers/stripe.rb
-config/secrets.yml
-db/seeds.rb
