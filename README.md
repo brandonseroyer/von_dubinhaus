@@ -1,5 +1,6 @@
 # _Von Dubinhaus Rescue Shepherds_
 
+##### _www.vondubinhaus.com_
 ##### _A website built in Rails for a German Shepherd Dog Rescue located in Portland, Oregon_
 
 #### By _**Brandon Seroyer**_
@@ -8,18 +9,21 @@
 
 _This application is the home to Von Dubinhaus Rescue Shepherds._
 _Using this app, users can:_
-* _Create user accounts_
-* _Set Admin privileges_
-* _Create and View Dogs currently available for adoption_
-* _Create and View Dogs previously adopted_
-* _Submit and view Adoption Applications_
+* _Create user accounts, set admin privileges_
+* _Create, view, edit rescue dogs currently available for adoption_
+* _Create and view rescue dogs previously adopted_
+* _Destroy dog profiles once erroneous_
+* _Submit adoption applications for rescue dogs_
 * _Donate to the rescue via Stripe API_
-* _View index of donations_
+* _View index of donations and adoption applications, destroy as needed_
 * _Share Animal profiles via Facebook and Twitter_
-* _Comment on rescue profiles_
+* _Comment feature for individual rescue profile_
 
 ## Setup
 
+* _visit online at www.vondubinhaus.com_
+
+_or to view on local machine:_
 * _Open this repository on GitHub and clone the files within to your computer._
 * _Run the following commands in the terminal on your computer._
 
@@ -33,7 +37,8 @@ rails server        # starts the rails server
 
 ## Technologies Used
 
-_Ruby, Rails, PostgreSQL, Active Record, Devise Encryption, AJAX, Bootstrap, Stripe API, Amazon S3,_
+_Ruby, Rails, PostgreSQL, Active Record, Devise Encryption, AJAX, Bootstrap, Stripe API, Amazon S3_
+
 _Testing was preformed with RSpec and Capybara_
 
 ### Legal
