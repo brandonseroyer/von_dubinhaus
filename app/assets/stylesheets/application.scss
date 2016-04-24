@@ -523,10 +523,16 @@ ul {
   border-left:  3px solid;
   border-bottom: 2px solid;
   background-color: black;
+  color: black;
   border-style-top: outset;
   border-style-left: outset;
   border-style-bottom: outset;
   background: rgba(0, 0, 0, .75);
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
   box-shadow: 1px 1px 5px black;
 }
 
