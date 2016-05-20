@@ -60,7 +60,10 @@
                 <%= link_to 'Available', dogs_path %>
               </li>
               <li>
-                <%= link_to 'Alumni ', testimonials_path %>
+                <%= link_to 'Alumni', testimonials_path %>
+              </li>
+              <li>
+                <%= link_to 'Adoption Application', new_applicant_path %>
               </li>
             </ul>
           </li>
@@ -96,11 +99,21 @@
               </span>
             </a>
             <ul class="dropdown-menu">
-              <li><%= link_to 'Add Rescue', new_dog_path %></li>
-              <li><%= link_to 'Add Alumni', new_testimonial_path %></li>
-              <li><%= link_to 'Adoption Applications', applicants_path %></li>
-              <li><%= link_to 'Donation Index', donations_path %></li>
-              <li><%= link_to 'Admin View', users_path %></li>
+              <li>
+                <%= link_to 'Add Rescue', new_dog_path %>
+              </li>
+              <li>
+                <%= link_to 'Add Alumni', new_testimonial_path %>
+              </li>
+              <li>
+                <%= link_to 'Adoption Applications', applicants_path %>
+              </li>
+              <li>
+                <%= link_to 'Donation Index', donations_path %>
+              </li>
+              <li>
+                <%= link_to 'Admin View', users_path %>
+              </li>
             </ul>
           </li>
           <li class="dropdown">
@@ -110,9 +123,14 @@
               </span>
             </a>
             <ul class="dropdown-menu" id="dropdown">
-              <li><%= link_to 'Available', dogs_path %>
+              <li>
+                <%= link_to 'Available', dogs_path %>
               </li>
-              <li><%= link_to 'Alumni', testimonials_path %>
+              <li>
+                <%= link_to 'Alumni', testimonials_path %>
+              </li>
+              <li>
+                <%= link_to 'Adoption Application', new_applicant_path %>
               </li>
             </ul>
           </li>
