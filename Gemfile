@@ -18,6 +18,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'stripe'
 gem 'ckeditor'
 gem 'social-share-button'
+gem 'rack-attack'
 
 group :development do
   gem 'letter_opener'
