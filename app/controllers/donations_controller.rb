@@ -1,8 +1,8 @@
 class DonationsController < ApplicationController
   def index
-    @donations = Donation.all.order(created_at: :desc)
+    @donations = Donation.page(params[:page]).per(10)
   end
-  
+
   def new
     @donation = Donation.new
     render :new

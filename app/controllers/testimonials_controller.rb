@@ -1,6 +1,6 @@
 class TestimonialsController < ApplicationController
   def index
-    @testimonials = Testimonial.all.order(created_at: :desc)
+    @testimonials = Testimonial.page(params[:page]).per(25)
   end
 
   def new
@@ -13,7 +13,7 @@ class TestimonialsController < ApplicationController
     if @testimonial.save
       redirect_to  testimonials_path
     else
-      render :new  
+      render :new
     end
   end
 

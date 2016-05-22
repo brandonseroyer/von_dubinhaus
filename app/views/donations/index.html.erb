@@ -1,6 +1,5 @@
 <div id="forms">
   <header>Donation Index</header>
-
   <% @donations.each do |donation| %>
     <br>
     Date: <%= donation.created_at %><br><br>
@@ -13,4 +12,5 @@
       :method => "delete"} %></p>
     <hr>
   <% end %>
+  <%= paginate @donations %>
 </div>

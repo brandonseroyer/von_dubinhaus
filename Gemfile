@@ -19,6 +19,7 @@ gem 'stripe'
 gem 'ckeditor'
 gem 'social-share-button'
 gem 'rack-attack'
+gem 'kaminari'
 
 group :development do
   gem 'letter_opener'
