@@ -1,6 +1,6 @@
 class TestimonialsController < ApplicationController
   def index
-    @testimonials = Testimonial.page(params[:page]).per(25)
+    @testimonials = Testimonial.page(params[:page]).per(48)
   end
 
   def new
