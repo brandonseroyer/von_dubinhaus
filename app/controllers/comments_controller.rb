@@ -7,10 +7,11 @@ class CommentsController < ApplicationController
   def create
     @dog = Dog.find(params[:dog_id])
     @comment = @dog.comments.new(comment_params)
-    if @comment.save
+    if verify_recaptcha
+      @comment.save
       redirect_to dog_path(@comment.dog)
     else
-      render :new  
+      render :new
     end
   end
 
