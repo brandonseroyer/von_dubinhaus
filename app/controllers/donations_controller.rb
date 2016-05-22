@@ -12,7 +12,8 @@ class DonationsController < ApplicationController
     @donation = Donation.new(donation_params)
     @donation = clean_dollars
     @donation = Donation.new(donation_params)
-    if @donation.save
+    if verify_recaptcha
+      @donation.save
       render :show
     else
       render :new

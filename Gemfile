@@ -18,8 +18,8 @@ gem 'aws-sdk', '< 2.0'
 gem 'stripe'
 gem 'ckeditor'
 gem 'social-share-button'
-gem 'rack-attack'
 gem 'kaminari'
+gem 'recaptcha', :require => 'recaptcha/rails'
 
 group :development do
   gem 'letter_opener'
