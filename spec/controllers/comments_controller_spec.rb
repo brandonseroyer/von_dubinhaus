@@ -15,9 +15,10 @@ RSpec.describe CommentsController do
     end
 
     context "with invalid attributes" do
-      it "renders new template" do
-        post :create, dog_id: @dog.id, comment: FactoryGirl.attributes_for(:invalid_comment)
-        expect(response).to render_template :new
+      it "does not create a new comment" do
+        expect{
+          post :create, dog_id: @dog.id, comment: FactoryGirl.attributes_for(:invalid_comment)
+        }.to_not change(Comment,:count)
       end
     end
   end

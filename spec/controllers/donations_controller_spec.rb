@@ -31,7 +31,7 @@ RSpec.describe DonationsController do
       post :create, donation: FactoryGirl.attributes_for(:donation)
       expect(response).not_to include "$"
     end
-    
+
     context "with invalid attributes" do
       it "does not save the new contact" do
         expect{

@@ -34,6 +34,14 @@ RSpec.describe DogsController do
         }.to_not change(Dog,:count)
       end
     end
+
+    context "with invalid attributes" do
+      it "renders new template" do
+        post :create, dog: FactoryGirl.attributes_for(:invalid_dog)
+        get :new
+        expect(response).to render_template :new
+      end
+    end
   end
 
   describe "GET #show" do
