@@ -11,8 +11,7 @@ class ApplicantsController < ApplicationController
   def create
     @applicant = Applicant.new(applicant_params)
     if @applicant.save
-      redirect_to  dogs_path
-      flash[:notice] = 'Your Application Has Been Submitted!'
+      render :show
     else
       render :new
     end

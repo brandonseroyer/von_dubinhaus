@@ -24,7 +24,7 @@ RSpec.describe ApplicantsController do
 
     it "renders the dogs index upon save" do
       post :create, applicant: FactoryGirl.attributes_for(:applicant)
-      expect(response).to redirect_to dogs_path
+      expect(response).to render_template :show
 
     end
 

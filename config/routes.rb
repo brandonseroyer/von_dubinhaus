@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   resources :testimonials
 
-  resources :applicants, :only => [:index, :new, :create, :destroy]
+  resources :applicants, :only => [:index, :new, :create, :show, :destroy]
 
   resources :training, :only => [:index]
 
