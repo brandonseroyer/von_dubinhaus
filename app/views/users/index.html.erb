@@ -1,19 +1,21 @@
-<div id="forms">
-  <header>Admin View</header>
-  <br>
-  <h3>Accounts</h3>
-  <ul>
-    <% @users.each do |user| %>
-    <li>
-      <%= user.email %>
-      <% if user.admin %>
-        <FONT COLOR="red">Admin</FONT>
+<% if current_user %>
+  <div id="forms">
+    <header>Admin View</header>
+    <br>
+    <h3>Accounts</h3>
+    <ul>
+      <% @users.each do |user| %>
+      <li>
+        <%= user.email %>
+        <% if user.admin %>
+          <FONT COLOR="red">Admin</FONT>
+        <% end %>
+        <%= link_to "Edit", edit_user_path(user) %> |
+        <%= link_to "Delete", user_path(user),
+        :data => {:confirm => "Are you sure?",
+          :method => "delete"} %>
+      </li>
       <% end %>
-      <%= link_to "Edit", edit_user_path(user) %> |
-      <%= link_to "Delete", user_path(user),
-      :data => {:confirm => "Are you sure?",
-        :method => "delete"} %>
-    </li>
-    <% end %>
-  </ul>
-</div>
+    </ul>
+  </div>
+<% end %>

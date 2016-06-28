@@ -1,4 +1,6 @@
-<div id="forms">
-  <header>Add Alumni</header>
-  <%= render 'form' %>
-</div>
+<% if current_user %>
+  <div id="forms">
+    <header>Add Alumni</header>
+    <%= render 'form' %>
+  </div>
+<% end %>
