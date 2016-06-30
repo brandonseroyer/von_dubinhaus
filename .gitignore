@@ -15,3 +15,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+config/initializers/stripe.rb
+config/initializers/recaptcha.rb
+config/secrets.yml
+db/seeds.rb
