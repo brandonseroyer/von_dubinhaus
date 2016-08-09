@@ -10,7 +10,8 @@ class ApplicantsController < ApplicationController
 
   def create
     @applicant = Applicant.new(applicant_params)
-    if @applicant.save
+    if verify_recaptcha
+      @applicant.save
       render :show
     else
       render :new
