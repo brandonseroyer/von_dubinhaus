@@ -81,22 +81,41 @@
   </div>
 </div>
 <br><br>
-<div id="home-page-text">
-  <p id="home-headers">Von Dubinhaus Shepherds</p>
-  <p>Proudly serving Portland, Oregon's dog community since 1999</p>
-  <hr>
-  <p id="home-headers">We Don't Just Train Dogs - We Train You!</p>
-  <p>Customized training programs for ALL dog breeds, designed to fit your lifestyle!</p>
-  <hr>
-  <p id="home-headers">Looking To Make a Difference and Enrich Your Life?<br>Why Shop? Adopt!</p>
-  <p>Visit our <%= link_to "Rescue Page", dogs_path %> to learn more about our
-    available Rescue Shepherds currently looking for forever-homes!</p>
-  <hr>
-  <p id="home-headers">Our Services</p>
-  <p>Animal Rescue • Basic & Advanced Obedience<br>Puppy & Adult Training
-    • Aggression & Behavioral Issues</p>
-</div>
 <br>
+<div id="info-1" >
+  <%= image_tag "https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/trio.jpg" %>
+  <%= image_tag "https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/image1.JPG" %>
+  <%= image_tag "https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/bearbear+roll.JPG" %>
+  <%= image_tag "https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/IMG_0385.JPG" %>
+  <div id="info-text-1">
+    Von Dubinhaus Shepherds
+    <br>
+    <span class="info-caption">
+      Proudly serving Portland, Oregon's dog community since 1999
+    </span>
+  </div>
+  <div id="info-text-2">
+    We Don't Just Train Dogs - We Train You!
+    <br>
+    <span class="info-caption">
+      Customized training programs for ALL dog breeds, designed to fit your lifestyle!
+    </span>
+  </div>
+  <div id="info-text-3">
+    Visit our <%= link_to "Rescue Page", dogs_path, id:'info-text-font' %>
+    <br>
+    <span class="info-caption">
+      Learn more about our available Rescue Shepherds currently looking for forever-homes!
+    </span>
+  </div>
+  <div id="info-text-4">
+    Our Services
+    <br>
+    <span class="info-caption">
+      Animal Rescue • Basic & Advanced Obedience • Puppy & Adult Training • Aggression & Behavioral Issues
+    </span>
+  </div>
+</div>
 <footer>
   <div id="footer-text">
     <div class="social">

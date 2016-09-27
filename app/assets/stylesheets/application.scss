@@ -46,6 +46,14 @@ ul {
   padding-left: 0;
 }
 
+footer {
+  background-color: black;
+  height: 200px;
+  width: 100%;
+  position: relative;
+  top: 1105px;
+}
+
 .carousel {
   box-shadow: 2px 2px 15px black;
 }
@@ -93,6 +101,10 @@ ul {
     display: block;
 }
 
+.info-caption {
+  color: white;
+  font-size: 28px;
+}
 .navbar-default {
   background-color: black;
   border-color: black;
@@ -127,6 +139,7 @@ ul {
   height: 40px;
   color: #FFF;
   background-color: #000000;
+  border: 1px solid white;
   font-size: 22px;
   text-align:center;
   padding-top: 12px;
@@ -354,11 +367,12 @@ ul {
 }
 
 #footer-text {
-  color: black;
+  color: white;
   text-align: center;
   font-size: 14px;
   width: 60%;
   margin: auto;
+  padding-top: 50px;
 }
 
 #forms {
@@ -379,21 +393,6 @@ ul {
 #header-text {
   font-size: 60px;
   font-weight: bolder;
-}
-
-#home-headers {
-  font-size: 35px;
-  font-weight: bold;
-}
-
-#home-page-text {
-  width: 60%;
-  margin: auto;
-  text-align: center;
-  border-radius: 25px;
-  padding: 2%;
-  background: rgba(0, 0, 0, .10);
-  box-shadow: 1px 1px 7px black;
 }
 
 #icon-text {
@@ -432,6 +431,65 @@ ul {
   width: 85%;
   margin: auto;
   padding-left: 4%;
+}
+
+#info-1 img {
+  width: 100%;
+  max-height: 450px;
+  margin: auto;
+}
+
+#info-text-1 {
+  position: relative;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  bottom: 1675px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+  margin-bottom: -1675px;
+}
+
+#info-text-2 {
+  position: relative;
+  top: 325px;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+}
+
+#info-text-3 {
+  position: relative;
+  top: 625px;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+}
+
+#info-text-4 {
+  position: relative;
+  font-size: 48px;
+  font-weight: bold;
+  top: 925px;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 1px #000;
+}
+
+#info-text {
+  position: relative;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+}
+
+#info-text-font {
+  font-size: 50px;
+  color: white;
 }
 
 #nav-right {
@@ -585,3 +643,153 @@ ul {
   padding-top: 5%;
   padding-bottom: 3%;
 }
+
+/*
+ The following are media queries used for responsive designs that adapt to fit to mobile views.
+ */
+
+ @media only screen and (max-width: 768px) {
+   /* Add your custom styles here for Tablet */
+ }
+
+ @media only screen and (max-width: 640px) {
+   /* Add your custom styles here for Mobile */
+
+   footer {
+     background-color: black;
+     height: 200px;
+     width: 100%;
+     position: relative;
+     top: 305px;
+   }
+
+   .info-caption {
+     color: white;
+     font-size: 18px;
+   }
+
+   #info-text-1 {
+     position: relative;
+     font-size: 24px;
+     font-weight: bold;
+     color: white;
+     bottom: 680px;
+     text-align: center;
+     text-shadow: 1px 1px 1px #000;
+     margin-bottom: -680px;
+   }
+
+   #info-text-2 {
+     position: relative;
+     top: 125px;
+     font-size: 24px;
+     font-weight: bold;
+     color: white;
+     text-align: center;
+     text-shadow: 1px 1px 1px #000;
+   }
+
+   #info-text-3 {
+     position: relative;
+     top: 210px;
+     font-size: 24px;
+     font-weight: bold;
+     color: white;
+     text-align: center;
+     text-shadow: 1px 1px 1px #000;
+   }
+
+   #info-text-4 {
+     position: relative;
+     font-size: 24px;
+     font-weight: bold;
+     top: 285px;
+     color: white;
+     text-align: center;
+     text-shadow: 1px 1px 1px #000;
+   }
+
+   #info-text {
+     position: relative;
+     font-size: 24px;
+     color: white;
+     text-align: center;
+   }
+
+   #info-text-font {
+     font-size: 24px;
+     color: white;
+   }
+
+ }
+
+ @media only screen and (max-width: 480px) {
+  /* Add your custom styles here for smaller Mobile */
+
+  footer {
+    background-color: black;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    top: 305px;
+  }
+
+  .info-caption {
+    color: white;
+    font-size: 18px;
+  }
+
+  #info-text-1 {
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    bottom: 680px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+    margin-bottom: -680px;
+  }
+
+  #info-text-2 {
+    position: relative;
+    top: 125px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+  }
+
+  #info-text-3 {
+    position: relative;
+    top: 210px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+  }
+
+  #info-text-4 {
+    position: relative;
+    font-size: 24px;
+    font-weight: bold;
+    top: 285px;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000;
+  }
+
+  #info-text {
+    position: relative;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+  }
+
+  #info-text-font {
+    font-size: 24px;
+    color: white;
+  }
+
+ }
