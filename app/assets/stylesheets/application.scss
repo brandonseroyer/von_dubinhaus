@@ -726,6 +726,77 @@ footer {
    }
  }
 
+ @media only screen and (max-width: 736px) {
+   /* Add your custom styles here for iPhone 6plus */
+
+   footer {
+     background-color: black;
+     height: 200px;
+     width: 100%;
+     position: relative;
+     top: 910px;
+   }
+
+   .info-caption {
+     color: white;
+     font-size: 18px;
+   }
+
+   #info-text-1 {
+     position: relative;
+     font-size: 42px;
+     font-weight: bold;
+     color: white;
+     bottom: 1200px;
+     text-align: center;
+     text-shadow: 1px 1px 1px #000;
+     margin-bottom: -1200px;
+   }
+
+   #info-text-2 {
+     position: relative;
+     top: 275px;
+     font-size: 42px;
+     font-weight: bold;
+     color: white;
+     text-align: center;
+     text-shadow: 1px 1px 1px #000;
+   }
+
+   #info-text-3 {
+     position: relative;
+     top: 550px;
+     font-size: 42px;
+     font-weight: bold;
+     color: white;
+     text-align: center;
+     text-shadow: 1px 1px 1px #000;
+   }
+
+   #info-text-4 {
+     position: relative;
+     font-size: 42px;
+     font-weight: bold;
+     top: 800px;
+     color: white;
+     text-align: center;
+     text-shadow: 1px 1px 1px #000;
+   }
+
+   #info-text {
+     position: relative;
+     font-size: 42px;
+     color: white;
+     text-align: center;
+   }
+
+   #info-text-font {
+     font-size: 42px;
+     color: white;
+   }
+
+ }
+
  @media only screen and (max-width: 640px) {
    /* Add your custom styles here for Mobile */
 
