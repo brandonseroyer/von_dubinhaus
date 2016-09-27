@@ -51,7 +51,7 @@ footer {
   height: 200px;
   width: 100%;
   position: relative;
-  top: 1105px;
+  top: 1160px;
 }
 
 .carousel {
@@ -441,19 +441,21 @@ footer {
 
 #info-text-1 {
   position: relative;
-  font-size: 48px;
+  font-size: 54px;
+  line-height: 1em;
   font-weight: bold;
   color: white;
-  bottom: 1675px;
+  bottom: 1640px;
   text-align: center;
   text-shadow: 1px 1px 1px #000;
-  margin-bottom: -1675px;
+  margin-bottom: -1640px;
 }
 
 #info-text-2 {
   position: relative;
-  top: 325px;
-  font-size: 48px;
+  top: 360px;
+  font-size: 54px;
+  line-height: 1em;
   font-weight: bold;
   color: white;
   text-align: center;
@@ -462,8 +464,9 @@ footer {
 
 #info-text-3 {
   position: relative;
-  top: 625px;
-  font-size: 48px;
+  top: 680px;
+  font-size: 54px;
+  line-height: 1em;
   font-weight: bold;
   color: white;
   text-align: center;
@@ -472,9 +475,10 @@ footer {
 
 #info-text-4 {
   position: relative;
-  font-size: 48px;
+  font-size: 54px;
+  line-height: 1em;
   font-weight: bold;
-  top: 925px;
+  top: 1000px;
   color: white;
   text-align: center;
   text-shadow: 1px 1px 1px #000;
@@ -482,13 +486,13 @@ footer {
 
 #info-text {
   position: relative;
-  font-size: 50px;
+  font-size: 54px;
   color: white;
   text-align: center;
 }
 
 #info-text-font {
-  font-size: 50px;
+  font-size: 54px;
   color: white;
 }
 
@@ -648,8 +652,78 @@ footer {
  The following are media queries used for responsive designs that adapt to fit to mobile views.
  */
 
- @media only screen and (max-width: 768px) {
+ @media only screen and (max-width: 910px) {
    /* Add your custom styles here for Tablet */
+
+   footer {
+     background-color: black;
+     height: 200px;
+     width: 100%;
+     position: relative;
+     top: 975px;
+   }
+
+   .info-caption {
+     color: white;
+     font-size: 18px;
+   }
+
+   #info-text-1 {
+     position: relative;
+     font-size: 42px;
+     font-weight: bold;
+     line-height: .75em;
+     color: white;
+     bottom: 1265px;
+     text-align: center;
+     text-shadow: 1px 1px 1px #000;
+     margin-bottom: -1265px;
+   }
+
+   #info-text-2 {
+     position: relative;
+     top: 315px;
+     font-size: 42px;
+     line-height: .75em;
+     font-weight: bold;
+     color: white;
+     text-align: center;
+     text-shadow: 1px 1px 1px #000;
+   }
+
+   #info-text-3 {
+     position: relative;
+     top: 590px;
+     font-size: 42px;
+     line-height: .75em;
+     font-weight: bold;
+     color: white;
+     text-align: center;
+     text-shadow: 1px 1px 1px #000;
+   }
+
+   #info-text-4 {
+     position: relative;
+     font-size: 42px;
+     line-height: .75em;
+     font-weight: bold;
+     top: 860px;
+     color: white;
+     text-align: center;
+     text-shadow: 1px 1px 1px #000;
+   }
+
+   #info-text {
+     position: relative;
+     font-size: 42px;
+     color: white;
+     text-align: center;
+   }
+
+   #info-text-font {
+     font-size: 42px;
+     color: white;
+   }
  }
 
  @media only screen and (max-width: 640px) {
