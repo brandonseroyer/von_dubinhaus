@@ -797,7 +797,7 @@ footer {
 
  }
 
- @media only screen and (max-width: 480px) {
+ @media only screen and (max-width: 400px) {
   /* Add your custom styles here for smaller Mobile */
 
   footer {
@@ -805,12 +805,12 @@ footer {
     height: 200px;
     width: 100%;
     position: relative;
-    top: 305px;
+    top: 440px;
   }
 
   .info-caption {
     color: white;
-    font-size: 18px;
+    font-size: 14px;
   }
 
   #info-text-1 {
@@ -818,15 +818,15 @@ footer {
     font-size: 24px;
     font-weight: bold;
     color: white;
-    bottom: 680px;
+    bottom: 655px;
     text-align: center;
     text-shadow: 1px 1px 1px #000;
-    margin-bottom: -680px;
+    margin-bottom: -655px;
   }
 
   #info-text-2 {
     position: relative;
-    top: 125px;
+    top: 145px;
     font-size: 24px;
     font-weight: bold;
     color: white;
@@ -836,7 +836,7 @@ footer {
 
   #info-text-3 {
     position: relative;
-    top: 210px;
+    top: 285px;
     font-size: 24px;
     font-weight: bold;
     color: white;
@@ -848,7 +848,7 @@ footer {
     position: relative;
     font-size: 24px;
     font-weight: bold;
-    top: 285px;
+    top: 410px;
     color: white;
     text-align: center;
     text-shadow: 1px 1px 1px #000;
