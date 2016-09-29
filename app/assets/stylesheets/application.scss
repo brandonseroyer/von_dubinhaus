@@ -29,6 +29,10 @@ body {
   background-color: #FFFFCC;
 }
 
+body.homepage {
+  background-color: black;
+}
+
 header {
    background-size: 100%;
    font-size: 55px;
@@ -48,10 +52,10 @@ ul {
 
 footer {
   background-color: black;
-  height: 210px;
+  height: 200px;
   width: 100%;
   position: relative;
-  top: 1145px;
+  top: 1190px;
 }
 
 .carousel {
@@ -419,6 +423,11 @@ footer {
   1px 1px 0 #000;
 }
 
+#index-categories {
+  background-color: #FFFFCC;
+  padding: 3%;
+}
+
 #index-email-link {
   font-size: 22px;
 }
@@ -431,6 +440,7 @@ footer {
   width: 85%;
   margin: auto;
   padding-left: 4%;
+  background-color: #FFFFCC;
 }
 
 #info-1 img {
