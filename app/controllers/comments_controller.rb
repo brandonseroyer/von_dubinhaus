@@ -9,6 +9,7 @@ class CommentsController < ApplicationController
     @comment = @dog.comments.new(comment_params)
     if verify_recaptcha
       @comment.save
+      UserMailer.welcome_email(@dog).deliver_now
       redirect_to dog_path(@comment.dog)
     else
       render :new
