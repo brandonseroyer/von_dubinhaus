@@ -12,6 +12,7 @@ class ApplicantsController < ApplicationController
     @applicant = Applicant.new(applicant_params)
     if verify_recaptcha
       @applicant.save
+      UserMailer.application_email.deliver
       render :show
     else
       render :new
