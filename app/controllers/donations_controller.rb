@@ -14,6 +14,7 @@ class DonationsController < ApplicationController
     @donation = Donation.new(donation_params)
     if verify_recaptcha
       @donation.save
+      UserMailer.donation_email.deliver
       render :show
     else
       render :new

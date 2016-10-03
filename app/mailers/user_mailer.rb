@@ -11,4 +11,9 @@ class UserMailer < ApplicationMailer
     @user = 'brandonseroyer@gmail.com'
     mail(to: @user, subject: 'A new Comment has been made on www.vondubinhaus.com')
   end
+
+  def donation_email
+    @user = 'brandonseroyer@gmail.com'
+    mail(to: @user, subject: 'A Donation has been made to Von Dubinhaus Shepherds!')
+  end
 end
