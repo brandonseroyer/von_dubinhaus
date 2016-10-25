@@ -18,6 +18,8 @@ _Using this app, users can:_
 * _View index of donations and adoption applications, destroy as needed_
 * _Share Animal profiles via Facebook and Twitter_
 * _Comment feature for individual rescue profile_
+* _Receive email notifications when comments, donations, or adoption apps are submitted_
+
 
 ## Setup
 
