@@ -9,7 +9,7 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks'
 gem 'devise'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.2.0.2'
 gem "font-awesome-rails"
 gem 'bootstrap-social-rails'
 gem 'rest-client'
@@ -20,6 +20,8 @@ gem 'ckeditor'
 gem 'social-share-button'
 gem 'kaminari'
 gem 'recaptcha', :require => 'recaptcha/rails'
+gem 'dropzonejs-rails'
+gem 'lightbox-bootstrap-rails'
 
 group :development do
   gem 'letter_opener'

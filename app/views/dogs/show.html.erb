@@ -22,6 +22,23 @@
 <div id="profile-pic-stats">
   <%= image_tag @dog.image.url(:profile), id: 'pic' %>
   <br>
+  <% if current_user %>
+  <%= link_to "Add Photo", new_dog_image_path(@dog) %>
+  <% end %>
+  <% if @dog.images.any? %>
+  <div class="well" style="max-width:405px;">
+    <% @images.each do |image| %>
+    <div class="img-thumbnail">
+      <%= link_to image_tag(image.avatar.url(:thumb)), image.avatar.url(:original), data: { toggle: "lightbox"} %>
+    </div>
+      <% if current_user %>
+      <%= link_to "Delete", dog_image_path(@dog, image),
+      :data => {:confirm => "You sure?",
+        :method => "delete"} %>
+      <% end %>
+    <% end %>
+    </div>
+  <% end %>
   <div id="dog-stats">
     <%= link_to "Apply for Adoption", new_applicant_path, id:'apply-font' %>
     <br>

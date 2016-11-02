@@ -1,6 +1,7 @@
 class Dog < ActiveRecord::Base
   belongs_to :user
   has_many :comments, dependent: :destroy
+  has_many :images, dependent: :destroy
   validates :name, presence: true
   validates :sex, presence: true
   validates :age, presence: true
@@ -11,6 +12,6 @@ class Dog < ActiveRecord::Base
     profile: '450x300',
     thumb: '300x225'
    }
-   
+
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 end

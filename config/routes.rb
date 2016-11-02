@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :dogs do
     resources :comments
+    resources :images
   end
 
   resources :donations do

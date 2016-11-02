@@ -14,5 +14,8 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require ckeditor/init
+//= require dropzone
+//= require turbolinks
 //= require social-share-button
+//= require lightbox-bootstrap
 //= require_tree .

@@ -1,5 +1,4 @@
 class DogsController < ApplicationController
-  before_action :find_dog, except: [:index, :new, :create]
   def index
     @dogs = Dog.all.order(created_at: :desc)
   end
@@ -14,12 +13,13 @@ class DogsController < ApplicationController
     if @dog.save
       redirect_to  dogs_path
     else
-      render :new  
+      render :new
     end
   end
 
   def show
     @dog = Dog.find(params[:id])
+    @images = @dog.images
     @comments = @dog.comments
     render :show
   end
