@@ -68,7 +68,6 @@ footer {
   width: 85%;
   height: auto;
   margin: auto;
-  box-shadow: 2px 2px 15px black;
 }
 
 .col-sm-4 img {
@@ -122,6 +121,15 @@ footer {
 .row {
   width: 50%;
   margin: auto;
+}
+
+.profile-div img {
+  border: solid black;
+  border-width: 1px;
+}
+.profile-div:hover {
+  box-shadow: 2px 2px 10px black;
+  text-decoration: none !important;
 }
 
 .social {
@@ -270,7 +278,16 @@ footer {
 }
 
 #dog-box {
-  box-shadow: 1px 0px 10px black;
+  border: solid black;
+  border-width: 1px;
+  font-weight: bold;
+  background-color: white;
+}
+
+#dog-box-title {
+  text-decoration: none;
+  font-size: 24px;
+  color: #212121;
 }
 
 #dog-comments {
@@ -285,8 +302,6 @@ footer {
   position: relative;
   bottom: 50px;
   border: 1px solid #000000;
-  border-style: solid;
-  color: #000000;
 }
 
 #dog-links {
@@ -580,8 +595,6 @@ footer {
 #rescue-profile {
   border-style: solid;
   border-width: 1px;
-  width: 85%;
-  height: auto;
   margin: auto;
   box-shadow: 2px 2px 15px black;  background: rgba(255, 255, 255, .75);
   text-shadow: 0 .5px 0 #000;
@@ -671,20 +684,12 @@ footer {
 
   @media only screen and (max-width: 1115px) {
     /* Add your custom styles here for Tablet */
-    #dog-row {
-      -webkit-column-count: 1;
-      -moz-column-count: 1;
-      column-count: 1;
-    }
+
   }
 
  @media only screen and (max-width: 1085px) {
    /* Add your custom styles here for Tablet */
-   #dog-row {
-     -webkit-column-count: 1;
-     -moz-column-count: 1;
-     column-count: 1;
-   }
+
  }
 
  @media only screen and (max-width: 910px) {
@@ -778,7 +783,6 @@ footer {
    }
 
    #dog-row {
-     max-width: 400px;
    }
 
    #info-text-1 {
