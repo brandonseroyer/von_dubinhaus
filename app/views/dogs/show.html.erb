@@ -40,7 +40,7 @@
     </div>
   <% end %>
   <div id="dog-stats">
-    <%= link_to "Apply for Adoption", new_applicant_path, id:'apply-font' %>
+    <%= link_to "Apply for Adoption", new_applicant_path, class: "btn btn-primary btn-lg" %>
     <br>
     <%= @dog.breed %>
     <br>
@@ -86,7 +86,7 @@
     :method => "delete"} %><br>
   </div>
 <% end %>
-<%= link_to "Return to Available Dogs", dogs_path %></p>
+<%= link_to "Return to Available Dogs", dogs_path, class: "btn btn-primary btn-lg" %></p>
 </div>
 </center>
 </div>

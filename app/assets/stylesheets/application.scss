@@ -664,6 +664,25 @@ footer {
  The following are media queries used for responsive designs that adapt to fit to mobile views.
  */
 
+
+  @media only screen and (max-width: 1115px) {
+    /* Add your custom styles here for Tablet */
+    #dog-row {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1;
+    }
+  }
+
+ @media only screen and (max-width: 1085px) {
+   /* Add your custom styles here for Tablet */
+   #dog-row {
+     -webkit-column-count: 1;
+     -moz-column-count: 1;
+     column-count: 1;
+   }
+ }
+
  @media only screen and (max-width: 910px) {
    /* Add your custom styles here for Tablet */
 
@@ -754,6 +773,10 @@ footer {
      font-size: 18px;
    }
 
+   #dog-row {
+     max-width: 400px;
+   }
+
    #info-text-1 {
      position: relative;
      font-size: 42px;
@@ -823,6 +846,10 @@ footer {
    .info-caption {
      color: white;
      font-size: 18px;
+   }
+
+   #dog-row {
+     max-width: 400px;
    }
 
    #info-text-1 {
