@@ -39,9 +39,10 @@
     <% end %>
     </div>
   <% end %>
+  <div id="apply-dog">
+  <%= link_to "Apply for Adoption", new_applicant_path, class: "btn btn-primary btn-lg" %>
+  </div>
   <div id="dog-stats">
-    <%= link_to "Apply for Adoption", new_applicant_path, class: "btn btn-primary btn-lg" %>
-    <br>
     <%= @dog.breed %>
     <br>
     <%= @dog.age %> years old
