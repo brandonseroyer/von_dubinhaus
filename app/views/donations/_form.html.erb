@@ -1,16 +1,29 @@
-<%= form_for @donation do |f| %>
-  <div class='col-xs-2'>
+<div id="forms">
+  <header>Make a Donation</header>
+  <br>
+  <%= form_for @donation do |f| %>
     <%= f.label :first_name %>
-    <%= f.text_field :first_name, class: "form-control", required: 'required' %><br>
+    <br>
+    <%= f.text_field :first_name, required: 'required' %>
+    <br><br>
     <%= f.label :last_name %>
-    <%= f.text_field :last_name, class: "form-control", required: 'required' %><br>
+    <br>
+    <%= f.text_field :last_name, required: 'required' %>
+    <br><br>
     <%= f.label :email %>
-    <%= f.text_field :email, class: "form-control", required: 'required' %><br>
+    <br>
+    <%= f.text_field :email, required: 'required' %>
+    <br><br>
     <b>Donation</b> <%= f.label :amount %>
-    <%= f.text_field :amount, class: "form-control", required: 'required' %><br>
+    <br>
+    <%= f.text_field :amount, required: 'required' %>
+    <br><br>
     <%= f.label :message %> (optional)
-    <%= f.text_area :message, class: "form-control" %><br>
-    <%= recaptcha_tags %><br>
-    <%= f.submit "Submit Donation", class: 'btn btn-success' %>
-  </div>
-<% end %>
+    <br>
+    <%= f.text_area :message %>
+    <br><br>
+    <%= recaptcha_tags %>
+    <br>
+    <%= f.submit "Submit Donation", class: 'btn btn-primary btn-md' %>
+  <% end %>
+</div>

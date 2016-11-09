@@ -106,6 +106,14 @@ footer {
     display: block;
 }
 
+.forms {
+  border: 2px solid black;
+  padding: 10px;
+  width: 75%;
+  border-radius: 25px;
+  background-color: rgba(255,255,255, 0.85);
+}
+
 .info-caption {
   color: white;
   font-size: 28px;
@@ -281,7 +289,7 @@ footer {
   border: solid black;
   border-width: 1px;
   font-weight: bold;
-  background-color: white;
+  background-color: rgba(255,255,255, 0.85);
 }
 
 #dog-box-title {
@@ -393,11 +401,11 @@ footer {
 
 #footer-text {
   color: white;
-  text-align: center;
   font-size: 14px;
   width: 60%;
   margin: auto;
   padding-top: 50px;
+  text-align: center;
 }
 
 #forms {
@@ -600,6 +608,11 @@ footer {
   text-shadow: 0 .5px 0 #000;
   font-size: 26px;
   text-align: center;
+}
+
+#root-footer {
+  position: relative;
+  top: 1190px;
 }
 
 #social {
