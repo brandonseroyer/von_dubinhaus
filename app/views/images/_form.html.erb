@@ -1,6 +1,10 @@
-<%= form_for [@dog, @image] do |f| %>
-  <div class="fallback">
-    <%= f.file_field :avatar %><br>
-    <%= f.submit "Upload Photo" %>
-  </div>
-<% end %>
+<div id="forms">
+  <header>Add Photo for <%= @dog.name %></header>
+  <br>
+  <%= form_for [@dog, @image] do |f| %>
+    <div class="fallback">
+      <%= f.file_field :avatar %><br>
+      <%= f.submit "Upload Photo", class: "btn btn-success btn-lg" %>
+    </div>
+  <% end %>
+</div>
