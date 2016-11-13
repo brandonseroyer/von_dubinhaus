@@ -1,6 +1,6 @@
 class ChargesController < ApplicationController
   def create
-    @donation = donation.find(params[:donation_id])
+    @donation = Donation.find(params[:donation_id])
     @email = Donation.find(params[:donation_id]).email
     @first_name = Donation.find(params[:donation_id]).first_name
     @last_name = Donation.find(params[:donation_id]).last_name
