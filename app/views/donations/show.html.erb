@@ -1,26 +1,25 @@
-<div id="payment-text">
-  Payment Confirmation
-</div>
-<br>
-<div id="donation-page-text">
-<%= @donation.first_name %>, you have selected a donation amount of $<%= @donation.amount %>.00 USD
-<%= form_tag donation_charges_path(@donation) do %>
-<article>
-  <% if flash[:error].present? %>
-    <div id="error_explanation">
-      <p><%= flash[:error] %></p>
+<div class="universal-page">
+  <div id="forms">
+    <div class="donation-pages">
+      <header>Payment Confirmation</header>
+      <%= @donation.first_name %>, you have selected a donation amount of $<%= number_to_currency(@donation.amount) %>
+      <%= form_tag donation_charges_path(@donation) do %>
+      <article>
+        <% if flash[:error].present? %>
+          <div id="error_explanation">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+      </article>
+      <br>
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description= "$<%= @donation.amount %>"
+              data-amount="<% @donation.amount %>"
+              data-locale="auto"></script>
+      <% end %>
     </div>
-  <% end %>
-</article>
-
-<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-        data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-        data-description= "$<%= @donation.amount %>.00 donation"
-        data-amount="<% @donation.amount %>"
-        data-locale="auto"></script>
-<% end %>
-</div>
-<br>
-<div id="back-link">
-<%= link_to "Cancel Payment, Return to Donation Page", new_donation_path %>
+    <br>
+    <%= link_to "Cancel Payment, Return to Donation Page", new_donation_path, class: "btn btn-primary btn-lg" %>
+  </div>
 </div>

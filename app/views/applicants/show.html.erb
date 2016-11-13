@@ -1,18 +1,19 @@
-<div id="payment-text">
-  Success!
-</div>
-<br>
-<div id="donation-page-text">
-  Your application has been submitted!
-  <br><br>
-  We will contact you shortly once we've had time to look things over to
-  determine whether or not you are a good fit for this dog.
-  <br><br>
-  Thank you!
-</div>
-<br>
-<div id="back-link">
-<%= link_to "Go To Available Rescue Dogs", dogs_path %>
-<br>
-<%= link_to "Go To Home Page", root_path %>
+<div class="universal-page">
+  <br>
+  <div id="forms">
+    <div class="forms">
+      <div id="apply-show">
+        <header>Success!</header>
+        <br>
+        Your application has been submitted!
+        We will contact you shortly once we've had time to look things over to
+        determine whether or not you are a good fit for this dog.
+        <br><br>
+        Thank you!
+        <br><br>
+        <%= link_to "Available Rescue Dogs", dogs_path, class: "btn btn-primary btn-md" %>
+        <%= link_to "Home Page", root_path, class: "btn btn-primary btn-md" %>
+      </div>
+    </div>
+  </div>
 </div>

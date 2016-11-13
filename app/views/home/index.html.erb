@@ -1,122 +1,120 @@
-<body class="homepage">
-  <div id="carousel-home" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-home" data-slide-to="1"></li>
-      <li data-target="#carousel-home" data-slide-to="2"></li>
-      <li data-target="#carousel-home" data-slide-to="3"></li>
-    </ol>
+<div id="carousel-home" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-home" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-home" data-slide-to="1"></li>
+    <li data-target="#carousel-home" data-slide-to="2"></li>
+    <li data-target="#carousel-home" data-slide-to="3"></li>
+  </ol>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/welcome.jpg", :alt => "German Shepherd Dog Rescue located in Portland, Oregon") %>
-        <div class="carousel-caption">
-          <div id="carousel-text">
-            Welcome to Von Dubinhaus Shepherds!
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/rescue.png", :alt => "German Shepherd Dog Rescue located in Portland, Oregon"), dogs_path %>
-        <div class="carousel-caption">
-          <div id="carousel-text">
-            Portland's Exclusive German Shepherd Dog Rescue
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/training.jpg", :alt => "Professional Dog Training Portland, Oregon"), training_index_path %>
-        <div class="carousel-caption">
-          <div id="carousel-text">
-            Professional trainers with 15+ years experience
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/boarding.png", :alt => "Professional Dog Training Portland, Oregon"), training_index_path%>
-        <div class="carousel-caption">
-          <div id="carousel-text">
-            Help your dog achieve their potential today!
-          </div>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/welcome.jpg", :alt => "German Shepherd Dog Rescue located in Portland, Oregon") %>
+      <div class="carousel-caption">
+        <div id="carousel-text">
+          Welcome to Von Dubinhaus Shepherds!
         </div>
       </div>
     </div>
+    <div class="item">
+      <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/rescue.png", :alt => "German Shepherd Dog Rescue located in Portland, Oregon"), dogs_path %>
+      <div class="carousel-caption">
+        <div id="carousel-text">
+          Portland's Exclusive German Shepherd Dog Rescue
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/training.jpg", :alt => "Professional Dog Training Portland, Oregon"), training_index_path %>
+      <div class="carousel-caption">
+        <div id="carousel-text">
+          Professional trainers with 15+ years experience
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/boarding.png", :alt => "Professional Dog Training Portland, Oregon"), training_index_path%>
+      <div class="carousel-caption">
+        <div id="carousel-text">
+          Help your dog achieve their potential today!
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#carousel-home" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-home" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-  <div id="index-categories">
-    <div class="row" id="index-row">
-      <div class="col-sm-4">
-        <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/index_icon_1.png", :alt => "Professional Dog Training Portland, Oregon"), training_index_path %>
-        <div class="carousel-caption">
-          <div id="icon-text">
-            <%= link_to "Training", training_index_path, id: "icon-text-2" %>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/index_icon_2.jpg", :alt => "German Shepherd Dog Rescue located in Portland, Oregon"), dogs_path, id: "rescue-icon" %>
-        <div class="carousel-caption">
-          <div id="icon-text">
-            <%= link_to "Rescue", dogs_path, id: "icon-text-2" %>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-4">
-      <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/index_icon_3.png", :alt => "German Shepherd Dog Rescue located in Portland, Oregon"), new_donation_path, id: "donate-icon" %>
-        <div class="carousel-caption">
-          <div id="icon-text">
-            <%= link_to "Donate", new_donation_path, id: "icon-text-2" %>
-          </div>
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#carousel-home" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-home" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div id="index-categories">
+  <div class="row" id="index-row">
+    <div class="col-sm-4">
+      <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/index_icon_1.png", :alt => "Professional Dog Training Portland, Oregon"), training_index_path %>
+      <div class="carousel-caption">
+        <div id="icon-text">
+          <%= link_to "Training", training_index_path, id: "icon-text-2" %>
         </div>
       </div>
     </div>
-  </div>
-  <div id="info-1" >
-    <%= image_tag "https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/trio.jpg" %>
-    <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/image1.JPG"), training_index_path %>
-    <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/bearbear+roll.JPG"), dogs_path %>
-    <%= image_tag "https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/IMG_0385.JPG" %>
-    <div id="info-text-1">
-      Von Dubinhaus Shepherds
-      <br>
-      <span class="info-caption">
-        Proudly serving Portland, Oregon's dog community since 1999
-      </span>
+    <div class="col-sm-4">
+      <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/index_icon_2.jpg", :alt => "German Shepherd Dog Rescue located in Portland, Oregon"), dogs_path, id: "rescue-icon" %>
+      <div class="carousel-caption">
+        <div id="icon-text">
+          <%= link_to "Rescue", dogs_path, id: "icon-text-2" %>
+        </div>
+      </div>
     </div>
-    <div id="info-text-2">
-      We Don't Just Train Dogs - We Train You!
-      <br>
-      <span class="info-caption">
-        Customized training programs for ALL dog breeds, designed to fit your lifestyle!
-      </span>
-    </div>
-    <div id="info-text-3">
-      Visit our <%= link_to "Rescue Page", dogs_path, id:'info-text-font' %>
-      <br>
-      <span class="info-caption">
-        Learn more about our available Rescue Shepherds currently looking for forever-homes!
-      </span>
-    </div>
-    <div id="info-text-4">
-      Our Services
-      <br>
-      <span class="info-caption">
-        Animal Rescue • Basic & Advanced Obedience • Puppy & Adult Training • Aggression & Behavioral Issues
-      </span>
+    <div class="col-sm-4">
+    <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/index_icon_3.png", :alt => "German Shepherd Dog Rescue located in Portland, Oregon"), new_donation_path, id: "donate-icon" %>
+      <div class="carousel-caption">
+        <div id="icon-text">
+          <%= link_to "Donate", new_donation_path, id: "icon-text-2" %>
+        </div>
+      </div>
     </div>
   </div>
-</body>
+</div>
+<div id="info-1" >
+  <%= image_tag "https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/trio.jpg" %>
+  <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/image1.JPG"), training_index_path %>
+  <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/bearbear+roll.JPG"), dogs_path %>
+  <%= image_tag "https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/IMG_0385.JPG" %>
+  <div id="info-text-1">
+    Von Dubinhaus Shepherds
+    <br>
+    <span class="info-caption">
+      Proudly serving Portland, Oregon's dog community since 1999
+    </span>
+  </div>
+  <div id="info-text-2">
+    We Don't Just Train Dogs - We Train You!
+    <br>
+    <span class="info-caption">
+      Customized training programs for ALL dog breeds, designed to fit your lifestyle!
+    </span>
+  </div>
+  <div id="info-text-3">
+    Visit our <%= link_to "Rescue Page", dogs_path, id:'info-text-font' %>
+    <br>
+    <span class="info-caption">
+      Learn more about our available Rescue Shepherds currently looking for forever-homes!
+    </span>
+  </div>
+  <div id="info-text-4">
+    Our Services
+    <br>
+    <span class="info-caption">
+      Animal Rescue • Basic & Advanced Obedience • Puppy & Adult Training • Aggression & Behavioral Issues
+    </span>
+  </div>
+</div>
 <footer>
   <div id="footer-text">
     <div class="social">

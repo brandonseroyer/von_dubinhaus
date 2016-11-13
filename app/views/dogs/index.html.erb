@@ -1,6 +1,6 @@
-<div id="universal-page">
+<div class="universal-page">
   <%= image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/rescue.png", id: "pic") %>
-  <div id="universal-page-text">
+  <div class="universal-page-text">
     <div id="header-text">
       Rescue
     </div>
@@ -25,28 +25,28 @@
     If you know of a German Shepherd Dog in need of re-homing, please contact Brandon at: <a href="mailto:brandonseroyer@gmail.com">brandonseroyer@gmail.com</a>
     or (503) 806-2572.
   </div>
-</div>
-<br>
-<center><header>Available for Adoption</header></center>
-<br>
-<center>
-<div id="dog-row" class="row">
-  <% @dogs.each do |dog| %>
-  <div class="col-md-4">
-    <%= link_to(dog_path(dog)) do %>
-    <div id="dog-box" class="profile-div">
+  <hr>
+  <center><header>Available for Adoption</header></center>
+  <br>
+  <center>
+  <div id="dog-row" class="row">
+    <% @dogs.each do |dog| %>
+    <div class="col-md-4">
+      <%= link_to(dog_path(dog)) do %>
+      <div id="dog-box" class="profile-div">
+        <br>
+        <%= image_tag(dog.image.url) %>
+        <br>
+        <a id="dog-box-title">
+          Click to learn about <%= dog.name %>
+        </a>
+        <br><br>
+      </div>
+      <% end%>
       <br>
-      <%= image_tag(dog.image.url) %>
-      <br>
-      <a id="dog-box-title">
-        Click to learn about <%= dog.name %>
-      </a>
-      <br><br>
     </div>
-    <% end%>
-    <br>
+    <% end %>
   </div>
-  <% end %>
+  </center>
+  <br>
 </div>
-</center>
-<br>

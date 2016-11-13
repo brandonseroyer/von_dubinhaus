@@ -1,94 +1,92 @@
-<br><br>
 <div id="profile-page">
-<center>
-<div id="profile-box">
-<div id="profile-head">
-  <div id="donate-social">
-    <div id="donate">
-      <%= link_to 'Donate', new_donation_path, id:'text-color2' %>
-    </div>
-    <br><br>
-    <div id="social">
-      <div id="text-color2">
-        Help <%= @dog.name %> get adopted!
+  <center>
+  <div id="profile-box">
+    <div id="profile-head">
+      <div id="donate-social">
+        <div id="donate">
+          <%= link_to 'Donate', new_donation_path, id:'text-color2' %>
+        </div>
+        <br><br>
+        <div id="social">
+          <div id="text-color2">
+            Help <%= @dog.name %> get adopted!
+          </div>
+          <%= social_share_button_tag(@dog.name,'data-twitter-title' => "Need a friend?
+          Check out this awesome rescue dog looking for a home!", :popup => "true",) %>
+        </div>
+        <br><br>
       </div>
-      <%= social_share_button_tag(@dog.name,'data-twitter-title' => "Need a friend?
-      Check out this awesome rescue dog looking for a home!", :popup => "true",) %>
+      <%= @dog.name %>
     </div>
-    <br><br>
-  </div>
-  <%= @dog.name %>
-</div>
-<div id="profile-pic-stats">
-  <%= image_tag @dog.image.url(:profile), id: 'pic' %>
-  <br>
-  <% if current_user %>
-  <%= link_to "Add Photo", new_dog_image_path(@dog) %>
-  <% end %>
-  <% if @dog.images.any? %>
-  <div class="well" style="max-width:405px;">
-    <% @images.each do |image| %>
-    <div class="img-thumbnail">
-      <%= link_to image_tag(image.avatar.url(:thumb)), image.avatar.url(:original), data: { toggle: "lightbox"} %>
-    </div>
-      <% if current_user %>
-      <%= link_to "Delete", dog_image_path(@dog, image),
-      :data => {:confirm => "You sure?",
-        :method => "delete"} %>
-      <% end %>
+  <div id="profile-pic-stats">
+    <%= image_tag @dog.image.url(:profile), id: 'pic' %>
+    <br>
+    <% if current_user %>
+    <%= link_to "Add Photo", new_dog_image_path(@dog) %>
     <% end %>
-    </div>
-  <% end %>
-  <div id="apply-dog">
-  <%= link_to "Apply for Adoption", new_applicant_path, class: "btn btn-primary btn-lg" %>
-  </div>
-  <div id="dog-stats">
-    <%= @dog.breed %>
-    <br>
-    <%= @dog.age %> years old
-    <br>
-    <%= @dog.sex %>
-  </div>
-</div>
-<hr id="dog-hr">
-<div id="dog-story">
-  <h1><%= @dog.name %>'s Story</h1>
-  <p><%= simple_format(@dog.info) %></p>
-</div>
-<hr id="dog-hr">
-<div id="dog-comments">
-  <h2>Questions & Comments</h2>
-  <% if @dog.comments.any? %>
-    <% @comments.each do |comment| %>
-      <ul>
-      <b><%= comment.name %></b>: <h4><%= comment.comment %></h4>
-      <% if current_user %>
-        <%= link_to "Edit", edit_dog_comment_path(@dog, comment), id: 'edit-comment' %> |
-        <%= link_to "Delete", dog_comment_path(@dog, comment), id: 'delete-comment',
-        :data => {:confirm => "Are you sure?",
+    <% if @dog.images.any? %>
+    <div class="well" style="max-width:405px;">
+      <% @images.each do |image| %>
+      <div class="img-thumbnail">
+        <%= link_to image_tag(image.avatar.url(:thumb)), image.avatar.url(:original), data: { toggle: "lightbox"} %>
+      </div>
+        <% if current_user %>
+        <%= link_to "Delete", dog_image_path(@dog, image),
+        :data => {:confirm => "You sure?",
           :method => "delete"} %>
+        <% end %>
       <% end %>
-      </ul>
+      </div>
     <% end %>
-  <% else %>
-    <p>There are no comments yet!</p>
+    <div id="apply-dog">
+    <%= link_to "Apply for Adoption", new_applicant_path, class: "btn btn-primary btn-lg" %>
+    </div>
+    <div id="dog-stats">
+      <%= @dog.breed %>
+      <br>
+      <%= @dog.age %> years old
+      <br>
+      <%= @dog.sex %>
+    </div>
+  </div>
+  <hr id="dog-hr">
+  <div id="dog-story">
+    <h1><%= @dog.name %>'s Story</h1>
+    <p><%= simple_format(@dog.info) %></p>
+  </div>
+  <hr id="dog-hr">
+  <div id="dog-comments">
+    <h2>Questions & Comments</h2>
+    <% if @dog.comments.any? %>
+      <% @comments.each do |comment| %>
+        <ul>
+        <b><%= comment.name %></b>: <h4><%= comment.comment %></h4>
+        <% if current_user %>
+          <%= link_to "Edit", edit_dog_comment_path(@dog, comment), id: 'edit-comment' %> |
+          <%= link_to "Delete", dog_comment_path(@dog, comment), id: 'delete-comment',
+          :data => {:confirm => "Are you sure?",
+            :method => "delete"} %>
+        <% end %>
+        </ul>
+      <% end %>
+    <% else %>
+      <p>There are no comments yet!</p>
+    <% end %>
+    <%= link_to "Add a comment", new_dog_comment_path(@dog), class: "btn btn-primary btn-md" %>
+  </div>
+  <% if current_user %>
+    <div id='edit-dog-form'>
+    </div>
+    <hr>
+    <div id='dog-links'>
+    <p>
+    <%= link_to "Edit", edit_dog_path(@dog), id:'edit-dog-link', remote: true %><br>
+    <%= link_to "Delete", dog_path(@dog),
+    :data => {:confirm => "You sure?",
+      :method => "delete"} %><br>
+    </div>
   <% end %>
-  <%= link_to "Add a comment", new_dog_comment_path(@dog), class: "btn btn-primary btn-md" %>
-</div>
-<% if current_user %>
-  <div id='edit-dog-form'>
+  <%= link_to "Return to Available Dogs", dogs_path, class: "btn btn-primary btn-lg" %></p>
   </div>
-  <hr>
-  <div id='dog-links'>
-  <p>
-  <%= link_to "Edit", edit_dog_path(@dog), id:'edit-dog-link', remote: true %><br>
-  <%= link_to "Delete", dog_path(@dog),
-  :data => {:confirm => "You sure?",
-    :method => "delete"} %><br>
-  </div>
-<% end %>
-<%= link_to "Return to Available Dogs", dogs_path, class: "btn btn-primary btn-lg" %></p>
+  </center>
 </div>
-</center>
-</div>
-<br>

@@ -28,10 +28,6 @@
 }
 
 body {
-  background-color: #FFFFCC;
-}
-
-body.homepage {
   background-color: black;
 }
 
@@ -98,6 +94,14 @@ footer {
   width: 100%;
 }
 
+.donation-pages {
+  border: 2px solid black;
+  padding: 30px;
+  width: 50%;
+  border-radius: 25px;
+  background-color: rgba(255,255,255, 0.85);
+}
+
 .dropdown-menu li:hover .sub-menu {
     visibility: visible;
 }
@@ -108,7 +112,6 @@ footer {
 
 .forms {
   border: 2px solid black;
-  padding: 10px;
   width: 75%;
   border-radius: 25px;
   background-color: rgba(255,255,255, 0.85);
@@ -198,6 +201,30 @@ footer {
   background: #00ABE3;
 }
 
+.universal-page {
+  background: rgba(0, 0, 0, .10);
+  box-shadow: 1px 1px 7px black;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFCC;
+  font-size: 22px;
+  text-align: left;
+  margin: auto;
+  padding-bottom: 10%;
+}
+
+.universal-page img {
+  width: 100%;
+  height: 100%;
+}
+
+.universal-page-text {
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 3%;
+  padding-top: 3%;
+}
+
 #about-hr {
   position: relative;
   bottom: 5px;
@@ -213,6 +240,14 @@ footer {
   box-shadow: 1px 1px 7px black;
   width: 100%;
   height: 100%;
+  background-color: #FFFFCC;
+  font-size: 22px;
+  text-align: left;
+  margin: auto;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 3%;
+  padding-top: 3%;
 }
 
 #alumni-name {
@@ -240,17 +275,12 @@ footer {
   box-shadow: 1px 1px 7px black;
 }
 
-#alumni-row {
-  width: 90%;
-  margin: auto;
-}
-
 #apply-dog {
   padding-top: 5px;
 }
 
-#apply-font {
-  font-size: 36px;
+#apply-show {
+  padding: 5%;
 }
 
 #back-link {
@@ -290,6 +320,8 @@ footer {
   border-width: 1px;
   font-weight: bold;
   background-color: rgba(255,255,255, 0.85);
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #dog-box-title {
@@ -409,7 +441,8 @@ footer {
 }
 
 #forms {
-  padding: 5%;
+  padding: 3%;
+
 }
 
 #header {
@@ -475,7 +508,6 @@ footer {
 #info-1 img {
   width: 100%;
   max-height: 450px;
-  margin: auto;
 }
 
 #info-text-1 {
@@ -556,17 +588,11 @@ footer {
   padding-right: 20px;
 }
 
-#payment-text{
-  font-size: 60px;
-  font-weight: bolder;
-  padding-left: 5%;
-  padding-top: 3%;
-}
-
 #pic {
   border-style: solid;
   border-width: 2px;
   box-shadow: 1px 1px 5px black;
+  padding: none;
 }
 
 #profile-box {
@@ -590,7 +616,8 @@ footer {
 }
 
 #profile-page {
-  padding-left: 30px;
+  padding: 30px;
+  background-color: #FFFFCC;
 }
 
 #profile-pic-stats {
@@ -664,30 +691,6 @@ footer {
   bottom: 10px;
   font-size: 22px;
   font-style: italic;
-}
-
-#universal-page {
-  background: rgba(0, 0, 0, .10);
-  box-shadow: 1px 1px 7px black;
-  width: 100%;
-  height: 100%;
-}
-
-#universal-page img {
-  width:100%;
-  height:100%;
-}
-
-#universal-page-text {
-  font-size: 22px;
-  text-align: left;
-  margin: auto;
-  width: 97%;
-  height: 97%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 5%;
-  padding-bottom: 3%;
 }
 
 /*

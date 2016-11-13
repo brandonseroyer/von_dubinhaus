@@ -1,30 +1,36 @@
-<%= form_for @dog, html: { multipart: true }, remote: true do |f| %>
-  <div>
-    <%= f.label :name %>
-    <br>
-    <%= f.text_field :name, required: 'required' %>
-    <br><br>
-    <%= f.label :breed %>
-    <br>
-    <%= f.text_field :breed, required: 'required' %>
-    <br><br>
-    <%= f.label :age %>
-    <br>
-    <%= f.text_field :age, required: 'required' %>
-    <br><br>
-    <%= f.label :sex %>
-    <br>
-    <%= f.text_field :sex, required: 'required' %>
-    <br><br>
-    <%= f.label :info %>
-    <br>
-    <%= f.cktext_area :info, required: 'required' %>
-    <br><br>
-    <%= f.label :image %>
-    <%= f.file_field :image %>
-  </div>
+<div id="forms">
+  <header>Add New Rescue Dog</header>
   <br>
-  <div class='form-group'>
-    <%= f.submit class: 'btn btn-success' %>
-  </div>
-<% end %>
+  <%= form_for @dog, html: { multipart: true }, remote: true do |f| %>
+    <div>
+      <%= f.label :name %>
+      <br>
+      <%= f.text_field :name, required: 'required' %>
+      <br><br>
+      <%= f.label :breed %>
+      <br>
+      <%= f.text_field :breed, required: 'required' %>
+      <br><br>
+      <%= f.label :age %>
+      <br>
+      <%= f.text_field :age, required: 'required' %>
+      <br><br>
+      <%= f.label :sex %>
+      <br>
+      <%= f.text_field :sex, required: 'required' %>
+      <br><br>
+      <%= f.label :info %>
+      <br>
+      <%= f.cktext_area :info, required: 'required' %>
+      <br><br>
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+    </div>
+    <br>
+    <div class='form-group'>
+      <%= f.submit class: 'btn btn-success btn-md' %>
+    </div>
+    <%= link_to "Return to Available Dogs", dogs_path, class: "btn btn-primary btn-md" %>
+    <br>
+  <% end %>
+</div>
