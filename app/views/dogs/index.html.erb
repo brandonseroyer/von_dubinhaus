@@ -32,18 +32,16 @@
   <div id="dog-row" class="row">
     <% @dogs.each do |dog| %>
     <div class="col-md-4">
-      <%= link_to(dog_path(dog)) do %>
-      <div id="dog-box" class="profile-div">
+      <%= link_to dog_path(dog) do %>
+      <span id="dog-box" class="profile-div">
         <br>
         <%= image_tag(dog.image.url) %>
-        <br>
-        <a id="dog-box-title">
-          Click to learn about <%= dog.name %>
-        </a>
         <br><br>
-      </div>
-      <% end%>
-      <br>
+        <p id="dog-box-title">Click to learn about <%= dog.name %></p>
+        <br>
+      </span>
+      <% end %>
+      <br><br>
     </div>
     <% end %>
   </div>
