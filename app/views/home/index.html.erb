@@ -81,39 +81,40 @@
     </div>
   </div>
 </div>
-<div id="info-1" >
+<div class="home-container">
   <%= image_tag "https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/trio.jpg" %>
+  <p class="home-container-text">
+    <span class="home-container-title-text">Von Dubinhaus Shepherds</span>
+    <br>
+    Proudly serving Portland, Oregon's dog community and beyond since 1999
+  </p>
+</div>
+
+<div class="home-container">
   <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/image1.JPG"), training_index_path %>
+  <p class="home-container-text">
+    <span class="home-container-title-text">We Don't Just Train Dogs - We Train You!</span>
+    <br>
+    Customized training programs for ALL dog breeds, designed to fit your lifestyle
+  </p>
+</div>
+
+<div class="home-container">
   <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/bearbear+roll.JPG"), dogs_path %>
+  <p class="home-container-text">
+    <span class="home-container-title-text">Visit Our <%= link_to "Rescue Page", dogs_path, id:'info-text-font' %></span>
+    <br>
+    Learn more about our available Rescue Shepherds currently looking for homes
+  </p>
+</div>
+
+<div class="home-container">
   <%= image_tag "https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/IMG_0385.JPG" %>
-  <div id="info-text-1">
-    Von Dubinhaus Shepherds
+  <p class="home-container-text">
+    <span class="home-container-title-text">Our Services</span>
     <br>
-    <span class="info-caption">
-      Proudly serving Portland, Oregon's dog community since 1999
-    </span>
-  </div>
-  <div id="info-text-2">
-    We Don't Just Train Dogs - We Train You!
-    <br>
-    <span class="info-caption">
-      Customized training programs for ALL dog breeds, designed to fit your lifestyle!
-    </span>
-  </div>
-  <div id="info-text-3">
-    Visit our <%= link_to "Rescue Page", dogs_path, id:'info-text-font' %>
-    <br>
-    <span class="info-caption">
-      Learn more about our available Rescue Shepherds currently looking for forever-homes!
-    </span>
-  </div>
-  <div id="info-text-4">
-    Our Services
-    <br>
-    <span class="info-caption">
-      Animal Rescue • Basic & Advanced Obedience • Puppy & Adult Training • Aggression & Behavioral Issues
-    </span>
-  </div>
+    Animal Rescue • Basic & Advanced Obedience • Aggression & Behavioral Issues
+  </p>
 </div>
 <footer>
   <div id="footer-text">
