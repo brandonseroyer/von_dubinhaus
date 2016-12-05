@@ -55,20 +55,21 @@ footer {
 }
 
 .carousel {
-  box-shadow: 2px 2px 15px black;
 }
 
 .col-md-4 img {
   width: 85%;
   height: auto;
   margin: auto;
+  border: 1px solid black;
 }
 
 .col-sm-4 img {
-  width: 95%;
+  width: 98%;
   height: auto;
   margin: auto;
-  box-shadow: 2px 2px 15px black;
+  border: 1px solid black;
+
 
     -webkit-transition: all 1s ease;
        -moz-transition: all 1s ease;
@@ -78,7 +79,7 @@ footer {
 }
 
 .col-sm-4 img:hover {
-  width: 98%;
+  width: 100%;
   height: auto;
   margin: auto;
   box-shadow: 2px 2px 15px black;
@@ -125,13 +126,12 @@ footer {
 
 .home-container-text {
   z-index: 100;
-  position: absolute;
+  position: relative;
   color: white;
   font-weight: bold;
-  font-size: 32px;
-  top: 35%;
-  left: 15%;
+  font-size: 24px;
   text-align: center;
+  padding: 20px;
   text-shadow:
   -1px -1px 0 #000,
   1px -1px 0 #000,
@@ -244,6 +244,7 @@ footer {
   padding-left: 5%;
   padding-bottom: 3%;
   padding-top: 3%;
+  font-size: 22px;
 }
 
 #about-hr {
@@ -290,10 +291,7 @@ footer {
   font-size: 28px;
   width: 65%;
   margin: auto;
-  text-align: center;
   padding: 1%;
-  background: rgba(0, 0, 0, .10);
-  box-shadow: 1px 1px 7px black;
 }
 
 #apply-dog {
@@ -484,14 +482,13 @@ footer {
 #icon-text {
   font-size: 30px;
   font-weight: bold;
-  background: rgba(0, 0, 0, .30);
   display: inline-block;
   padding-left: 5%;
   padding-right: 5%;
   border-radius: 25px;
   position: relative;
-  right: 25px;
   top: 25px;
+  background: rgba(0, 0, 0, .30);
 }
 
 #icon-text-2 {

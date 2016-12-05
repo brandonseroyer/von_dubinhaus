@@ -166,4 +166,24 @@
 </div>
     <%= yield %>
 </body>
+<footer>
+  <div id="footer-text">
+    <div class="social">
+      <ul>
+        <li><a href="https://www.facebook.com/Von-Dubinhaus-Shepherds-202535683142444/"><i class="fa fa-lg fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/vondubshepherds"><i class="fa fa-lg fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/vondubinhaus/"><i class="fa fa-lg fa-instagram"></i></a></li>
+      </ul>
+    </div>
+    <% unless current_user %>
+    <div><h5>Von Dubinhaus LLC | © Copyright 2016 | All Rights Reserved |
+       <%= link_to 'Log in', new_user_session_path, id:'footer-text' %></h5>
+    </div>
+    <% else %>
+    <div><h5>Von Dubinhaus LLC | © Copyright 2016 | All Rights Reserved |
+      <%= link_to 'Log out',  destroy_user_session_path, method: 'delete', id:'footer-text' %></h5>
+    </div>
+    <% end %>
+  </div>
+</footer>
 </html>

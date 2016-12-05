@@ -82,57 +82,37 @@
   </div>
 </div>
 <div class="home-container">
-  <%= image_tag "https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/trio.jpg" %>
   <p class="home-container-text">
     <span class="home-container-title-text">Von Dubinhaus Shepherds</span>
     <br>
     Proudly serving Portland, Oregon's dog community and beyond since 1999
   </p>
+  <%= image_tag "https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/trio.jpg" %>
 </div>
 
 <div class="home-container">
-  <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/image1.JPG"), training_index_path %>
   <p class="home-container-text">
     <span class="home-container-title-text">We Don't Just Train Dogs - We Train You!</span>
     <br>
     Customized training programs for ALL dog breeds, designed to fit your lifestyle
   </p>
+  <%= image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/image1.JPG") %>
 </div>
 
 <div class="home-container">
-  <%= link_to image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/bearbear+roll.JPG"), dogs_path %>
   <p class="home-container-text">
     <span class="home-container-title-text">Visit Our <%= link_to "Rescue Page", dogs_path, id:'info-text-font' %></span>
     <br>
     Learn more about our available Rescue Shepherds currently looking for homes
   </p>
+  <%= image_tag("https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/bearbear+roll.JPG") %>
 </div>
 
 <div class="home-container">
-  <%= image_tag "https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/IMG_0385.JPG" %>
   <p class="home-container-text">
     <span class="home-container-title-text">Our Services</span>
     <br>
-    Animal Rescue • Basic & Advanced Obedience • Aggression & Behavioral Issues
+    Animal Rescue • Basic & Advanced Obedience • Aggression & Behavioral Rehabilitation
   </p>
+  <%= image_tag "https://s3-us-west-2.amazonaws.com/vondubinhaus/general/images/IMG_0385.JPG" %>
 </div>
-<footer>
-  <div id="footer-text">
-    <div class="social">
-      <ul>
-        <li><a href="https://www.facebook.com/Von-Dubinhaus-Shepherds-202535683142444/"><i class="fa fa-lg fa-facebook"></i></a></li>
-        <li><a href="https://twitter.com/vondubshepherds"><i class="fa fa-lg fa-twitter"></i></a></li>
-        <li><a href="https://www.instagram.com/vondubinhaus/"><i class="fa fa-lg fa-instagram"></i></a></li>
-      </ul>
-    </div>
-    <% unless current_user %>
-    <div><h5>Von Dubinhaus LLC | © Copyright 2016 | All Rights Reserved |
-       <%= link_to 'Log in', new_user_session_path, id:'footer-text' %></h5>
-    </div>
-    <% else %>
-    <div><h5>Von Dubinhaus LLC | © Copyright 2016 | All Rights Reserved |
-      <%= link_to 'Log out',  destroy_user_session_path, method: 'delete', id:'footer-text' %></h5>
-    </div>
-    <% end %>
-  </div>
-</footer>
